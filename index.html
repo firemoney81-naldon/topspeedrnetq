@@ -325,788 +325,742 @@
 
 
 
-	
 
 
-  <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "name": "안산인터넷설치 비교센터",
-          "url": "https://yourdomain.com",
-          "description": "안산 지역 전문 인터넷 설치 비교 플랫폼입니다. SK, KT, LG 통신사별 요금제와 사은품 혜택을 투명하게 비교하여 최적의 통신사를 찾아 드립니다.",
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://yourdomain.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          },
-          "offers": {
-            "@type": "AggregateOffer",
-            "offerCount": "100+",
-            "lowPrice": "10000",
-            "highPrice": "50000",
-            "priceCurrency": "KRW",
-            "areaServed": "경기도 안산시"
-          }
-        }
-    </script>
 
-    <!-- Basic CSS for modern/clean look (soft colors) -->
-    <style>
+
+	 <style>
+        /* Modern Reset and CSS Variables for Beautiful Palette */
         :root {
-            --primary-color: #007bff; /* Soft Blue */
-            --secondary-color: #6c757d; /* Soft Gray */
-            --background-color: #f8f9fa; /* Light Background */
-            --section-bg-color: #ffffff; /* White Section Background */
-            --border-color: #dee2e6; /* Light Border */
-            --link-color: #0056b3; /* Darker Blue Link */
-            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --primary: #1e293b;
+            --primary-light: #f1f5f9;
+            --accent: #0f766e;
+            --accent-light: #ccfbf1;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --bg-main: #f8fafc;
+            --bg-card: #ffffff;
+            --border: #e2e8f0;
+            --accent-warn: #b45309;
+            --bg-warn: #fef3c7;
+            --border-warn: #fde68a;
+            --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
         }
 
-        body {
-            font-family: 'Malgun Gothic', sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: var(--background-color);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
+        body { 
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            line-height: 1.8; 
+            background-color: var(--bg-main); 
+            color: var(--text-main); 
         }
 
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-            border-bottom: 5px solid #0056b3;
+        .container { 
+            width: 100%; 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 24px; 
+            box-sizing: border-box; 
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            font-weight: bold;
+        /* Header Style */
+        header { 
+            background-color: var(--primary); 
+            color: white; 
+            padding: 40px 0; 
+            border-bottom: 4px solid var(--accent); 
         }
-
+        header h1 { 
+            margin: 0; 
+            font-size: 2.2em; 
+            text-align: center; 
+            font-weight: 800; 
+            letter-spacing: -0.05em;
+        }
         header p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
+            margin: 10px 0 0 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.1em;
         }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
+        /* Navigation Style */
+        nav { 
+            background-color: var(--bg-card); 
+            padding: 8px; 
+            margin-bottom: 30px; 
+            border-radius: 12px; 
+            box-shadow: var(--shadow-sm); 
+            border: 1px solid var(--border);
+        }
+        .main-menu { 
+            list-style: none; 
+            padding: 0; 
+            margin: 0; 
+            display: flex; 
+            justify-content: space-around; 
             flex-wrap: wrap;
         }
-
-        nav li {
-            margin: 0 10px;
+        .main-menu li { 
+            margin: 4px; 
         }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        main {
-            width: 100%;
-            max-width: 1200px;
-            padding: 20px;
-            background-color: white;
-        }
-
-        section {
-            padding: 40px 30px;
-            margin-bottom: 20px;
-            background-color: var(--section-bg-color);
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
-
-        section h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 10px;
-            margin-bottom: 25px;
-            font-weight: bold;
-        }
-
-        section h3 {
-            font-size: 1.5rem;
-            color: #444;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-
-        section p {
-            font-size: 1.05rem;
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.8;
-        }
-
-        form {
-            background-color: #f1f7fe;
-            padding: 30px;
+        .main-menu li a { 
+            display: block; 
+            padding: 10px 18px; 
+            text-decoration: none; 
+            color: var(--text-main); 
+            font-weight: 600; 
+            font-size: 1em; 
+            transition: all 0.2s ease-in-out; 
             border-radius: 8px;
-            border: 1px solid var(--primary-color);
+        }
+        .main-menu li a:hover { 
+            background-color: var(--primary-light); 
+            color: var(--accent); 
         }
 
-        .form-group {
-            margin-bottom: 20px;
+        /* Content Layout */
+        .content-wrap { 
+            display: flex; 
+            gap: 30px; 
+        }
+        .sidebar { 
+            flex: 0 0 320px; 
+            padding: 24px; 
+            background-color: var(--bg-card); 
+            border-radius: 16px; 
+            box-shadow: var(--shadow-md); 
+            align-self: flex-start; 
+            border: 1px solid var(--border);
+        }
+        .main-content { 
+            flex: 1; 
+            padding: 36px; 
+            background-color: var(--bg-card); 
+            border-radius: 16px; 
+            box-shadow: var(--shadow-md); 
+            border: 1px solid var(--border);
         }
 
-        label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 8px;
-            color: #333;
+        /* Sidebar Elements */
+        .sidebar h2 { 
+            color: var(--primary); 
+            font-size: 1.3em; 
+            margin-top: 0; 
+            border-bottom: 2px solid var(--accent); 
+            padding-bottom: 12px; 
+            font-weight: 700;
+        }
+        .sub-menu { 
+            list-style: none; 
+            padding: 0; 
+            margin: 20px 0; 
+        }
+        .sub-menu li a { 
+            display: block; 
+            padding: 10px 0; 
+            text-decoration: none; 
+            color: var(--text-muted); 
+            border-bottom: 1px dashed var(--border); 
+            transition: all 0.2s ease; 
+            font-size: 0.95em;
+        }
+        .sub-menu li a:hover { 
+            color: var(--accent); 
+            padding-left: 8px; 
+            font-weight: 600; 
         }
 
-        input[type="text"], input[type="tel"], input[type="number"], select, textarea {
-            width: calc(100% - 20px);
-            padding: 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 5px;
-            font-size: 1rem;
-            box-sizing: border-box;
-            background-color: white;
+        /* Interactive Card Sections */
+        .calculator-section { 
+            background-color: var(--primary-light); 
+            padding: 24px; 
+            border-radius: 12px; 
+            border: 1px solid var(--border); 
+            margin-bottom: 24px; 
+        }
+        .calculator-section h3 { 
+            color: var(--primary); 
+            font-size: 1.2em; 
+            margin-top: 0; 
+            font-weight: 700;
+        }
+        .calculator-section p {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        .calculator-section label { 
+            display: block; 
+            margin-top: 12px; 
+            font-weight: 600; 
+            color: var(--text-main); 
+            font-size: 0.9em;
+        }
+        .calculator-section input[type="text"],
+        .calculator-section input[type="number"],
+        .calculator-section select { 
+            width: 100%; 
+            padding: 10px; 
+            border: 1px solid var(--border); 
+            border-radius: 6px; 
+            margin-top: 6px; 
+            box-sizing: border-box; 
+            background-color: var(--bg-card);
+            color: var(--text-main);
+            font-size: 0.95em;
+        }
+        .calculator-section button { 
+            width: 100%; 
+            padding: 12px; 
+            background-color: var(--accent); 
+            color: white; 
+            border: none; 
+            border-radius: 6px; 
+            font-size: 1em; 
+            font-weight: 700; 
+            cursor: pointer; 
+            margin-top: 18px; 
+            transition: background-color 0.2s; 
+        }
+        .calculator-section button:hover { 
+            background-color: #0d5c56; 
         }
 
-        select {
-            appearance: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            background-image: url('data:image/svg+xml;utf8,<svg fill="%23333333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-            background-repeat: no-repeat;
-            background-position: right 10px center;
-        }
-
-        textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .submit-btn {
-            display: block;
-            width: 100%;
+        /* Result Container */
+        .result-box {
+            margin-top: 15px;
             padding: 15px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-            background-color: var(--primary-color);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-
-        .submit-btn:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-        }
-
-        .info-box {
-            background-color: #e9f5ff;
-            padding: 15px;
-            border-left: 5px solid var(--primary-color);
-            border-radius: 5px;
-            margin-top: 20px;
-            font-size: 0.95rem;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            font-size: 0.95rem;
-        }
-
-        table th, table td {
-            border: 1px solid var(--border-color);
-            padding: 12px;
-            text-align: left;
-        }
-
-        table th {
-            background-color: #f1f7fe;
-            color: var(--primary-color);
-            font-weight: bold;
-            text-align: center;
-        }
-
-        table tbody tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        
-        table tbody td:last-child {
-             font-size: 0.9rem;
-        }
-
-        .keyword-tags {
-            margin-top: 20px;
-            padding-top: 15px;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .keyword-tags a {
-            display: inline-block;
-            background-color: #e9ecef;
-            color: var(--secondary-color);
-            padding: 6px 12px;
-            border-radius: 20px;
-            text-decoration: none;
-            margin: 5px;
-            font-size: 0.9rem;
-        }
-
-        .related-links {
-            margin-top: 20px;
-        }
-
-        .related-links a {
-            display: inline-block;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            padding: 8px 15px;
-            border: 1px solid var(--primary-color);
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .related-links a:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-
-        /* FAQ Styling */
-        .faq-dl dt {
-            background-color: #f1f7fe;
-            padding: 15px;
-            border-bottom: 1px solid var(--border-color);
-            font-weight: bold;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            position: relative;
-        }
-
-        .faq-dl dt::before {
-            content: "+";
-            position: absolute;
-            right: 15px;
-            font-weight: bold;
-        }
-
-        .faq-dl dt.active::before {
-            content: "-";
-        }
-
-        .faq-dl dd {
-            background-color: #fafafa;
-            padding: 15px;
-            border-bottom: 1px solid var(--border-color);
+            background-color: var(--accent-light);
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            font-size: 0.95em;
             display: none;
-            line-height: 1.6;
         }
 
-        .faq-dl dt.active + dd {
-            display: block;
+        /* Typography */
+        .main-content h2 { 
+            color: var(--primary); 
+            font-size: 1.8em; 
+            border-bottom: 2px solid var(--border); 
+            padding-bottom: 12px; 
+            margin-top: 40px; 
+            font-weight: 800;
+            letter-spacing: -0.03em;
         }
-        
-        /* 20000자 이상 정보성 텍스트 스타일 */
-        .long-content {
-            padding: 20px;
-            background-color: #fefefe;
-            border-radius: 8px;
-            border: 1px solid #e0e0e0;
+        .main-content h3 { 
+            color: var(--accent); 
+            font-size: 1.4em; 
+            margin-top: 30px; 
+            border-left: 4px solid var(--accent); 
+            padding-left: 12px; 
+            font-weight: 700;
         }
-        .long-content p {
+        .main-content h4 { 
+            font-size: 1.15em; 
+            color: var(--primary); 
+            margin-top: 24px; 
+            font-weight: 700;
+        }
+        .main-content p { 
+            color: var(--text-main); 
+            margin-bottom: 1.2em; 
+            text-align: justify; 
+            font-size: 1.05em;
+        }
+        .main-content ul, .main-content ol {
             margin-bottom: 20px;
-            font-size: 1.05rem;
-            line-height: 1.8;
+            padding-left: 20px;
         }
-        .long-content h4 {
-            font-size: 1.3rem;
-            color: #333;
-            margin-top: 25px;
-            margin-bottom: 10px;
-            border-left: 4px solid var(--primary-color);
-            padding-left: 10px;
+        .main-content li {
+            margin-bottom: 8px;
+            font-size: 1.05em;
         }
-        
-        @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
-            nav ul { flex-direction: column; }
-            nav li { margin: 5px 0; }
-            section { padding: 30px 20px; }
-            table th, table td { padding: 10px; font-size: 0.9rem; }
-            input[type="text"], input[type="tel"], input[type="number"], select, textarea { width: 100%; }
+
+        /* Accent Boxes */
+        .highlight { 
+            background-color: var(--bg-warn); 
+            border: 1px solid var(--border-warn); 
+            padding: 20px; 
+            border-radius: 12px; 
+            margin: 24px 0; 
+            color: var(--accent-warn); 
         }
-        
-        @media (max-width: 480px) {
-            header { padding: 30px 15px; }
-            section { padding: 20px 15px; }
-            h2 { font-size: 1.8rem; }
+        .highlight p { 
+            margin: 0; 
+            line-height: 1.7; 
+            color: #78350f;
+            font-weight: 500;
+        }
+
+        /* Tables */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin-top: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            font-size: 0.95em; 
+            min-width: 600px;
+        }
+        table th, table td { 
+            border: 1px solid var(--border); 
+            padding: 14px; 
+            text-align: left; 
+        }
+        table th { 
+            background-color: var(--primary-light); 
+            color: var(--primary); 
+            font-weight: 700; 
+        }
+        table tr:nth-child(even) { 
+            background-color: #fafbfd; 
+        }
+
+        /* Dividers */
+        .main-content hr { 
+            border: 0; 
+            height: 1px; 
+            background-color: var(--border); 
+            margin: 40px 0; 
+        }
+
+        /* External Links Styling */
+        .external-links ul { 
+            list-style: none; 
+            padding: 0; 
+            margin-top: 20px; 
+        }
+        .external-links li a { 
+            display: block; 
+            padding: 14px; 
+            margin-bottom: 8px; 
+            background-color: var(--primary-light); 
+            border-radius: 8px; 
+            text-decoration: none; 
+            color: var(--text-main); 
+            transition: all 0.2s ease; 
+            border: 1px solid var(--border);
+            font-size: 0.95em;
+        }
+        .external-links li a:hover { 
+            background-color: var(--accent-light); 
+            color: var(--accent); 
+            border-color: var(--accent);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 960px) {
+            .content-wrap { flex-direction: column; }
+            .sidebar { width: 100%; margin-bottom: 20px; }
+            .main-content { padding: 24px; }
+            .main-menu { flex-direction: column; align-items: stretch; }
+            .main-menu li a { text-align: center; border-bottom: 1px solid var(--border); }
         }
     </style>
+
+    <!-- JSON-LD Structured Data for SEO & LLM Agents -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "안산인터넷설치 맞춤형 비교 분석 및 2026년 최저가 가입 가이드",
+      "headline": "안산인터넷설치 요금제 비교 및 현금지원 사은품 혜택 극대화 전략",
+      "description": "안산 상록구 및 단원구 전 지역의 KT, SK, LGU+ 인터넷 가입 요금 및 사은품 혜택 비교. 2026년 최신 경품고시제 가이드라인에 맞춘 합리적인 요금제 설계법과 지역 케이블과의 차이점을 상세히 분석합니다.",
+      "url": "https://telecom.reliabledone.com/ansan-internet-guide",
+      "about": {
+        "@type": "Thing",
+        "name": "안산인터넷설치"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "안산 초고속 인터넷 정보 센터",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://telecom.reliabledone.com/logo.png"
+        }
+      },
+      "mainEntity": {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "안산인터넷설치 시 통신사별로 현금지원 사은품 금액 차이점은 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "각 통신사 및 온라인 대리점마다 제공하는 신규 가입 혜택과 지원금 규모는 경품고시제 한도 내에서 상이하게 결정됩니다. 일반적으로 본사 고객센터보다 인터넷 비교사이트 또는 가입 성지를 이용하시는 것이 더 유리한 사은품 혜택을 받는 방법입니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "안산 지역 케이블 방송과 대기업 통신사 인터넷의 가장 큰 단점과 장점은 무엇인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "대기업 통신사(KT, SK, LG)의 인터넷은 안정적인 광랜(FTTH) 대칭형망을 제공하는 장점이 있는 반면, 비용이 상대적으로 높은 편입니다. 지역 케이블 방송(SK브로드밴드 B tv 케이블 등)은 요금이 저렴한곳이라는 장점이 있으나 비대칭형망 비중이 존재해 속도의 일관성이 떨어질 수 있다는 차이점이 있습니다."
+            }
+          }
+        ]
+      }
+    }
+    </script>
 </head>
 <body>
     <header>
-        <h1>안산인터넷설치 | 통신사별 요금 및 현금 사은품 비교 센터</h1>
-        <p>안산 전 지역 SK, KT, LG 인터넷 최저가 견적 비교. 신규 가입 시 최대 현금 지원 혜택을 지금 바로 확인하세요!</p>
-        <nav aria-label="주요 메뉴">
-            <ul>
-                <li><a href="#견적요청">실시간 견적 요청</a></li>
-                <li><a href="#가격비교">상품별 요금 비교</a></li>
-                <li><a href="#혜택정보">현금 사은품 혜택</a></li>
-                <li><a href="#업체선택">업체 선정 가이드</a></li>
-                <li><a href="#정보센터">정보 센터</a></li>
-            </ul>
-        </nav>
+        <div class="container">
+            <h1>안산인터넷설치 요금제 비교 및 현금지원 혜택 극대화 전략</h1>
+            <p>2026년 상록구와 단원구의 맞춤형 초고속망 분석 및 가입 조건 상세 안내</p>
+        </div>
     </header>
 
-    <main>
-
-        <section id="견적요청">
-            <h2>안산인터넷설치 실시간 무료 견적 요청</h2>
-            <p>간단한 정보 입력으로 안산 지역 내 SK, KT, LG U+ 인터넷 전문 업체들의 최신 요금제와 사은품 혜택을 동시에 비교해 드립니다. 가장 합리적인 가입 조건을 찾아보세요.</p>
-
-            <form action="/submit-estimate" method="POST">
-                <div class="form-group">
-                    <label for="move-type">1. 설치 희망 상품 선택 (필수)</label>
-                    <select id="move-type" name="move-type" required>
-                        <option value="">상품 종류를 선택하세요</option>
-                        <option value="인터넷+TV결합">인터넷 + TV 결합 상품</option>
-                        <option value="인터넷 단독">인터넷 단독 상품</option>
-                        <option value="인터넷+TV+전화">인터넷 + TV + 전화 결합 상품</option>
-                        <option value="재약정">기존 통신사 재약정 문의</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="desired-speed">2. 희망 인터넷 속도 선택 (필수)</label>
-                    <select id="desired-speed" name="desired-speed" required>
-                        <option value="">속도를 선택하세요</option>
-                        <option value="100Mbps">100Mbps (저렴한 요금, 웹서핑/간단한 스트리밍)</option>
-                        <option value="500Mbps">500Mbps (가장 많이 선택하는 속도, 4K 스트리밍/게임)</option>
-                        <option value="1Gbps">1Gbps (고사양 게임, 대용량 파일 다운로드, 다수 동시 접속)</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="address-type">3. 설치 주소지 종류 (필수)</label>
-                    <select id="address-type" name="address-type" required>
-                        <option value="">주소지 종류를 선택하세요</option>
-                        <option value="아파트">아파트 (기가인터넷 설치 용이)</option>
-                        <option value="주택/빌라">주택/빌라 (설치 가능 여부 확인 필요)</option>
-                        <option value="오피스텔">오피스텔</option>
-                        <option value="사무실">사무실/기업</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="installation-address">4. 안산 지역 설치 희망 주소지 (필수)</label>
-                    <input type="text" id="installation-address" name="installation-address" placeholder="예: 안산시 단원구 고잔동, 안산시 상록구 이동" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="contact-tel">5. 연락처 (필수)</label>
-                    <input type="tel" id="contact-tel" name="contact-tel" placeholder="010-xxxx-xxxx" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="additional-notes">6. 추가 요청 사항 (선택)</label>
-                    <textarea id="additional-notes" name="additional-notes" placeholder="TV 채널 수, 와이파이 공유기, 기존 통신사 약정 만료일 등"></textarea>
-                </div>
-
-                <button type="submit" class="submit-btn" aria-label="안산 인터넷 설치 비교 견적 신청">클릭! 안산인터넷설치 무료 신청</button>
-            </form>
-            <div class="info-box">
-                <strong>💡 안산인터넷설치</strong> 안내: 모든 정보는 **현금 사은품** 혜택 및 **최저가 요금제** 산출을 위해서만 사용되며, 1:1 전문 상담사가 연락드립니다.
-            </div>
-
-             <div class="keyword-tags" aria-label="주요 인터넷 설치 키워드">
-                <a href="#가격비교">안산인터넷설치 가격</a>
-                <a href="#혜택정보">안산 인터넷 현금지원</a>
-                <a href="#업체선택">안산 인터넷가입 추천</a>
-                <a href="#혜택정보">SK KT LG 사은품 비교</a>
-                <a href="#트렌드">안산 지역별 인터넷 트렌드</a>
-                <a href="#지역별견적">안산 고잔동 인터넷설치</a>
-                <a href="#지역별견적">안산 중앙동 인터넷설치</a>
-                <a href="#지역별견적">안산 초지동 인터넷</a>
-            </div>
-        </section>
-
-        <hr>
-
-        <section id="가격비교">
-            <h2>안산인터넷설치: 통신사별 요금 및 상품 비교</h2>
-            <p>안산인터넷설치를 고민할 때 가장 중요한 것은 통신사별 요금제와 사은품 혜택을 비교하는 것입니다. 안산 지역은 SK, KT, LG 통신사 모두 커버리지가 우수하지만, 아파트나 주택 등 주거 형태에 따라 설치 가능 여부와 속도가 달라질 수 있으므로 정확한 비교가 필수적입니다.</p>
-
-            <p>아래 표는 2026년 상반기 안산 지역 기준 주요 통신사별 결합 상품의 평균 요금제와 사은품 혜택을 비교한 예시입니다. 정확한 현금 지원금은 상담을 통해 확인 가능합니다.</p>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>통신사 (안산 지역)</th>
-                        <th>인터넷 속도 (예시)</th>
-                        <th>상품 구성</th>
-                        <th>월 평균 요금 (VAT 포함)</th>
-                        <th>주요 혜택 및 현금 지원금 (변동 가능)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>SK 브로드밴드 (B)</td>
-                        <td>500Mbps (기가 라이트)</td>
-                        <td>인터넷 + TV 베이직</td>
-                        <td>40,000원대</td>
-                        <td>결합 할인 폭이 크고, 현금 사은품 지원</td>
-                    </tr>
-                    <tr>
-                        <td>KT 올레 (kt)</td>
-                        <td>1Gbps (기가 인터넷)</td>
-                        <td>인터넷 + 지니TV 스페셜</td>
-                        <td>50,000원대</td>
-                        <td>안정적인 속도와 넓은 커버리지, 현금 사은품 지원</td>
-                    </tr>
-                    <tr>
-                        <td>LG 유플러스 (U+)</td>
-                        <td>500Mbps (프라임)</td>
-                        <td>인터넷 + UHD TV (넷플릭스 포함)</td>
-                        <td>40,000원대</td>
-                        <td>모바일 결합 시 할인 혜택, 현금 사은품 지원</td>
-                    </tr>
-                    <tr>
-                        <td>케이블 인터넷 (지역 SO)</td>
-                        <td>100Mbps (광랜)</td>
-                        <td>인터넷 단독 + TV</td>
-                        <td>20,000원대 ~</td>
-                        <td>저렴한 가격, 설치 당일 처리 가능, 현금 사은품 소폭 지원</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <p>※ 상기 요금은 통신사 본사 정책 및 대리점별 프로모션, 고객의 휴대폰 결합 조건, 약정 기간(3년 기준)에 따라 달라질 수 있습니다. 안산인터넷설치 시 **현금 사은품**과 **월 요금** 중 어떤 것을 더 중요하게 생각하는지에 따라 **가입 조건**이 달라지므로, 전문가와 상담을 통해 최적의 조건을 확인하는 것이 중요합니다.</p>
-
-            <h3>📈 안산인터넷설치 트렌드 (2026년 상반기 기준)</h3>
-
-            <p class="figure-caption">2026년 상반기 안산 지역 인터넷 가입 현황: 500Mbps 이상 기가인터넷 비중 65% 돌파</p>
-            <p>최근 챗지피티(ChatGPT), 제미나이(Gemini) 등 AI 서비스와 4K/8K 고화질 스트리밍, 클라우드 게임의 확산으로 **안산인터넷설치**를 진행하는 고객 10명 중 6명 이상이 500Mbps 이상의 기가인터넷을 선택하고 있습니다. 특히 안산시 단원구의 신축 아파트 단지(초지동, 고잔동)에서는 1Gbps 상품의 가입률이 높게 나타나고 있습니다. 저희 **안산인터넷설치 비교센터**는 이러한 트렌드를 반영하여 고객의 사용 환경에 최적화된 상품을 추천해 드립니다.</p>
-        </section>
-
-        <hr>
-
-        <section id="혜택정보">
-            <h2>안산인터넷설치 시 현금 사은품 및 할인 혜택 극대화 전략</h2>
-            <p>**안산인터넷설치** 신규 가입 시 통신사별로 제공하는 **사은품**과 **현금지원금**은 고객이 체감하는 혜택의 핵심입니다. **안산인터넷설치** 전문 업체들은 본사 정책과 별도로 추가 혜택을 제공하며, 이를 비교하는 것이 **인터넷가입**의 가장 큰 장점입니다.</p>
-
-            <h3>1. 현금 사은품 비교: 안산인터넷설치 시 체크포인트</h3>
-            <p>인터넷 가입 시 **현금 사은품**은 통신사 본사 정책에 따라 결정되는 기본 사은품과 대리점 재량으로 지급되는 추가 사은품으로 나뉩니다. 안산 지역의 경쟁이 치열한 만큼, **안산인터넷설치** 전문 대리점에서는 타 지역보다 더 많은 혜택을 제공하는 경우가 많습니다. 저희는 **안산인터넷설치** 업체들의 **현금지원금**을 투명하게 비교하여 고객님께 최대 혜택을 제공합니다. (관련 법규: 방송통신위원회 경품 고시제)</p>
-
-            <h3>2. 통신사 결합 할인: 휴대폰 결합의 중요성</h3>
-            <p>SKT, KT, LGU+ 모두 휴대폰 통신사를 인터넷과 결합하여 할인받는 **결합 상품**이 가장 큰 **할인 혜택**을 제공합니다. 특히 SKT의 '온가족 할인'이나 KT의 '총액 결합 할인' 등은 가족 구성원의 휴대폰 요금을 합산하여 할인율을 높이는 방식으로, **안산인터넷설치** 시 반드시 고려해야 할 요소입니다. 저희 **안산인터넷설치 비교센터**는 고객님의 가족 구성원 휴대폰 통신사를 파악하여 가장 유리한 **결합 상품**을 추천해 드립니다.</p>
-
-            <h3>3. 2026년 신규 가입 vs 재약정: 안산인터넷설치 시 현명한 선택</h3>
-            <p>**안산인터넷설치** 고객 중 기존 통신사 약정이 만료된 분들은 신규 가입과 재약정 중 하나를 선택해야 합니다. 일반적으로 **신규 가입** 시 **현금지원금**이나 **사은품** 혜택이 재약정보다 훨씬 높습니다. 기존 통신사의 재약정 혜택이 미미하다면, **안산인터넷설치** 전문 업체를 통해 통신사를 변경하고 **최대 사은품**을 받는 것이 **가성비** 측면에서 훨씬 유리한 경우가 많습니다. 저희는 고객의 **약정 만료일**을 확인하여 최적의 타이밍에 **안산인터넷설치**를 진행하도록 도와드립니다.</p>
-
-            <h3>4. 안산 지역별 맞춤 혜택 (고잔동, 초지동, 중앙동 등)</h3>
-            <p>안산은 신도시 개발이 활발한 **고잔동**과 **초지동**을 중심으로 **기가인터넷** 인프라가 잘 갖춰져 있습니다. 반면, 일부 오래된 주택가나 빌라 밀집 지역(예: **선부동**, **본오동**)에서는 광케이블 설치가 어렵거나, 특정 통신사의 커버리지가 제한적일 수 있습니다. **안산인터넷설치**를 원한다면, 설치 주소지에 대한 정확한 **전문 업체**의 조회가 필수적입니다. 저희 **안산인터넷설치 비교센터**는 안산 지역에 특화된 정보를 제공하며, 설치 가능 여부와 혜택을 상세히 안내합니다.</p>
-        </section>
-
-        <hr>
-
-        <section id="업체선택">
-            <h2>안산인터넷설치 전문가 추천 및 업체 선정 가이드</h2>
-            <p>수많은 인터넷 가입 대리점 중에서 신뢰할 수 있는 곳을 선택하는 것은 **안산인터넷설치**의 성공을 좌우합니다. 저희 **안산인터넷설치 비교센터**는 검증된 업체만을 연결하며, 고객님 스스로 좋은 **인터넷 업체**를 고를 수 있는 기준을 제시합니다.</p>
-
-            <h3>필수 인터넷 업체 선정 기준</h3>
-            <ul>
-                <li><strong>정식 사업자 허가 여부:</strong> 방송통신위원회에 등록된 **정식 인터넷 판매점**인지 확인해야 합니다. (정부 공식 사이트: <a href="https://www.gov.kr/main" target="_blank" rel="nofollow noopener">정부24</a>, <a href="https://www.kcc.go.kr/index.do" target="_blank" rel="nofollow noopener">방송통신위원회</a>에서 확인 가능)</li>
-                <li><strong>현금 사은품 지급 명확성:</strong> **현금지원금**은 통신사 본사 정책과 대리점 정책에 따라 지급 시기가 다릅니다. 계약서에 정확한 지급일과 금액을 명시해야 합니다. (불법 사은품 지급 관련 규제: 경품 고시제)</li>
-                <li><strong>고객 후기 및 평점:</strong> **안산인터넷설치** 전문 업체들의 실제 **내돈내산** 후기 평점을 반드시 확인하여 서비스 품질을 간접적으로 평가해야 합니다.</li>
-                <li><strong>설치 전문성:</strong> **안산인터넷설치** 경험이 풍부한 업체는 주거 환경(아파트, 빌라)에 맞는 최적의 설치 방법을 제시합니다.</li>
+    <div class="container">
+        <nav>
+            <ul class="main-menu">
+                <li><a href="#intro">안산 인터넷 인프라 소개</a></li>
+                <li><a href="#comparison">통신사별 요금 및 혜택 비교</a></li>
+                <li><a href="#regional">안산 행정동별 인프라 분석</a></li>
+                <li><a href="#strategy">현금지원 및 사은품 전략</a></li>
+                <li><a href="#demographics">라이프스타일별 요금제 추천</a></li>
+                <li><a href="#faq">자주 묻는 질문 FAQ</a></li>
             </ul>
+        </nav>
 
-            <h3 id="지역별견적">🔑 안산인터넷설치 - 30개 이상 안산 지역별 맞춤 분석</h3>
-            <p>**안산인터넷설치**는 지역별 주거 환경에 따라 설치 가능 여부와 속도가 달라집니다. 특히 **안산인터넷설치**의 경우, 아파트가 많은 **고잔동**, **초지동**, **중앙동**과 주택이 많은 **본오동**, **사동**, **선부동**의 **인터넷 가입** 환경이 다릅니다. 저희 **안산인터넷설치 비교센터**는 안산 전 지역을 꼼꼼히 분석하여 맞춤형 정보를 제공합니다.</p>
+        <div class="content-wrap">
+            <div class="sidebar">
+                <h2>실시간 맞춤 컨설팅</h2>
+                
+                <!-- Plan Calculator Card -->
+                <div class="calculator-section">
+                    <h3>안산 인터넷 요금제 계산기</h3>
+                    <p>가구 구성 형태와 모바일 결합 상품을 선택하여 실시간 예상 요금 및 혜택을 시뮬레이션해 보세요.</p>
+                    <form id="calcForm" onsubmit="calculatePlan(); return false;">
+                        <label for="speed">원하는 인터넷 속도</label>
+                        <select id="speed" required>
+                            <option value="100">100Mbps 가성비 실속형</option>
+                            <option value="500">500Mbps 고화질 스트리밍/멀티미디어형</option>
+                            <option value="1000">1Gbps 고대역폭 다운로드/게이밍형</option>
+                        </select>
 
-            <form action="/search-regional-estimate" method="GET">
-                <div class="form-group">
-                    <label for="region-select">원하는 안산 **지역**을 선택해 주세요.</label>
-                    <select id="region-select" name="region" onchange="updateRegionalInfo(this.value)">
-                        <option value="안산전체">안산시 전체 (평균)</option>
-                        <option value="고잔동">고잔동 (단원구, 신축 아파트 밀집 지역)</option>
-                        <option value="중앙동">중앙동 (단원구, 상업 지구 및 주상복합)</option>
-                        <option value="초지동">초지동 (단원구, 신규 입주 단지, 와이파이존)</option>
-                        <option value="선부동">선부동 (단원구, 다세대 주택 밀집 지역)</option>
-                        <option value="와동">와동 (단원구, 주거 지역)</option>
-                        <option value="이동">이동 (상록구, 한양대 에리카 캠퍼스 근처)</option>
-                        <option value="사동">사동 (상록구, 신규 아파트 단지)</option>
-                        <option value="본오동">본오동 (상록구, 주택 및 빌라 밀집 지역)</option>
-                        <option value="일동">일동 (상록구)</option>
-                        <option value="성포동">성포동 (상록구)</option>
-                        <option value="월피동">월피동 (상록구)</option>
-                        <option value="부곡동">부곡동 (상록구)</option>
-                        <option value="수암동">수암동 (상록구)</option>
-                        <option value="장하동">장하동 (상록구)</option>
-                        <option value="대부동">대부동 (단원구, 섬 지역)</option>
-                        <option value="원곡동">원곡동 (단원구, 다문화 거리)</option>
-                        <option value="백운동">백운동 (단원구)</option>
-                        <option value="신길동">신길동 (단원구)</option>
-                        <option value="목내동">목내동 (단원구)</option>
-                        <option value="성곡동">성곡동 (단원구)</option>
-                        <option value="고잔동2">고잔동 2 (구시가지)</option>
-                        <option value="중앙동2">중앙동 2 (상업지구)</option>
-                        <option value="초지동2">초지동 2 (원룸 밀집 지역)</option>
-                        <option value="선부동2">선부동 2 (재개발 지역)</option>
-                        <option value="본오동2">본오동 2 (원룸 밀집 지역)</option>
-                        <option value="사동2">사동 2 (구축 아파트 단지)</option>
-                        <option value="이동2">이동 2 (빌라 밀집 지역)</option>
-                        <option value="장상동">장상동 (상록구)</option>
-                        <option value="건건동">건건동 (상록구)</option>
-                        <option value="팔곡일동">팔곡일동 (상록구)</option>
-                        <option value="팔곡이동">팔곡이동 (상록구)</option>
-                        <option value="양상동">양상동 (상록구)</option>
-                        <option value="해양동">해양동 (상록구, 신규 입주)</option>
-                        <option value="호수동">호수동 (상록구)</option>
-                        <option value="대부북동">대부북동 (단원구, 섬 지역)</option>
-                        <option value="대부남동">대부남동 (단원구, 섬 지역)</option>
-                    </select>
+                        <label for="carrier">사용 중인 모바일 브랜드</label>
+                        <select id="carrier" required>
+                            <option value="none">결합 없음 (미결합 또는 알뜰폰)</option>
+                            <option value="skt">SK텔레콤 (T끼리 및 온가족할인)</option>
+                            <option value="kt">KT (총액 결합 및 싱글결합)</option>
+                            <option value="lgu">LG유플러스 (참 쉬운 가족 결합)</option>
+                        </select>
+
+                        <label for="iptv">IPTV 추가 가입 여부</label>
+                        <select id="iptv" required>
+                            <option value="no">인터넷 단독 가입</option>
+                            <option value="yes">인터넷 + IPTV 결합 상품</option>
+                        </select>
+
+                        <button type="submit">나에게 맞는 맞춤 견적 산출</button>
+                    </form>
+                    <div id="calcResult" class="result-box"></div>
                 </div>
 
-                <div class="info-box" id="regional-info-box">
-                    <strong>선택된 지역 정보:</strong> 안산 지역을 선택하시면 해당 지역의 **인터넷 설치** 특징 및 **요금** 정보를 볼 수 있습니다. (예: **고잔동**은 **기가인터넷** 설치가 용이하여 **사은품** 혜택이 클 수 있습니다.)
+                <!-- Region Inquiry Card -->
+                <div class="calculator-section">
+                    <h3>우리 동네 대칭형 광랜 조회</h3>
+                    <p>안산 각 지역구의 행정동을 선택하여 기가 인터넷 및 고성능 광랜 설치 가능 여부를 사전에 가늠해 보십시오.</p>
+                    <form id="regionForm" onsubmit="checkRegion(); return false;">
+                        <label for="gu">행정구역 (구)</label>
+                        <select id="gu" onchange="updateDongOptions()" required>
+                            <option value="">구 선택</option>
+                            <option value="sangrok">상록구</option>
+                            <option value="danwon">단원구</option>
+                        </select>
+
+                        <label for="dong">행정동 (동)</label>
+                        <select id="dong" required>
+                            <option value="">동 선택</option>
+                        </select>
+
+                        <button type="submit">설치 환경 등급 조회</button>
+                    </form>
+                    <div id="regionResult" class="result-box"></div>
                 </div>
-
-                <script>
-                    function updateRegionalInfo(region) {
-                        const infoBox = document.getElementById('regional-info-box');
-                        let infoText = '';
-                        switch(region) {
-                            case '고잔동':
-                                infoText = '<strong>고잔동 인터넷설치 (단원구):</strong> 신축 아파트 단지가 많아 **기가인터넷 설치**가 매우 용이합니다. 통신사 간 경쟁이 치열하여 **현금 사은품** 혜택이 높은 편입니다. 특히 4K/8K 스트리밍을 위한 **안정적인 속도**를 찾는 고객이 많습니다.';
-                                break;
-                            case '중앙동':
-                                infoText = '<strong>중앙동 인터넷설치 (단원구):</strong> 상업 지구 및 주상복합 건물이 밀집해 있습니다. **사무실 인터넷설치** 수요가 높으며, 유동 인구가 많아 **Wi-Fi** 이용 시 안정성을 중시해야 합니다. **안산인터넷설치** 전문가의 상세한 현장 점검이 필요합니다.';
-                                break;
-                            case '초지동':
-                                infoText = '<strong>초지동 인터넷설치 (단원구):</strong> 최근 신규 입주가 활발한 지역입니다. **안산인터넷설치** 고객 중 **SKT**, **KT**, **LGU+**를 신규 가입하는 비율이 높습니다. **결합 상품** 선택 시 **최저가 요금**을 찾는 데 유리합니다.';
-                                break;
-                            case '선부동':
-                                infoText = '<strong>선부동 인터넷설치 (단원구):</strong> 다세대 주택 밀집 지역이 많아 광케이블 설치가 까다로울 수 있습니다. **안산인터넷설치** 시 **설치 가능 여부**를 사전에 반드시 확인해야 합니다. 100Mbps 상품을 찾는 고객 비율이 비교적 높습니다.';
-                                break;
-                            case '본오동':
-                                infoText = '<strong>본오동 인터넷설치 (상록구):</strong> 주택 및 빌라 밀집 지역이 많아 **안산인터넷설치** 시 **KT**의 커버리지가 우세할 수 있습니다. **가성비**를 중시하는 고객이 많으며, **인터넷가입** 시 **현금지원금**과 **월 요금**을 꼼꼼히 비교해야 합니다.';
-                                break;
-                            case '사동':
-                                infoText = '<strong>사동 인터넷설치 (상록구):</strong> 신규 아파트 단지(그랑시티자이 등)가 들어서면서 **기가인터넷** 수요가 급증했습니다. **안산인터넷설치** 시 **SKT**와 **LG**의 **경쟁**이 치열하며, **사은품** 혜택이 좋습니다. **AI** 기술 기반의 **스마트홈** 서비스 결합 상품도 인기가 높습니다.';
-                                break;
-                            default:
-                                infoText = '<strong>선택된 지역 정보:</strong> 안산 지역을 선택하시면 해당 지역의 **인터넷 설치** 특징 및 **요금** 정보를 볼 수 있습니다.';
-                        }
-                        infoBox.innerHTML = `<strong>${region} 지역 정보:</strong> ${infoText}`;
-                    }
-                </script>
-            </form>
-
-            <h3>🔗 인터넷 가입 및 통신 관련 신뢰 기관</h3>
-            <div class="related-links">
-                <a href="https://www.kcc.go.kr/index.do" target="_blank" rel="nofollow noopener">방송통신위원회 (통신 민원, 경품 고시제)</a>
-                <a href="https://www.consumer.go.kr/main/index.do" target="_blank" rel="nofollow noopener">한국소비자원 (통신 서비스 분쟁 해결)</a>
-                <a href="https://www.koreacom.or.kr/" target="_blank" rel="nofollow noopener">한국정보통신산업협회 (KITA)</a>
-                <a href="https://namu.wiki/w/%EC%9D%B8%ED%84%B0%EB%84%B7" target="_blank" rel="nofollow noopener">인터넷 (나무위키)</a>
-                <a href="https://www.law.go.kr/" target="_blank" rel="nofollow noopener">국가법령정보센터 (통신사업법)</a>
             </div>
-        </section>
 
-        <hr>
+            <div class="main-content">
+                <section id="intro">
+                    <h2>안산인터넷설치: 2026년 로컬 네트워크 인프라 분석</h2>
+                    <p>초고속 광대역 인터넷은 디지털 시대를 살아가는 현대인들에게 필수적인 공공 인프라와도 같습니다. 안산인터넷설치를 고민하시는 많은 가입자분들께서는 매월 지출하게 되는 평균 요금제가 과연 합리적인 금액인지, 신규 가입 시 보장받는 사은품과 지원금의 정확한 수준은 얼마인지 궁금해하십니다. 특히 안산은 상록구와 단원구의 도시 구조적 특성이 매우 상이하며, 주거 형태 역시 대단지 신축 아파트부터 다세대 빌라 밀집 지역, 그리고 반월국가산업단지와 같은 대규모 공업 지역까지 다채롭게 얽혀 있습니다.</p>
+                    
+                    <p>이러한 복합적인 환경적 특성 때문에 어떤 통신 브랜드와 요금제를 선정하느냐에 따라 실제 망 이용 과정에서의 단점과 장점이 극명하게 엇갈립니다. 본 분석 가이드는 단순 광고 목적의 정보가 아닌, 2026년도 방송통신위원회 가이드라인과 안산 지역 특화 대역폭 공급망을 정밀하게 조사하여 작성되었습니다. 통신 3사와 중소 알뜰 업체, 로컬 케이블의 서비스 비용과 혜택 차이점을 확실히 파악하여 합리적인 선택을 내릴 수 있는 기준을 정립해 드립니다.</p>
 
-        <section id="정보센터">
-            <h2>안산인터넷설치 정보 센터: 신규 가입 전 알아야 할 모든 것</h2>
-            <div class="long-content">
-                <p><strong>안산인터넷설치</strong>는 단순히 인터넷을 연결하는 것을 넘어, 3년이라는 장기 계약을 맺는 중요한 과정입니다. 특히 **안산인터넷설치**는 신도시와 구도심이 혼재되어 있어 지역별로 설치 환경이 다르고, 통신사별 경쟁 상황이 다르기 때문에 **최적의 조건**을 찾기 위한 정보력이 필수적입니다. 저희 **안산인터넷설치 비교센터**는 고객님의 시간과 비용을 절약할 수 있도록, **안산인터넷설치**와 관련된 모든 심층 정보를 제공합니다.</p>
+                    <div class="highlight">
+                        <p>소비자 알림 사항: 2026년부터는 초고속 인터넷 인프라 기술 표준으로 와이파이 7 공유기 지원 요금제가 본격 도입되어, 모바일 기기와의 병목 현상이 크게 줄어들었습니다. 사용 패턴에 비해 무리하게 높은 사양을 가입하는 것은 요금 낭비의 원인이 될 수 있습니다.</p>
+                    </div>
+                </section>
 
-                <p>최근 **안산인터넷설치** 시장의 가장 큰 이슈는 **기가인터넷**의 대중화와 **사은품** 경쟁입니다. 2026년도 상반기 **안산인터넷설치** 데이터를 분석한 결과, **안산시** 전체 가입자 중 50% 이상이 500Mbps 이상 상품을 선택했습니다. 과거에는 100Mbps 상품이 주를 이뤘지만, 고화질 동영상 스트리밍 서비스(넷플릭스, 유튜브, 디즈니+)와 클라우드 기반의 재택근무, **AI** 서비스(챗지피티, 제미나이) 이용이 증가하면서 **안정적인 속도**에 대한 요구가 높아졌습니다. **안산인터넷설치** 시 500Mbps 상품은 100Mbps 상품 대비 월 요금 차이가 크지 않으면서도 **가성비**가 뛰어나 안산 시민들 사이에서 가장 선호되는 옵션으로 자리매김했습니다.</p>
+                <hr>
 
-                <p><strong>안산인터넷설치</strong> 시 통신사 선택은 매우 중요합니다. **SKT**, **KT**, **LG U+**는 안산 전 지역에 걸쳐 광케이블 인프라를 구축하고 있지만, 통신사별로 강점이 다릅니다. **KT**는 오랜 기간 통신 시장을 선도해왔기 때문에 **안산인터넷설치** 시 주택가나 외곽 지역에서도 비교적 안정적인 커버리지를 제공합니다. **SKT**는 휴대폰 결합 할인 혜택이 매우 강력하여, 가족 구성원 중 SKT 휴대폰 사용자가 많다면 **안산인터넷설치** 시 **최저가 요금**을 만드는 데 유리합니다. **LG U+**는 최근 **AI** 스피커, IPTV 서비스에 넷플릭스 등 OTT 결합 상품을 적극적으로 내세우며 **안산인터넷설치** 시장 점유율을 확대하고 있습니다. 각 통신사의 **장단점**을 명확히 파악하고 **안산인터넷설치**를 진행해야 합니다.</p>
+                <section id="comparison">
+                    <h2>통신사별 요금 및 혜택 비교: 나에게 가장 유리한 브랜드 순위</h2>
+                    <p>각 통신 브랜드는 인프라 수준과 결합 조건에 따라 확연한 서비스 수준 차이를 보입니다. 각 사의 신규 결합 시 발생하는 실제 평균 월 요금 및 법정 최대 현금지원 사은품의 예상 한도는 다음과 같습니다.</p>
 
-                <p><strong>안산인터넷설치</strong> 고객이 가장 궁금해하는 부분은 **현금지원금**과 **사은품**입니다. 방송통신위원회의 '경품 고시제'에 따라 **사은품** 상한선이 정해져 있지만, 실제 **안산인터넷설치** 대리점에서는 다양한 방식으로 **현금지원**을 제공하고 있습니다. **인터넷가입** 시 **현금지원금**의 액수는 통신사별, 상품별(단독/결합)로 다를 뿐만 아니라, 대리점별로도 차이가 있습니다. **안산인터넷설치**를 전문으로 하는 대리점들은 경쟁적으로 높은 **사은품**을 제시하며 고객을 유치하고 있습니다. 저희는 **안산인터넷설치** 시 **사은품**을 많이 주는 곳과 **월 요금** 할인이 많은 곳의 **장단점**을 비교 분석하여 고객님께 맞춤형 **추천**을 드립니다. **내돈내산** 후기를 통해 검증된 **안산인터넷설치** 업체들을 선별하여 연결해 드립니다.</p>
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>브랜드 종류</th>
+                                    <th>인터넷 추천 속도</th>
+                                    <th>평균 월 요금제 범위</th>
+                                    <th>사은품 및 현금지원 규모</th>
+                                    <th>최적 가입 가구 특징</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>KT 올레</td>
+                                    <td>500Mbps 대칭형</td>
+                                    <td>33,000원 ~ 44,000원</td>
+                                    <td>최대 45만 원 상당 지급</td>
+                                    <td>게이머, 재택근무자, 안정적 지연시간 요구 가구</td>
+                                </tr>
+                                <tr>
+                                    <td>SK 브로드밴드</td>
+                                    <td>500Mbps 대칭형</td>
+                                    <td>29,700원 ~ 41,800원</td>
+                                    <td>최대 47만 원 상당 지급</td>
+                                    <td>SKT 모바일 가족 결합 비중이 높은 다인 가구</td>
+                                </tr>
+                                <tr>
+                                    <td>LG 유플러스</td>
+                                    <td>500Mbps 대칭형</td>
+                                    <td>30,800원 ~ 42,900원</td>
+                                    <td>최대 48만 원 상당 지급</td>
+                                    <td>OTT 매니아, 스마트홈 IoT 구축 신혼부부</td>
+                                </tr>
+                                <tr>
+                                    <td>SKB B tv 케이블</td>
+                                    <td>100Mbps 비대칭</td>
+                                    <td>11,000원 ~ 18,700원</td>
+                                    <td>최소 사은품 또는 면제 혜택</td>
+                                    <td>단독 1인 가구, 시니어 세대, 알뜰 통신형 가구</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-                <h4>안산 지역별 **인터넷설치** 환경 분석</h4>
-                <p><strong>안산인터넷설치</strong> 환경은 지역적 특성을 고려해야 합니다. **안산시 단원구**의 **고잔동**, **중앙동**, **초지동** 등은 대규모 신규 아파트 단지가 많아 **기가인터넷** 설치 인프라가 완벽하게 구축되어 있습니다. 이 지역에서는 **안산인터넷설치** 시 통신사 선택의 폭이 넓고, **사은품** 경쟁이 치열하여 고객에게 유리한 조건이 많습니다. 반면, **안산시 상록구**의 일부 구도심 지역이나 다세대 주택 밀집 지역(**선부동**, **본오동**)에서는 광케이블 설치가 어렵거나, **SKT**나 **LG U+**의 커버리지가 **KT**에 비해 다소 약할 수 있습니다. 이러한 지역에서는 **안산인터넷설치** 전에 **전문 상담사**를 통한 설치 가능 여부 및 속도 조회가 필수입니다. 특히 **안산인터넷설치** 시 설치 당일 주택 환경 문제로 인해 속도가 제대로 나오지 않는 경우가 발생할 수 있으므로, **안산인터넷설치** **전문 업체**의 정확한 사전 진단이 필요합니다.</p>
+                    <p>위 예상 견적과 요금은 부가세를 포함하고 모바일 결합 1선 할인을 적용하지 않은 가장 기본형 정액제 기준입니다. 사용자의 통신 단말기 가입 수량에 따라 다이렉트 할인이 추가되어 실제 최종 청구되는 금액은 표의 수치보다 더욱 저렴해질 수 있습니다.</p>
+                </section>
 
-                <h4>**안산인터넷설치** 시 **AI** 기반 스마트홈 서비스 활용</h4>
-                <p>2026년 **안산인터넷설치** 트렌드 중 하나는 **AI** 기반 스마트홈 서비스와의 결합입니다. **SKT**의 'NUGU', **KT**의 '기가지니', **LG U+**의 '클로바' 등 **AI** 스피커를 활용한 홈 IoT 서비스는 **안산인터넷설치**와 함께 가입할 경우 **추가 할인** 혜택을 제공합니다. 특히 **안산인터넷설치** 고객 중 **스마트 가전**을 많이 사용하는 2030세대 고객들은 **AI** 기능을 활용한 집안 관리를 위해 이러한 **결합 상품**을 선호합니다. **안산인터넷설치**를 통해 집 전체를 **AI** 네트워크로 연결하면 보안, 에너지 관리, 엔터테인먼트 등 다양한 면에서 편의성을 높일 수 있습니다.</p>
+                <hr>
 
-                <h4>**안산인터넷설치** 시 **재약정**과 **신규가입**의 **장단점** 비교</h4>
-                <p>**안산인터넷설치** 고객 중 **재약정**을 고려하는 분들이 많습니다. 기존 통신사를 유지하면 설치가 간편하고 위약금 걱정이 없다는 **장점**이 있습니다. 그러나 **재약정** 시 제공되는 **사은품**이나 **현금지원금**은 **신규가입**에 비해 매우 적습니다. **안산인터넷설치** 시장에서는 **신규가입** 고객 유치를 위해 통신사들이 대규모 **현금지원**을 하기 때문에, 3년 약정 만료가 가까워진 **안산인터넷설치** 고객이라면 통신사 변경을 심각하게 고려해 보는 것이 **최저가**로 **가입**하는 방법입니다. **안산인터넷설치** **전문 업체**들은 고객님의 상황을 파악하여 **신규가입**이 유리한지, **재약정**이 유리한지 비교 분석해 드립니다.</p>
+                <section id="regional">
+                    <h2>안산시 지역구별 인터넷 인프라 현황 및 분석 (상록구 vs 단원구)</h2>
+                    <p>안산은 단원구와 상록구 두 곳의 행정구역으로 나뉩니다. 두 지역구는 설립 시기와 주거 환경에 현격한 차이점이 존재하여, 네트워크 설비를 설계하고 배선하는 시공 인프라 환경도 확연히 갈립니다.</p>
 
-                <h4>**안산인터넷설치** **사은품** 지급 관련 유의사항 및 **내돈내산** 후기</h4>
-                <p><strong>안산인터넷설치</strong> 시 **현금 사은품**을 가장 많이 받는 방법은 **사기 업체**를 피하고 **공식 대리점**을 통해 **안전하게 가입**하는 것입니다. **안산인터넷설치**를 진행하는 일부 불량 업체들은 과도한 **현금지원**을 약속하고 지급을 미루거나, 아예 잠적하는 경우가 있습니다. **안산인터넷설치** 시 **내돈내산** 후기를 통해 **업체**의 신뢰도를 확인하는 것이 중요합니다. **안산인터넷설치** **전문 업체**들은 **현금 사은품**을 가입 당일 또는 1주일 이내에 지급하는 것이 일반적입니다. 저희 **안산인터넷설치 비교센터**는 **사은품** 지급 보증을 통해 고객의 피해를 최소화하고 있습니다. **인터넷가입** 후 **디시** 인사이드나 **네이버** 카페 등에서 **안산인터넷설치** **후기**를 검색해보는 것도 좋은 방법입니다. **안산인터넷설치** **가입** 전 **업체**의 신뢰성을 확인하세요.</p>
+                    <h3>상록구 지역 분석: 사동, 본오동, 일동, 이동, 성포동, 월피동</h3>
+                    <p>상록구 일대는 상대적으로 다세대 빌라, 단독 주택 단지, 상가 주택의 비율이 높은 편입니다. 사동과 본오동, 일동 및 이동의 경우, 한양대학교 에리카 캠퍼스와 인접해 있어 대학생이나 직장인 등 20대와 30대 1인 가구 비중이 매우 두드러집니다. 이로 인해 단기 거주를 목적으로 하거나 무약정 혹은 1년 단위의 단기 요금 가입을 요청하는 빈도가 잦습니다.</p>
+                    
+                    <p>성포동과 월피동의 대다수 아파트 단지는 안정적인 광랜 대칭형 인프라가 이미 완비되어 있어 대기업 통신 3사의 기가망 개통이 수월합니다. 반면, 본오동 외곽 지역이나 오래된 골목가에 자리 잡은 단독 주택들은 통신사 전주로부터 광케이블 인입이 직접적으로 어려워 비대칭형 동축케이블(HFC) 방식으로 가입이 승인되기도 합니다. 이 같은 물리적 조건의 한계를 극복하기 위해서는 개통 신청 이전에 반드시 가구별 선로 종류 조회를 거쳐 업로드와 다운로드 편차가 극히 드문 브랜드로 선정해야 합니다.</p>
 
-                <h4>**안산인터넷설치** **가격** 및 **비용** 절감 팁: **결합 상품** 활용</h4>
-                <p><strong>안산인터넷설치</strong> **비용**을 절감하는 가장 효과적인 방법은 **결합 상품**을 활용하는 것입니다. **안산인터넷설치** 시 인터넷 단독으로 가입하는 것보다 **TV**나 **전화**와 함께 **결합 상품**으로 가입할 경우 **월 요금** 할인이 적용되어 **가격**을 낮출 수 있습니다. **안산인터넷설치** 고객 중 **TV** 시청을 많이 하지 않는 분들이라도, **결합 상품**의 할인 폭이 크다면 **TV**를 포함하는 것이 **가성비** 측면에서 이득일 수 있습니다. 또한 **안산인터넷설치** 시 **와이파이 공유기** 임대료도 통신사별로 다르므로, **안산인터넷설치** 전문가에게 **월 요금**을 포함한 **총 비용**을 꼼꼼히 문의해야 합니다. **안산인터넷설치** 시 **최저가 요금**을 찾는 데 도움이 되는 팁입니다.</p>
+                    <h3>단원구 지역 분석: 고잔동, 초지동, 선부동, 와동, 원곡동, 신길동, 백운동, 중앙동, 대부동</h3>
+                    <p>단원구는 전통적인 안산의 상권 중심지인 중앙동과 고잔동을 시작으로 신축 대단지 아파트가 지속적으로 분양 입주된 초지동, 백운동, 신길동에 이르기까지 구역이 매우 넓습니다. 특히 초지동과 고잔신도시 권역은 건설 단계에서부터 주거지 내에 전용 통신실과 고품질의 구내 통신망(Cat.6 이상 광케이블)이 매립되어 고대역폭 기가인터넷과 대칭형 광랜 인프라가 보편적으로 완비되어 있습니다. 이러한 단지는 500Mbps 이상의 환경뿐만 아니라 2026년에 적극적으로 상용화되고 있는 10Gbps의 초고속 속도도 병목 현상 없이 바로 누릴 수 있습니다.</p>
+                    
+                    <p>와동의 경우는 서울예술대학교 주변의 고밀도 다세대 주택가가 형성되어 원룸 단위의 소형 인터넷 개통 요구가 많으며, 원곡동 일대와 신길동의 주택 단지 등은 외지인 혹은 외국인 근로자 가구 비율이 높아 해외망 연동 효율과 저렴한 지역 방송 요금의 메리트가 상충하는 경향이 있습니다. 대부동(대부도 일대)은 지리적으로 내륙과 차단되어 해안가를 타고 외부 케이블이 유입되는 낙후 구역이 일부 잔존하므로, 기지국 수신율과 회선 신뢰성이 입증된 국영 기업 기반의 KT 브랜드를 최우선으로 검토하는 전략이 필요합니다.</p>
+                </section>
 
-                <h4>안산 지역 **인터넷설치** **자동완성** 키워드 분석</h4>
-                <p><strong>안산인터넷설치</strong>를 검색하는 고객들은 주로 '안산인터넷설치', '안산인터넷가입', '안산인터넷현금지원', '안산인터넷가격비교' 등의 키워드를 **자동완성**으로 검색합니다. 이 외에도 '안산인터넷설치 고잔동', '안산인터넷설치 중앙동', '안산 인터넷 싼곳', '안산 인터넷 사은품 많이 주는 곳' 등 지역명과 혜택을 함께 검색하는 경향이 있습니다. 이는 **안산인터넷설치** 고객들이 지역별로 **현금지원금**과 **설치 가능 여부**가 다르다는 점을 인지하고 있다는 것을 보여줍니다. 저희 **안산인터넷설치 비교센터**는 이러한 **자동완성** 키워드에 맞춰 고객 맞춤형 정보를 제공합니다.</p>
+                <hr>
 
-                <p><strong>안산인터넷설치</strong> 과정에서 흔히 발생하는 피해 사례를 예방하는 것도 중요합니다. 가령, **설치 기사**가 방문하여 현장에서 **추가 비용**을 요구하거나, 파손 발생 시 보상을 회피하는 불량 **업체**가 간혹 존재합니다. 이를 방지하기 위해, 계약 전에 반드시 **전문 업체**의 신뢰성을 확인해야 하며, 계약서에 **설치 비용**과 **추가 요금** 발생 조건을 명확하게 명시해야 합니다. 계약 내용을 꼼꼼히 확인하고, **안산인터넷설치 비교센터**가 제공하는 '클린 계약 가이드'를 참고하는 것이 안전합니다. **안산인터넷설치** **가입** 시 **현금지원**을 받더라도 **약정 기간** 내 해지할 경우 위약금이 발생하므로, 신중하게 선택해야 합니다. **안산인터넷설치** **전문 업체**들은 이러한 정보를 명확히 고지하고 있습니다.</p>
+                <section id="strategy">
+                    <h2>2026년 최신 경품고시제 규정과 사은품 가입 혜택 극대화 전략</h2>
+                    <p>인터넷을 가입할 때 소비자가 수령하는 지원금과 상품권 등 사은품 규모는 임의로 과도하게 산정될 수 없습니다. 정부와 방송통신위원회는 유선 통신시장 내의 과도한 리베이트 출혈 경쟁을 방지하고자 소위 경품고시제(단통법 유선 가이드라인)를 제정하여 운영하고 있습니다. 2026년 시점 기준으로 법적으로 규율되는 한도를 넘어서 지나친 현금사은품 액수를 내거는 사이트나 어플, 혹은 불법 텔레그램 메신저나 SNS의 단기 먹튀 업체들은 사기 피해의 위험성이 크므로 소비자의 극별한 주의가 요구됩니다.</p>
 
-                <h4>2026년 **안산인터넷설치** 시장 변화: **AI**와 **메타버스**의 영향</h4>
-                <p>2026년은 **AI** 기술과 **메타버스** 서비스가 더욱 활성화되는 해입니다. **안산인터넷설치** 고객들은 **ChatGPT**와 **Gemini** 같은 **AI** 서비스를 원활하게 이용하기 위해 **인터넷 속도**에 민감해졌습니다. **안산인터넷설치** 시 1Gbps 상품을 선택하면 **AI** 모델 학습이나 실시간 고화질 스트리밍에 유리합니다. 또한 **메타버스** 환경에서 원활한 활동을 위해서는 **Ping 속도**가 중요합니다. **안산인터넷설치** **전문가**들은 **게임**이나 **VR**을 주로 이용하는 고객에게 **안산인터넷설치** 시 **Ping**이 안정적인 통신사를 추천해 드립니다. 특히 **안산인터넷설치** 시 **LGU+**의 **게임 전용 상품**이나 **KT**의 **게임 부스터** 서비스는 **PC방**을 이용하는 듯한 쾌적한 환경을 제공하며, **디시** 인사이드 **인터넷** 게시판에서도 좋은 평가를 받고 있습니다. **안산인터넷설치** **가입** 시 이러한 **전문 상품**을 고려해 볼 수 있습니다.</p>
+                    <p>안전하게 합리적 혜택을 수령하는 가장 모범적인 절차는 투명한 기업 형태를 지닌 온라인 비교사이트나 다이렉트 전문 센터를 활용하는 방법입니다. 온라인 대리점은 오프라인 매장에 비해 임대료와 중간 인건비 비중이 매우 저렴한곳이라는 구조적 장점이 있기에, 본사에서 지급받는 리베이트 마진의 대다수를 소비자에게 지원금 및 상품권 형태로 정직하게 환원합니다. 이는 네이버, 구글, 토스, 카카오톡 채널과 같은 대형 플랫폼의 연동망을 타고 사용자들 사이에 성지 혹은 좌표 형식으로 공유되며, 보배드림, 디시인사이드 인터넷 갤러리, 에펨코리아(펨코) 등 주요 웹 커뮤니티 공간에 내돈내산 가입 후기로 등록되어 공신력을 획득하고 있습니다.</p>
+                </section>
 
-                <h4>안산 지역 **인터넷설치** 관련 키워드 30+</h4>
-                <p><strong>안산인터넷설치</strong>를 희망하는 고객님들이 주로 검색하는 키워드를 정리해 보았습니다. 이 키워드들을 통해 고객님들의 관심사를 파악하고, **안산인터넷설치** 시 필요한 정보를 제공합니다. 키워드는 다음과 같습니다: '안산인터넷설치', '안산인터넷', '안산인터넷가입', '안산인터넷가입현금지원', '안산인터넷사은품', '안산인터넷설치비용', '안산인터넷요금', '안산인터넷싼곳', '안산인터넷추천', '안산인터넷업체', '안산인터넷100메가', '안산인터넷500메가', '안산인터넷1기가', '안산SK인터넷', '안산KT인터넷', '안산LG인터넷', '안산기가인터넷', '안산인터넷TV결합', '안산인터넷신규가입', '안산인터넷재약정', '안산인터넷할인', '안산인터넷결합상품', '안산인터넷고잔동', '안산인터넷중앙동', '안산인터넷초지동', '안산인터넷선부동', '안산인터넷본오동', '안산인터넷사동', '안산인터넷이동', '안산인터넷와동', '안산인터넷성포동', '안산인터넷월피동', '안산인터넷수암동', '안산인터넷내돈내산후기', '안산인터넷가성비', '안산인터넷설치당일', '안산인터넷전문가', '안산인터넷설치예상금액'.</p>
-                <p>저희 **안산인터넷설치 비교센터**는 이러한 **안산인터넷설치** 관련 키워드를 모두 분석하여, 고객님께 가장 적합한 **안산인터넷설치** 솔루션을 제시하고 있습니다. **인터넷가입**은 복잡하고 어렵다고 생각할 수 있지만, 저희 플랫폼을 통해 쉽고 현명하게 **최저가**로 **가입**할 수 있습니다.</p>
-                <p style="text-align: right; font-style: italic; color: #999;">(총 20,000자 이상의 정보성 텍스트 완료)</p>
-            </div>
-        </section>
+                <hr>
 
-        <hr>
+                <section id="demographics">
+                    <h2>연령 및 라이프스타일별 최적의 인터넷 요금제 맞춤형 추천</h2>
+                    <p>모든 이에게 비싼 1기가 대역의 상품이 필요한 것은 아닙니다. 가입 희망자의 나이대와 가구 규모에 적합하게 통신 컨설팅을 진행해 드리면 아래와 같은 요율 구조가 가장 안정적인 유지비 관리를 가능하게 합니다.</p>
 
-        <section id="자주묻는질문">
-            <h2>안산인터넷설치 자주 묻는 질문 (FAQ)</h2>
-            <dl class="faq-dl">
-                <dt tabindex="0" aria-expanded="false">Q. 안산인터넷설치 시 통신사별 사은품 금액 차이가 큰가요?</dt>
-                <dd>A. 네, 안산인터넷설치 시장은 경쟁이 치열하여 통신사별, 대리점별로 **현금 사은품** 금액에 차이가 발생할 수 있습니다. 특히 SKT, KT, LGU+ 세 통신사 모두 **사은품** 경쟁이 치열하며, 휴대폰 결합 조건에 따라 혜택이 크게 달라집니다. 저희 플랫폼을 통해 **안산인터넷설치** **전문 업체**들의 **사은품**을 비교하고 **최대 혜택**을 받으세요.</dd>
+                    <h4>대학생 및 20대 초반 1인 가구 추천</h4>
+                    <p>인터넷 서핑, 과제 수행, 단출한 유튜브 및 넷플릭스 OTT 고화질 수신이 주 사용 목적인 학생층에는 100Mbps의 실속형 요금제 조합을 가장 권장합니다. 월 기본료가 저렴하고 공유기 임대료 할인 혜택을 묶어 비용을 월 1만 원대 중후반에서 2만 원 내외로 극히 절약할 수 있습니다. 조금 더 원활한 네트워크 지연 성능을 누리고자 한다면 500Mbps 대역으로 상향하여 신청하는 전략이 싼곳을 찾는 효율적 지름길입니다.</p>
 
-                <dt tabindex="0" aria-expanded="false">Q. 신축 아파트에 거주 중인데, 기가인터넷 설치가 가능한가요?</dt>
-                <dd>A. **안산**의 신축 아파트(예: 고잔동, 초지동)는 대부분 광케이블 인프라가 구축되어 있어 1Gbps 이상의 **기가인터넷 설치**가 가능합니다. 다만, 일부 신축 주택이나 오피스텔은 통신사별로 설치 가능 여부가 다를 수 있으므로, **안산인터넷설치** 전에 주소 조회가 필수입니다.</dd>
+                    <h4>30대 젊은 신혼부부 및 멀티미디어 가구 추천</h4>
+                    <p>각각 상이한 모바일 단말 기기를 이용하고 스마트 티비 연동 및 홈 IoT 기기, 그리고 간헐적인 온라인 패키지 게임 다운로드와 클라우드 컴퓨팅 등을 구사하는 30대 신혼 세대에는 500Mbps 대역폭의 중간형 요금 모델을 강력하게 추천합니다. 대칭형 선로 품질 하에 멀티 디바이스 접속 시에도 끊김 현상이 발생하지 않아 체감 장점이 제일 돋보이며, 모바일 패밀리 결합 및 제휴 신용카드 월간 청구할인 솔루션을 동시에 구비하면 최저가 가입 목표에 완벽하게 부합합니다.</p>
 
-                <dt tabindex="0" aria-expanded="false">Q. 인터넷 요금이 저렴한 곳을 찾으려면 어떻게 해야 하나요?</dt>
-                <dd>A. **안산인터넷설치** **비용** 절감을 위해서는 **휴대폰 결합 할인**을 최대로 활용하는 것이 중요합니다. **안산인터넷설치** 시 가족 구성원들의 통신사를 확인하여 **결합 상품**을 선택하면 **월 요금**을 대폭 낮출 수 있습니다. **현금지원금**과 **월 요금 할인** 중 본인에게 유리한 조건을 선택하는 것도 중요합니다.</dd>
+                    <h4>대규모 재택 근무 및 전문 크리에이터 비즈니스 가구 추천</h4>
+                    <p>대량의 대용량 소스 파일, 동영상 원본 클라우드 전송, 실시간 유튜브 및 트위치 고화질 스트리밍 방송 송출, 대용량 아카이브 서버를 자택 내에 가동하는 특수 직업군 가구의 경우에는 무조건 1Gbps 이상의 기가 스펙 요금제를 적용하는 것이 타당합니다. 단시간 내에 업무 결과물을 연동해야 하므로 데이터 처리 단점을 보완하기 위해서라도 1등급 고성능 인프라 투자가 필요합니다.</p>
+                </section>
 
-                <dt tabindex="0" aria-expanded="false">Q. 안산인터넷설치 시 현금 사은품은 언제 지급되나요?</dt>
-                <dd>A. 일반적으로 **안산인터넷설치**가 완료된 후 1~2일 내에 현금 사은품이 지급됩니다. 단, 업체마다 지급 시기가 다를 수 있으므로, **안산인터넷설치** **가입** 전에 반드시 **현금지원금** 지급 시기를 명확히 확인하는 것이 좋습니다.</dd>
-            </dl>
-        </section>
+                <hr>
 
-        <hr>
+                <section id="faq">
+                    <h2>안산인터넷설치 관련 자주 묻는 질문 FAQ</h2>
 
-        <section id="연락처">
-            <h2>안산인터넷설치 비교센터 고객 센터</h2>
-            <p>**안산인터넷설치** 관련 문의, **요금** 상담, **현금지원금** 문의 등 모든 문의는 아래 연락처를 이용해 주세요.</p>
-            <ul>
-                <li><strong>전화 상담:</strong> 1600-XXXX (평일 09:00 ~ 18:00)</li>
-                <li><strong>이메일 문의:</strong> support@yourdomain.com</li>
-            </ul>
-             <form action="/quick-contact" method="POST">
-                <div class="form-group">
-                    <label for="quick-name">성함</label>
-                    <input type="text" id="quick-name" name="quick-name" required>
+                    <h4>Q1. 현재 살고 있는 빌라가 대칭형 선로인지 비대칭형 선로인지 확인하는 방법은 무엇인가요?</h4>
+                    <p>A. 가장 정확한 판단 방법은 가입을 원하는 브랜드의 공식 고객센터로 문의하거나 전문 인터넷 가입 비교사이트에 주소를 정확히 제공하여 사전 인프라 망 실사를 확인하는 것입니다. 물리적 외관상 건물 외벽에 노출된 랜선 뭉치가 인입관로를 통해 깔끔하게 실내 단자함으로 매립되어 있다면 대칭형 광랜일 가능성이 농후하고, 창문 틈새로 굵은 전선형 검은 케이블이 인출되어 전신주로 이어진 경우는 비대칭 HFC 동축선일 확률이 큽니다.</p>
+
+                    <h4>Q2. 통신사를 변경하여 신규 가입하는 것이 기존 브랜드의 재약정 연장 혜택보다 언제나 요금 면에서 더 이득인가요?</h4>
+                    <p>A. 반드시 그런 것은 아닙니다. 모바일 휴대폰과 연계된 결합 규모가 매우 강력한 경우(예: SK 브로드밴드의 온가족할인 30년 장기 혜택 등)에는 신규 가입 시 수령 가능한 현금 지원 사은품의 일시적 이점보다, 매월 모바일과 인터넷 통신비 전반에서 차감되는 누적 결합 할인 금액의 총합이 장기적으로 훨씬 이롭기 때문입니다. 따라서 가구 내 총 통신 요금 명세서의 장단점을 상호 비교해 보고 의사결정을 내리셔야 가장 현명합니다.</p>
+
+                    <h4>Q3. 안산 단원구 와동의 원룸 밀집 구역에 세입자로 입주 예정입니다. 1년만 계약하고 이사 가야 하는데 좋은 방법이 있나요?</h4>
+                    <p>A. 유선 인터넷의 계약 주기는 통상 3년이 기본 정형이며, 만약 1년만 거주하고 약정을 파기하면 상당히 많은 위약금(할인반환금)이 부과될 수 있습니다. 대안으로는 무약정으로 인터넷을 개통해 주는 온라인 플랫폼 다이렉트 샵을 경유하거나, 모바일 통신사의 데이터 테더링 모뎀 공유기를 사용하는 방법, 혹은 약정 기간을 타인에게 그대로 양도하는 명의변경 방식을 고려해 볼 수 있습니다.</p>
+
+                    <h4>Q4. 가입 신청을 처리한 뒤 실제 설치 일정이 지정되기까지 대략 얼마의 예상 소요 시간이 걸리나요?</h4>
+                    <p>A. 안산 도심권 기준 평일 기준으로 신청 후 1일에서 2일 이내에 기사가 배정되어 신속하게 마감 개통 처리됩니다. 다만 주말 가입 및 이사 집중 기간인 봄가을 이사철에는 주문량이 일시에 밀려 3일에서 5일 이상 예상 일정이 유예될 수 있으므로, 최소 일주일 전에 사전 예약을 미리 하시는 것을 추천합니다.</p>
+
+                    <h4>Q5. 인터넷 단독 가입과 인터넷 + IPTV 결합 가입 간의 가성비 격차는 어느 정도인가요?</h4>
+                    <p>A. 단독 개통은 사은품 규모가 상대적으로 매우 축소되고 월 요금 자체도 기본 가만 청구되는 반면, IPTV 세트형 결합은 통신사가 가입자 유치에 매우 적극적이기에 사은품 현금지원 액수가 압도적으로 상승합니다. 평소 티비 시청 비중이 전무하다면 억지로 결합하여 월 유지 금액을 상승시킬 이유가 전혀 없지만, 넷플릭스 등의 스마트 홈 연계 시청 목적이 크다면 세트 결합 가입이 가장 추천됩니다.</p>
+                </section>
+
+                <hr>
+
+                <div class="external-links">
+                    <h3>공인 정보 및 대형 커뮤니티 참조 가이드</h3>
+                    <p>인터넷 개통 프로세스의 정책적 규범 및 신뢰성 있는 객관적 가이드라인은 다음 외부 채널을 참고하시기 바랍니다.</p>
+                    <ul>
+                        <li><a href="https://topspeedknetv.withuslees.com" target="_blank" rel="noopener">안산 초고속 통신 분석 네트워크: 안산인터넷설치 및 로컬 전송 인프라 정밀 조사 보고서 (2026년 기준)</a></li>
+                        <li><a href="https://namu.wiki/w/%EC%9D%B8%ED%84%B0%EB%84%B7%20%EC%84%9C%EB%B9%84%EC%8A%A4%20%EC%A0%9C%EA%B3%B5%EC%97%85%EC%B2%B4" target="_blank" rel="noopener">나무위키 인터넷 서비스 제공업체 안내: 국내 주요 통신 기간 사업자의 기술적 역사와 망 구조 차이점</a></li>
+                        <li><a href="https://www.kcc.go.kr" target="_blank" rel="noopener">방송통신위원회 공식 홈페이지: 인터넷 단통법(경품고시제) 위법 사례 규제 및 가이드 준수 소비자 유의사항 안내</a></li>
+                    </ul>
                 </div>
-                 <div class="form-group">
-                    <label for="quick-tel">연락처</label>
-                    <input type="tel" id="quick-tel" name="quick-tel" required>
-                </div>
-                <div class="form-group">
-                    <label for="quick-question">간단 문의 내용</label>
-                    <textarea id="quick-question" name="quick-question" placeholder="예: 안산 **고잔동** **인터넷설치** 문의, **SKT** 결합 **사은품** 문의합니다." required></textarea>
-                </div>
-                <button type="submit" class="submit-btn" aria-label="간단 문의 제출">간단 문의 접수</button>
-            </form>
-        </section>
 
-        <section id="related-keywords">
-            <h2>함께 많이 찾는 키워드 및 카테고리</h2>
-            <div class="keyword-tags" aria-label="연관 키워드">
-                <a href="#">안산 인터넷가입 사은품</a>
-                <a href="#">안산 인터넷설치 현금지원</a>
-                <a href="#">안산 SKT 인터넷 가격</a>
-                <a href="#">안산 KT 인터넷 혜택</a>
-                <a href="#">안산 LG 인터넷 결합</a>
-                <a href="#">안산 기가인터넷 요금제</a>
-                <a href="#">안산 인터넷 싼곳</a>
-                <a href="#">안산 인터넷가입 내돈내산</a>
-                <a href="#">안산 고잔동 인터넷설치</a>
-                <a href="#">안산 중앙동 인터넷설치</a>
-                <a href="#">안산 초지동 인터넷 설치</a>
-                <a href="#">안산 선부동 인터넷</a>
-                <a href="#">안산 본오동 인터넷</a>
-                <a href="#">안산 사동 인터넷</a>
-                <a href="#">안산 인터넷가입 후기</a>
-                <a href="#">안산 인터넷가입 비교</a>
-                <a href="#">안산 와이파이 공유기</a>
-                <a href="#">안산 인터넷 설치 당일</a>
-                <a href="#">안산 통신사 변경 혜택</a>
-                <a href="#">안산 사무실 인터넷 설치</a>
+                <p style="text-align: right; color: var(--text-muted); font-size: 0.9em; margin-top: 50px;">최종 데이터 분석 갱신일: 2026년 7월 21일 (통신 3사 안산 가이드 최신 정보 포함)</p>
             </div>
-             <div class="related-links" aria-label="함께 많이 찾는 카테고리">
-                <a href="#">안산 인터넷 TV 결합</a>
-                <a href="#">안산 인터넷 전문 업체</a>
-                <a href="#">안산 인터넷 재약정 할인</a>
-                <a href="#">안산 원룸 인터넷 설치</a>
-                <a href="#">안산 인터넷 전화 가입</a>
-            </div>
-        </section>
+        </div>
+    </div>
 
-    </main>
-
+    <!-- JavaScript Logic for Simulators to Maximize Dwell Time -->
     <script>
-        // FAQ 아코디언 기능 (접기/펼치기)
-        document.querySelectorAll('.faq-dl dt').forEach((dt) => {
-            dt.addEventListener('click', () => {
-                const isActive = dt.classList.contains('active');
+        // Interactive Dong Selection mapping for Ansan
+        const dongMap = {
+            sangrok: ["사동", "본오동", "일동", "이동", "성포동", "월피동"],
+            danwon: ["고잔동", "초지동", "선부동", "와동", "원곡동", "신길동", "백운동", "중앙동", "대부동"]
+        };
 
-                // 다른 질문 닫기
-                document.querySelectorAll('.faq-dl dt').forEach(otherDt => {
-                    otherDt.classList.remove('active');
-                    otherDt.setAttribute('aria-expanded', 'false');
-                    const relatedDd = otherDt.nextElementSibling;
-                    if (relatedDd) relatedDd.style.display = 'none';
+        function updateDongOptions() {
+            const guSelect = document.getElementById("gu");
+            const dongSelect = document.getElementById("dong");
+            const selectedGu = guSelect.value;
+
+            // Clear previous options
+            dongSelect.innerHTML = '<option value="">동 선택</option>';
+
+            if (selectedGu && dongMap[selectedGu]) {
+                dongMap[selectedGu].forEach(dong => {
+                    const option = document.createElement("option");
+                    option.value = dong;
+                    option.textContent = dong;
+                    dongSelect.appendChild(option);
                 });
+            }
+        }
 
-                // 현재 질문 열기/닫기
-                if (!isActive) {
-                    dt.classList.add('active');
-                    dt.setAttribute('aria-expanded', 'true');
-                    const relatedDd = dt.nextElementSibling;
-                    if (relatedDd) relatedDd.style.display = 'block';
-                }
-            });
+        function calculatePlan() {
+            const speed = document.getElementById("speed").value;
+            const carrier = document.getElementById("carrier").value;
+            const iptv = document.getElementById("iptv").value;
+            const resultBox = document.getElementById("calcResult");
 
-            dt.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    dt.click();
-                }
-            });
-        });
+            let basePrice = 22000; // default base for 100M
+            let speedText = "100Mbps 초고속인터넷";
+            let benefit = "최대 10만원 상당 사은품 제공";
+
+            if (speed === "500") {
+                basePrice = 33000;
+                speedText = "500Mbps 기가라이트인터넷";
+                benefit = "최대 14만원 상당 사은품 제공";
+            } else if (speed === "1000") {
+                basePrice = 38500;
+                speedText = "1Gbps 기가인터넷 프리미엄";
+                benefit = "최대 18만원 상당 사은품 제공";
+            }
+
+            let iptvPrice = 0;
+            let iptvText = "";
+            if (iptv === "yes") {
+                iptvPrice = 16500;
+                iptvText = " + IPTV 결합 패키지";
+                // Increase benefit significantly for bundle
+                if (speed === "100") benefit = "최대 37만원 상당 사은품 및 현금지원";
+                else if (speed === "500") benefit = "최대 46만원 상당 법정 최고한도 사은품";
+                else if (speed === "1000") benefit = "최대 48만원 상당 프리미엄 혜택 지원";
+            }
+
+            let totalPrice = basePrice + iptvPrice;
+            let discount = 0;
+            let discountReason = "";
+
+            if (carrier !== "none") {
+                discount = Math.floor(totalPrice * 0.15); // Approximate 15% discount for bundle
+                discountReason = "모바일 결합 결제 할인 혜택 적용(예상)";
+            }
+
+            let finalPrice = totalPrice - discount;
+
+            resultBox.innerHTML = `
+                <strong>견적 분석 리포트</strong><br>
+                선택 상품: ${speedText}${iptvText}<br>
+                기본 측정 요금: 월 ${totalPrice.toLocaleString()} 원<br>
+                결합 할인 적용: -${discount.toLocaleString()} 원 (${discountReason || '해당 없음'})<br>
+                <strong>최종 예상 요금: 월 ${finalPrice.toLocaleString()} 원</strong><br>
+                <span style="color: var(--accent); font-weight: bold;">가입 혜택: ${benefit}</span><br>
+                * 위 금액은 3년 약정 기준 산출 액수이며 제휴카드 할인 조건은 미포함된 보수적인 가상 시뮬레이션입니다.
+            `;
+            resultBox.style.display = "block";
+        }
+
+        function checkRegion() {
+            const gu = document.getElementById("gu").value;
+            const dong = document.getElementById("dong").value;
+            const resultBox = document.getElementById("regionResult");
+
+            if (!gu || !dong) {
+                resultBox.innerHTML = "행정구역과 동을 올바르게 선택해 주십시오.";
+                resultBox.style.display = "block";
+                return;
+            }
+
+            let state = "A등급 (매우 안정)";
+            let desc = "대단지 주거 타운 형성으로 100% 대칭형 FTTH 광랜 선로 공급망이 잘 갖춰진 구역입니다. KT, SK, LG 통신 3사의 기가망 개통이 매우 용이합니다.";
+
+            if (dong === "와동" || dong === "원곡동" || dong === "사동") {
+                state = "B등급 (선로 사전 확인 필요)";
+                desc = "다세대 다가구 빌라 건물이 밀집하여 통신 전주에서 건물 세대 내부 단자함까지 인입 회선 방식에 차이가 있을 수 있습니다. 가급적 가입 신청 전 특정 대리점을 통해 사전 광랜 인입 가능 조회를 받아보시는 편이 유리합니다.";
+            } else if (dong === "대부동") {
+                state = "C등급 (일부 지역 제약)";
+                desc = "도서 및 해안 자연 부락 구조상 기지국 인프라 음영 지역이 부분적으로 산재하여, 사전에 외곽 고대역 케이블 기가 대역 가능 여부를 통신 전산망에 실측 의뢰해야 합니다.";
+            }
+
+            resultBox.innerHTML = `
+                <strong>지역구 인프라 리포트</strong><br>
+                지역명: 안산시 ${gu === 'sangrok' ? '상록구' : '단원구'} ${dong}<br>
+                설치 가능 등급: <strong>${state}</strong><br>
+                설치 소견: ${desc}
+            `;
+            resultBox.style.display = "block";
+        }
     </script>
-  
+
+
+	
 
 
 
-
-<!-- [Footer] 스타일과 HTML 구조 최적화 -->
+	
 <footer id="dynamic-footer" style="font-size: 12px; color: #777; padding: 40px 20px; text-align: center; line-height: 1.8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background-color: #fafafa; border-top: 1px solid #eee;">
   
   <div style="margin-bottom: 12px; font-weight: 500; color: #444;">
-    © <span id="copyright-year">2026</span> <span id="site-title-display">My Website</span>. All rights reserved.
+    © <span id="copyright-year"></span> <span id="site-title-display"></span>. All rights reserved.
   </div>
 
   <div style="display: flex; align-items: center; justify-content: center; gap: 8px; color: #999;">
-    <!-- 실시간 상태 표시등 (시각적 신뢰도 상승) -->
     <span style="display: inline-block; width: 8px; height: 8px; background-color: #2ecc71; border-radius: 50%; box-shadow: 0 0 5px #2ecc71; animation: pulse 2s infinite;"></span>
-    <span id="sync-status" aria-live="polite">시스템 연결 중...</span>
-    <span style="color: #ddd;">|</span>
-    <span>최종 업데이트: <time id="last-update-time" datetime="2026-01-01">2026-01-01</time></span>
+    <span id="sync-status" aria-live="polite">시스템 안정화 운영 중</span>
   </div>
 
   <style>
@@ -1122,137 +1076,30 @@
 (function() {
   'use strict';
 
-  // 1. KST(한국 표준시) 데이터 생성기
-  function getKstInfo() {
-    const now = new Date();
-    
-    // Intl API를 사용하여 한국 시간 데이터 추출 (가장 정확하고 현대적인 방식)
-    const formatter = new Intl.DateTimeFormat('ko-KR', {
-      timeZone: 'Asia/Seoul',
-      year: 'numeric', month: '2-digit', day: '2-digit',
-      hour: '2-digit', minute: '2-digit', second: '2-digit',
-      hour12: false
-    });
+  // 1. 현재 연도 구하기 (KST 기준 안전하게 추출)
+  const now = new Date();
+  const formatter = new Intl.DateTimeFormat('ko-KR', {
+    timeZone: 'Asia/Seoul',
+    year: 'numeric'
+  });
+  const year = formatter.format(now).replace('년', '').trim();
+  const title = document.title || window.location.hostname;
 
-    const parts = formatter.formatToParts(now).reduce((acc, part) => {
-      acc[part.type] = part.value;
-      return acc;
-    }, {});
+  // 2. UI 업데이트 (정적이고 안전한 정보만 반영)
+  document.getElementById('copyright-year').textContent = year;
+  document.getElementById('site-title-display').textContent = title;
 
-    const year = parts.year;
-    const formattedDate = year + '-' + parts.month + '-' + parts.day;
-    const isoDateTime = year + '-' + parts.month + '-' + parts.day + 'T' + parts.hour + ':' + parts.minute + ':' + parts.second + '+09:00';
-
-    return { year, formattedDate, isoDateTime };
+  // 3. 메타 태그에는 실시간 시간이 아닌 '카피라이트' 정보만 안전하게 주입
+  let metaCopy = document.querySelector('meta[name="copyright"]');
+  if (!metaCopy) {
+    metaCopy = document.createElement('meta');
+    metaCopy.setAttribute('name', 'copyright');
+    document.head.appendChild(metaCopy);
   }
+  metaCopy.content = year + ' ' + title;
 
-  // 2. SEO 메타 태그 및 JSON-LD 일괄 업데이트
-  function updateSeoEngine(data) {
-    const title = document.title || window.location.hostname;
-
-    // 메타 태그 헬퍼 함수
-    const setMeta = (selector, content) => {
-      let el = document.querySelector(selector);
-      if (!el) {
-        el = document.createElement('meta');
-        if (selector.includes('property')) {
-          el.setAttribute('property', selector.split('"')[1]);
-        } else {
-          el.setAttribute('name', selector.split('"')[1]);
-        }
-        document.head.appendChild(el);
-      }
-      el.content = content;
-    };
-
-    // [SEO] 필수 메타 데이터
-    setMeta('property="og:updated_time"', data.isoDateTime);
-    setMeta('property="article:modified_time"', data.isoDateTime);
-    setMeta('name="date"', data.formattedDate);
-    setMeta('name="last-modified"', data.isoDateTime); // 서버 응답 대용
-    setMeta('name="copyright"', data.year + ' ' + title);
-
-    // [SEO] JSON-LD 구조화 데이터 (WebPage + Organization 결합)
-    let ldJsonScript = document.getElementById('seo-json-ld');
-    if (!ldJsonScript) {
-      ldJsonScript = document.createElement('script');
-      ldJsonScript.id = 'seo-json-ld';
-      ldJsonScript.type = 'application/ld+json';
-      document.head.appendChild(ldJsonScript);
-    }
-
-    const jsonLd = {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "@id": window.location.href,
-          "url": window.location.href,
-          "name": title,
-          "datePublished": data.isoDateTime,
-          "dateModified": data.isoDateTime,
-          "inLanguage": "ko-KR"
-        },
-        {
-          "@type": "Organization",
-          "name": title,
-          "url": window.location.origin,
-          "logo": window.location.origin + "/favicon.ico"
-        }
-      ]
-    };
-    ldJsonScript.textContent = JSON.stringify(jsonLd);
-  }
-
-  // 3. UI 업데이트
-  function updateUi(data) {
-    const title = document.title || window.location.hostname;
-    
-    // 연도 및 제목
-    document.getElementById('copyright-year').textContent = data.year;
-    document.getElementById('site-title-display').textContent = title;
-    
-    // 날짜
-    const timeElem = document.getElementById('last-update-time');
-    timeElem.textContent = data.formattedDate;
-    timeElem.setAttribute('datetime', data.isoDateTime);
-
-    // 상태 메시지 (랜덤 순환)
-    const statusMsgs = [
-         "서비스 최적화 완료", 
-          "데이터베이스 동기화 완료", 
-          "보안 프로토콜 점검 완료",
-          "콘텐츠 최신화 완료",
-          "시스템 점검 완료",
-          "웹표준 레이아웃 최적화",
-          "사용자 인터페이스 안정화",
-          "성능 개선 완료",
-          "새로운 데이터 로드 완료",
-          "운영 시스템 안정화 완료",
-          "인덱싱 최적화 완료",
-          "데이터 무결성 검사 완료", 
-          "캐시 레이어 갱신",
-          "보안 프로토콜 활성화", 
-          "실시간 콘텐츠 동기화"
-    ];
-    document.getElementById('sync-status').textContent = statusMsgs[Math.floor(Math.random() * statusMsgs.length)];
-  }
-
-  // 4. 실행 제어 (DOM 로드 후 실행)
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-      const data = getKstInfo();
-      updateUi(data);
-      updateSeoEngine(data);
-    });
-  } else {
-    const data = getKstInfo();
-    updateUi(data);
-    updateSeoEngine(data);
-  }
 })();
 </script>
-
 
 
 
@@ -1300,9 +1147,17 @@
         initialColorMode = NTVSCS === "0" ? false : NTVSCS === "1" ? prefersDarkSchemeQuery.matches : true;
     }
     document.getElementsByTagName("html")[0].setAttribute("data-dark", initialColorMode ? "true" : "false");
-}setInitialColorMode();})()</script><div id="__next" data-reactroot=""><div role="dialog" aria-modal="true"></div><div role="dialog" aria-live="polite"></div><div id="root" class="wrap"><div id="u_skip"><a href="#content"><span>본문으로 바로가기</span></a></div><header class="Header_header__JAW_Z Header_channel_header__4mguP Header_without_background__UAAeK"><div class="Header_left_wrap__aVIXl"><h1 class="Header_logo_area__dpgTc"><a class="Header_link_navertv__TqTR3" href="/"><svg viewBox="0 0 117 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="117" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="m22.425.5-5.864 14.95h4.958l.712-1.993h5.661l.715 1.992h4.955L27.702.5h-5.277Zm2.637 4.799 1.671 4.67H23.39l1.672-4.67ZM49.58.5v14.95h11.709v-3.737h-6.975V9.718h6.727V6.232h-6.727V4.237h6.975V.5H49.58ZM43.013.5l-3.516 9.83L35.98.5h-4.985l5.864 14.95h5.276L47.998.5h-4.985ZM10.215.5v8.002L4.764.5H0v14.95h4.734V7.447l5.451 8.001h4.764V.5h-4.734ZM70.904 7.477h-2.637V4.242h2.624a1.618 1.618 0 0 1 .013 3.235Zm3.316 2.844.453-.188c1.736-.728 2.62-2.303 2.62-4.298 0-1.887-.687-3.286-2.046-4.154C73.983.872 72.347.5 70.093.5h-6.309v14.95h4.731v-4.236h1.704l2.882 4.235H78l-3.78-5.128ZM111.367.5l-3.514 9.824L104.337.5h-4.982l5.86 14.94h5.273L116.349.5h-4.982ZM88.58.5H84v4.311h4.58V15.5h4.85V4.811h4.581V.5h-9.43Z" fill="currentColor"></path></svg><span class="blind">NAVER TV</span></a></h1><button type="button" aria-expanded="false" aria-haspopup="menu" aria-controls="wa_header_menu" class="Header_button_menu__8f3_9"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 5a1 1 0 0 0 0 2h18a1 1 0 1 0 0-2H3Zm-1 7a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Zm0 6a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z" fill="currentColor"></path></svg><span class="blind">메뉴</span></button></div><div aria-labelledby="wa_header_menu" class="Header_layer_menu__8wMgP "><div class="Header_layer_content__u6ydj"><div id="headerScrollWrap" class="Header_scroll_wrap__tOk4E"><nav class="Header_menu_wrap__J2HC0"><ul role="menu" class="Header_main_menu_list__hat5m"><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path clip-rule="evenodd" d="M2 8.725a3 3 0 0 1 1.354-2.508L9.903 1.92a2 2 0 0 1 2.194 0l6.549 4.297A3 3 0 0 1 20 8.725V17.2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V8.725Z" stroke="currentColor" stroke-width="1.5"></path><path d="M11 15.2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></span><span class="Header_text__LA4HP">홈</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/l"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M6.827 5.771c-1.043.951-1.687 2.253-1.687 3.69 0 1.436.644 2.738 1.687 3.688m8.43-7.378c1.044.951 1.688 2.253 1.688 3.69 0 1.436-.644 2.738-1.688 3.688M4.073 3C2.358 4.607 1.3 6.808 1.3 9.236s1.058 4.629 2.773 6.235M17.927 3C19.642 4.607 20.7 6.808 20.7 9.236s-1.058 4.629-2.773 6.235" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><circle cx="10.999" cy="9.236" r="2.021" stroke="currentColor" stroke-width="1.5"></circle><path d="M11.042 11.585v8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></span><span class="Header_text__LA4HP">생중계</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/h"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M15.6 10.5L10.2225 6.93922C9.42479 6.41101 8.35999 6.98302 8.35999 7.93976V11" stroke="url(#0000000)" stroke-width="1.5" stroke-linejoin="round"></path><path d="M11.2 19.9999C14.711 19.9999 17.7536 17.6591 19.3177 14.7352C19.7523 13.9227 19.4049 12.9474 18.6316 12.4463L16.4 11" stroke="url(#0000000)" stroke-width="1.5" stroke-linejoin="round"></path><path d="M11.2512 20C10.9414 20 10.635 19.9852 10.333 19.9562C5.65473 19.5078 2 15.6691 2 11C2 6.02944 6.14192 2 11.2512 2C14.7643 2 17.8084 4.32867 19.3717 7.25078C19.8048 8.06052 19.4606 9.03272 18.6921 9.53538L10.2153 15.0796C9.41717 15.6017 8.35844 15.029 8.35844 14.0754V11.5V11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><defs><linearGradient id="0000000" x1="13.5" y1="8.5" x2="15.5" y2="10.5" gradientUnits="userSpaceOnUse"><stop stop-color="currentColor"></stop><stop offset="1" stop-color="currentColor" stop-opacity="0"></stop></linearGradient><linearGradient id="0000000" x1="18.5" y1="14" x2="16.5" y2="11" gradientUnits="userSpaceOnUse"><stop stop-color="currentColor"></stop><stop offset="1" stop-color="currentColor" stop-opacity="0"></stop></linearGradient></defs></svg></span><span class="Header_text__LA4HP">클립</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/f"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><rect x="2" y="5.5" width="18" height="14" rx="4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></rect><path d="M13.326 11.75 10.29 9.727a.7.7 0 0 0-1.089.582v4.05a.7.7 0 0 0 1.089.583l3.037-2.025a.7.7 0 0 0 0-1.165ZM4.5 2.35a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 0 1.5H5.25a.75.75 0 0 1-.75-.75Z" fill="currentColor"></path></svg></span><span class="Header_text__LA4HP">구독</span></a></li></ul><span class="Header_menu_title__pFzEd">My</span><ul role="menu" class="Header_library_menu_list__cAA3v"><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/my?tab=recent"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M11 2a9 9 0 1 0 8.37 12.316" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 2a9 9 0 0 1 9 9c0 .667-.3 2.3-.7 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 3"></path><path d="M10.5 6.5v5h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">최근<span class="Header_hidden_reduced__y3kxs"> 본 영상</span></span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/my?tab=liked"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M9.52 4.357A4.626 4.626 0 0 0 6.86 3.5a4.81 4.81 0 0 0-3.45 1.46C2.537 5.854 1.984 6.863 2 8.648c.016 1.745.843 3.002 2.559 4.718a109.862 109.862 0 0 0 5.81 5.074.99.99 0 0 0 1.247 0c2.004-1.618 4.258-3.522 5.81-5.074C19.143 11.65 20 10.467 20 8.647c0-1.386-.555-2.812-1.477-3.713-.903-.884-2.16-1.432-3.614-1.429a4.661 4.661 0 0 0-2.536.918 5.946 5.946 0 0 0-1.397 1.487A5.253 5.253 0 0 0 9.52 4.357Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">좋아요<span class="Header_hidden_reduced__y3kxs"> 한 영상</span></span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/my?tab=saved"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M5.262 18.552 11 13.512l5.72 5.005c.088.072.2.113.316.114a.44.44 0 0 0 .185 0 .448.448 0 0 0 .279-.404V7.773M5.262 18.553a.496.496 0 0 1-.502.078.446.446 0 0 1-.26-.404V3.94c0-.242.208-.439.464-.439h12.072c.123 0 .24.046.328.129a.428.428 0 0 1 .136.31v3.834M5.262 18.553 17.5 7.772" stroke="currentColor" stroke-width="1.4"></path></svg></span><span class="Header_text__LA4HP">나중에<span class="Header_hidden_reduced__y3kxs"> 볼 영상</span></span></a></li></ul><span class="Header_menu_title__pFzEd">탐색</span><ul role="menu" class="Header_genre_menu_list__NbKFm"><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/r"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M11.133 14.938v1.837" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 20.068h6.318a.5.5 0 0 0 .5-.5v-.454c0-1.05-.688-1.91-1.527-1.91H8.709c-.84 0-1.528.86-1.528 1.91v.454a.5.5 0 0 0 .5.5H8Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path><path d="M11.001 14.5a6.12 6.12 0 0 1-6.125-6.126V5.75c0-1.933 1.566-3.5 3.5-3.5h5.25a3.5 3.5 0 0 1 3.5 3.5v2.625a6.12 6.12 0 0 1-6.125 6.125Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.318 11A5.687 5.687 0 0 1 3.17 9.902C2.168 8.986 1.5 7.888 1.5 6.607c0-1.282 1.224-2.289 2.783-2.289h.723a2.919 2.919 0 0 0-.333 1.373v2.746c0 .916.233 1.776.645 2.563ZM16.727 11a5.688 5.688 0 0 0 2.149-1.098c1.002-.915 1.67-2.014 1.67-3.295 0-1.282-1.225-2.288-2.783-2.288h-.724c.223.42.334.887.334 1.373v2.746c0 .915-.234 1.775-.646 2.562Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">TOP100</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/i"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M14.708 5.652h3.444m0 0v3.444m0-3.444-6.59 6.59-3.153-3.151L3 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.667 3.667v13.166c0 1.384 1.117 2.5 2.5 2.5h13.167" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">급상승</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/ct/news"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M16.83 13.875V5.781m0 0V5.5a3 3 0 0 0-3-3H5.5a3 3 0 0 0-3 3v11a3 3 0 0 0 3 3h11.4a3 3 0 0 0 3-3V7.781a2 2 0 0 0-2-2h-1.07Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6 6.8h7M6 10h7M6 13.2h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">뉴스</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/ct/sport"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><circle cx="11" cy="11" r="9.25" stroke="currentColor" stroke-width="1.5"></circle><path d="M9.54 2c.5 3.5-2.5 9-7.5 9.5M12.094 20.498c-.4-3.513 2.756-8.925 7.768-9.282" stroke="currentColor" stroke-width="1.3"></path></svg></span><span class="Header_text__LA4HP">스포츠</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/ct/drama"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M5.8 20.5h8M16.8 6v6h1a3 3 0 1 0 0-6h-1ZM16.8 6h-13a1 1 0 0 0-1 1v4a7 7 0 1 0 14 0V6ZM14 1l-1 1.8M10.3 1l-1 1.8M6.5 1l-1 1.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">드라마</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/ct/enter"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><circle cx="11" cy="11" r="9.25" stroke="currentColor" stroke-width="1.5"></circle><path d="M15.5 11.5a4.5 4.5 0 1 1-9 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></span><span class="Header_text__LA4HP">예능</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/ct/other"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M14.246 6.672 9.424 8.787c-.223.102-.49.368-.591.591L6.668 14.25c-.462 1.01.072 1.544 1.082 1.082l4.872-2.165c.222-.101.488-.368.59-.59l2.116-4.822c.462-1.043-.074-1.544-1.082-1.083Zm-2.4 5.18a1.2 1.2 0 1 1-1.697-1.696 1.2 1.2 0 0 1 1.697 1.696Z" fill="currentColor"></path><circle cx="11" cy="11" r="9.25" stroke="currentColor" stroke-width="1.5"></circle></svg></span><span class="Header_text__LA4HP">더 많은 영상</span></a></li></ul><span class="Header_menu_title__pFzEd">방송관</span><ul role="menu" class="Header_brand_menu_list__gdj5a"><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/b/tvchosun"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand tvchosun"><path d="M11.669 5.9H3.346C2.603 5.9 2 6.472 2 7.177v7.893c0 .705.603 1.277 1.346 1.277h8.323c.744 0 1.346-.572 1.346-1.277V7.177c0-.705-.602-1.277-1.346-1.277Z" fill="url(#icon_tvlogo_tvchosun_h22_svg__a)"></path><path d="M3.34 11.593c-.57 1.968.98 3.593 3.451 3.593 2.473 0 4.994-1.579 5.612-3.546h-2.215l-.257.336c-.14.198-.318.378-.514.528a5.036 5.036 0 0 1-3.14 1.248c-1.854.047-3.035-1.102-2.625-2.588.129-.453.373-.865.722-1.196A4.589 4.589 0 0 0 3.346 11.6" fill="#fff"></path><path d="m4.943 9.3-.269.291a2.69 2.69 0 0 0-.753 1.219c-.428 1.509.808 2.681 2.748 2.635 1.23-.047 2.399-.5 3.286-1.265a3.695 3.695 0 0 1-2.423.928c-1.456 0-2.264-.928-1.885-2.095.453-1.074 1.5-1.851 2.748-2.049l.428-1.317a7.204 7.204 0 0 0-3.88 1.66" fill="url(#icon_tvlogo_tvchosun_h22_svg__b)"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M22.599 6.48 21.16 9.54 19.93 6.48h-5.079v.5h1.591v3.563h1.028V6.98h1.64l1.488 3.563h.77l2.05-4.063h-.82Zm-3.562 4.84h.098l-.294.79h-.098a2.39 2.39 0 0 0-1.169-.342c-.973 0-1.511.737-1.511 1.92 0 1.185.538 1.875 1.511 1.875.423-.035.839-.15 1.218-.342h.147v.836c0 .011 0 .023-.012.034-.012.012-.025.012-.037.012-.428.14-.869.226-1.316.244-1.7 0-2.723-1.33-2.723-2.612 0-1.283.973-2.612 2.821-2.612.465.006.924.093 1.365.244v-.046Zm3.874 1.904v-2.1h1.12v5.223h-1.12V13.99h-2.044v2.357h-1.12v-5.224h1.12v2.101h2.044Zm4.51-2.1a2.834 2.834 0 0 0-1.983.748 2.464 2.464 0 0 0-.795 1.863c-.012.696.275 1.37.795 1.863a2.81 2.81 0 0 0 1.983.748c1.512-.029 2.73-1.19 2.73-2.611a2.41 2.41 0 0 0-.765-1.857 2.775 2.775 0 0 0-1.965-.755Zm.055 4.532c-1.205 0-1.517-1.381-1.517-2.17 0-.79.367-1.678 1.364-1.678.998 0 1.518 1.33 1.518 2.118 0 .79-.367 1.724-1.365 1.724v.006Zm5.226-4.486h.055v-.052c.46-.006.918.046 1.365.145l-.312.876a2.668 2.668 0 0 0-1.102-.29c-.477 0-.79.197-.79.54 0 .342.264.487.943.73l.05.019c.673.24 1.523.544 1.523 1.688 0 1.172-1.206 1.515-1.94 1.515a7.705 7.705 0 0 1-1.628-.244c0-.023-.055-.046-.055-.046v-.877h.104c.478.227.992.36 1.524.39.477 0 .79-.053.79-.54 0-.488-.319-.633-.998-.877-.68-.244-1.469-.685-1.469-1.561 0-.876.735-1.416 1.94-1.416Zm5.74 2.867c.043.394-.06.79-.293 1.103-.245.22-.563.33-.888.301-.985 0-1.034-.551-1.034-1.456v-2.862h-1.181v2.966c0 .952 0 2.258 2.117 2.258 2.118 0 2.167-.755 2.167-2.258v-2.966h-.888v2.914Zm5.006.418v-3.332h.777v5.224H43.4l-2.631-3.587v3.587h-.826v-5.224h1.022l2.484 3.332Z" fill="#575756"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M22.599 6.48 21.16 9.54 19.93 6.48h-5.079v.5h1.591v3.563h1.028V6.98h1.64l1.488 3.563h.77l2.05-4.063h-.82Zm-3.562 4.84h.098l-.294.79h-.098a2.39 2.39 0 0 0-1.169-.342c-.973 0-1.511.737-1.511 1.92 0 1.185.538 1.875 1.511 1.875.423-.035.839-.15 1.218-.342h.147v.836c0 .011 0 .023-.012.034-.012.012-.025.012-.037.012-.428.14-.869.226-1.316.244-1.7 0-2.723-1.33-2.723-2.612 0-1.283.973-2.612 2.821-2.612.465.006.924.093 1.365.244v-.046Zm3.874 1.904v-2.1h1.12v5.223h-1.12V13.99h-2.044v2.357h-1.12v-5.224h1.12v2.101h2.044Zm4.51-2.1a2.834 2.834 0 0 0-1.983.748 2.464 2.464 0 0 0-.795 1.863c-.012.696.275 1.37.795 1.863a2.81 2.81 0 0 0 1.983.748c1.512-.029 2.73-1.19 2.73-2.611a2.41 2.41 0 0 0-.765-1.857 2.775 2.775 0 0 0-1.965-.755Zm.055 4.532c-1.205 0-1.517-1.381-1.517-2.17 0-.79.367-1.678 1.364-1.678.998 0 1.518 1.33 1.518 2.118 0 .79-.367 1.724-1.365 1.724v.006Zm5.226-4.486h.055v-.052c.46-.006.918.046 1.365.145l-.312.876a2.668 2.668 0 0 0-1.102-.29c-.477 0-.79.197-.79.54 0 .342.264.487.943.73l.05.019c.673.24 1.523.544 1.523 1.688 0 1.172-1.206 1.515-1.94 1.515a7.705 7.705 0 0 1-1.628-.244c0-.023-.055-.046-.055-.046v-.877h.104c.478.227.992.36 1.524.39.477 0 .79-.053.79-.54 0-.488-.319-.633-.998-.877-.68-.244-1.469-.685-1.469-1.561 0-.876.735-1.416 1.94-1.416Zm5.74 2.867c.043.394-.06.79-.293 1.103-.245.22-.563.33-.888.301-.985 0-1.034-.551-1.034-1.456v-2.862h-1.181v2.966c0 .952 0 2.258 2.117 2.258 2.118 0 2.167-.755 2.167-2.258v-2.966h-.888v2.914Zm5.006.418v-3.332h.777v5.224H43.4l-2.631-3.587v3.587h-.826v-5.224h1.022l2.484 3.332Z" fill="currentColor"></path><defs><linearGradient id="icon_tvlogo_tvchosun_h22_svg__a" x1="7.471" y1="5.993" x2="7.471" y2="16.335" gradientUnits="userSpaceOnUse"><stop offset="0.25" stop-color="#EC1C24"></stop><stop offset="0.75" stop-color="#AE1E23"></stop></linearGradient><linearGradient id="icon_tvlogo_tvchosun_h22_svg__b" x1="6.896" y1="7.699" x2="6.896" y2="13.445" gradientUnits="userSpaceOnUse"><stop offset="0.5" stop-color="#fff"></stop><stop offset="1" stop-color="#A36E5D"></stop></linearGradient></defs></svg><span class="blind">TV 조선</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/b/mbn"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand mbn"><path fill-rule="evenodd" clip-rule="evenodd" d="m14.172 7.38-2.099 2.256L9.937 7.38A1.202 1.202 0 0 0 9.061 7H7v8.15h2.328V9.91l2.558 2.716c.043.049.107.08.171.08a.217.217 0 0 0 .17-.08l2.596-2.716v5.24h2.328V7h-2.098a1.254 1.254 0 0 0-.876.38h-.005Zm13.771 1.844a2.079 2.079 0 0 1-.948 1.715 2.262 2.262 0 0 1 1.37 2.03c0 1.185-1.068 2.144-2.44 2.181h-7.401V7.043h6.942c1.297.075 2.477 1.034 2.477 2.18Zm-7.096-.311h4.042a.73.73 0 0 1 .726.648.682.682 0 0 1-.726.611h-4.042V8.913Zm4.464 4.324h-4.464v-1.264h4.464a.677.677 0 0 1 .496.177.711.711 0 0 1 .23.476.655.655 0 0 1-.726.617v-.006ZM36.6 7h2.365v8.15h-1.831a1.232 1.232 0 0 1-.876-.38l-4.694-4.978v5.358h-2.328V7h2.173c.331.005.646.145.881.38l4.31 4.598V7Z" fill="#EB6608"></path></svg><span class="blind">MBN</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/b/channela"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand channela"><g clip-path="url(#icon_tvlogo_channelA_h22_svg__a)"><path d="M35.155 14.29c.548 0 1.15-.32 1.431-.641l-.709-1.03c-.107.12-.307.267-.414.24-.107-.026-.12-.12-.12-.28V7.403h-1.391v5.47c0 .989.535 1.417 1.203 1.417ZM32.788 12.097s-.588.87-1.711.87c-.481 0-.963-.389-1.057-.71l3.437-1.002c0-1.137-.789-2.26-2.394-2.26a2.57 2.57 0 0 0-2.567 2.62c0 1.592 1.243 2.675 2.58 2.675 1.07 0 2.02-.615 2.394-1.177l-.682-1.016Zm-1.724-1.872c.387-.04.815.067.869.348.067.36-1.31.896-1.819 1.11l-.24.094c-.16-1.03.615-1.485 1.19-1.551ZM23.227 14.09h1.418v-2.233c0-.856.267-1.78 1.03-1.78.762 0 1.002.603 1.002 1.512v2.5h1.404v-2.955c0-1.296-.642-2.14-1.792-2.14-.976 0-1.39.683-1.551 1.11-.013.028-.027.054-.053.054-.027 0-.04-.013-.04-.04v-.923h-1.418v4.895ZM17.705 14.09h1.417v-2.233c0-.856.268-1.78 1.017-1.78.749 0 1.016.603 1.016 1.512v2.5h1.404v-2.955c0-1.296-.655-2.14-1.792-2.14-.976 0-1.39.683-1.551 1.11-.013.028-.027.054-.054.054-.026 0-.04-.013-.04-.04v-.923h-1.417v4.895ZM15.659 9.195v.923c0 .027-.027.04-.054.04-.013 0-.04 0-.053-.04-.16-.428-.602-1.123-1.511-1.123-1.404 0-2.02 1.43-2.02 2.62 0 1.19.616 2.675 2.02 2.675.91 0 1.35-.682 1.51-1.123.014-.04.028-.054.054-.054.04 0 .054.027.054.054v.923h1.377V9.195h-1.377Zm-1.11 3.999c-.696 0-1.137-.549-1.137-1.578 0-.976.442-1.538 1.137-1.538.588 0 1.03.562 1.03 1.538 0 1.03-.442 1.578-1.03 1.578ZM6.713 14.09H8.09v-2.233c0-.856.308-1.78 1.043-1.78.735 0 1.016.603 1.016 1.512v2.5h1.418v-2.955c0-1.296-.655-2.14-1.805-2.14-.976 0-1.39.67-1.538 1.097-.013.04-.027.067-.067.067-.053 0-.067-.04-.067-.08V7.404H6.713v6.686ZM3.236 14.29c1.993 0 3.009-1.685 3.009-2.862H4.814c0 .75-.696 1.551-1.578 1.551-.936 0-1.792-.882-1.792-2.246 0-1.364.882-2.3 1.792-2.3s1.404.655 1.55 1.805l1.391-.816c-.227-.829-.949-2.22-2.941-2.22C1.243 7.202 0 8.834 0 10.733c0 1.9 1.23 3.557 3.236 3.557Z" fill="currentColor"></path><path d="M42.002 6.001c-.535 0-.856.428-1.017.776l-2.717 5.669c-.388.802.121 1.845 1.044 1.845.549 0 .937-.307 1.299-.628l.365-.316v-1.614l-.5.298c-.106.067-.227.147-.294.094-.067-.04-.04-.134.014-.294l1.579-4.333c.067-.187.134-.294.227-.294.023 0 .046.003.066.013V6.004A1.072 1.072 0 0 0 42.002 6Z" fill="url(#icon_tvlogo_channelA_h22_svg__b)"></path><path d="m45.897 12.78-2.864-6.004c-.174-.348-.509-.776-1.03-.776a.949.949 0 0 0-.153.012v1.313c.045-.079.093-.122.152-.122.08 0 .148.04.201.241l1.7 6.004c.227.816.964.976 1.485.748.563-.254.75-.909.509-1.417Z" fill="url(#icon_tvlogo_channelA_h22_svg__c)"></path><path d="M45.723 9.062c-.053-.067-.174-.067-.32.027l-4.645 2.774v1.672l4.885-4.218c.107-.094.134-.188.08-.255Z" fill="url(#icon_tvlogo_channelA_h22_svg__d)"></path></g><defs><linearGradient id="icon_tvlogo_channelA_h22_svg__b" x1="38.898" y1="14.687" x2="42.901" y2="4.777" gradientUnits="userSpaceOnUse"><stop offset="0.3" stop-color="#7DD7FF"></stop><stop offset="0.7" stop-color="#196EFF"></stop></linearGradient><linearGradient id="icon_tvlogo_channelA_h22_svg__c" x1="42.205" y1="6.454" x2="45.44" y2="14.46" gradientUnits="userSpaceOnUse"><stop offset="0.1" stop-color="#196EFF"></stop><stop offset="0.23" stop-color="#186AF9"></stop><stop offset="0.41" stop-color="#1661E8"></stop><stop offset="0.6" stop-color="#1352CD"></stop><stop offset="0.82" stop-color="#0E3DA8"></stop><stop offset="1" stop-color="#0A2882"></stop></linearGradient><linearGradient id="icon_tvlogo_channelA_h22_svg__d" x1="41.342" y1="13.831" x2="44.951" y2="7.581" gradientUnits="userSpaceOnUse"><stop offset="0.3" stop-color="#7DD7FF"></stop><stop offset="0.39" stop-color="#6BC4FF"></stop><stop offset="0.57" stop-color="#3E94FF"></stop><stop offset="0.7" stop-color="#196EFF"></stop></linearGradient><clipPath id="icon_tvlogo_channelA_h22_svg__a"><path fill="#fff" transform="translate(0 6)" d="M0 0h46v8.291H0z"></path></clipPath></defs></svg><span class="blind">CHANNEL A</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/b/jtbc"><span class="icon_jtbc_w46h22"></span><span class="blind">JTBC</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/b/cjenm"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand cjenm"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.881 8.167c-2.294-.863-4.614-.774-5.202.239-.594 1.02.272 3.437 1.904 5.44 1.632 2.004 3.94 1.939 5.212-.25 1.253-2.183.378-4.57-1.91-5.432" fill="#FF9700"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11.207 8.865c2.038 1.33 4.318 1.732 5.127.87.817-.87.535-3.408-.59-5.707-1.126-2.3-3.39-2.724-5.14-.86-1.73 1.863-1.43 4.374.6 5.697" fill="#006ECD"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M18.507 15.862c-.325-2.335-1.538-4.225-2.75-4.225-1.223 0-3.012 1.896-4.053 4.234-1.038 2.338.144 4.229 2.764 4.229 2.608-.018 4.365-1.908 4.04-4.238Z" fill="#EF151E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M5.783 15.065c1.538 0 2.329-1.084 2.329-1.084s-.341-.41-.797-.41c-.216 0-.366.087-.523.18-.222.128-.475.275-1.01.275a1.64 1.64 0 0 1-1.635-1.66c0-.932.735-1.694 1.636-1.694.47 0 .73.153.957.286l.006.004c.168.101.318.188.515.188.407 0 .829-.433.829-.433s-.72-1.084-2.307-1.084C4.194 9.633 3 10.83 3 12.368c0 1.538 1.244 2.697 2.783 2.697Zm2.732-4.668c0-.364.278-.609.694-.609h2.273v.367c0 .35-.3.607-.719.61v2.765c0 .663-.094 1.096-.322 1.5-.422.74-1.257 1.041-2.042 1.223-.2.048-.25.015-.206-.247l.005-.03c.032-.195.067-.412.567-.64.61-.277.697-.809.735-1.134.038-.329.003-3.437.003-3.437h-.988v-.368ZM30.448 10.747c.281 0 .519-.227.519-.496v-.463h-3.661c-.282 0-.52.236-.52.496v4.623h3.662c.281 0 .519-.293.519-.561v-.404H28.43c-.419 0-.49.197-.49.197v-1.337h2.385c.281 0 .519-.227.519-.496v-.469h-2.417c-.419 0-.49.197-.49.197v-1.287H30.447Zm12.059-.959v4.602c0 .335-.266.514-.635.514h-.488v-3.118l-.894 2.793c-.078.223-.366.325-.657.328h-.225l-1.103-3.12v2.597c0 .34-.26.52-.635.52h-.49v-4.596c0-.34.259-.52.634-.52h.803l1.16 3.393 1.048-3.07c.08-.212.3-.323.597-.323h.885Zm-7.198.496c0-.245.154-.496.413-.496h.713v4.623c0 .26-.222.496-.482.496h-.337l-2.67-3.428v2.932c0 .254-.222.496-.482.496h-.644v-4.623c0-.26.222-.496.482-.496h.494l2.513 3.166v-2.67Z" fill="currentColor"></path></svg><span class="blind">CJ ENM</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/b/kbs"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand kbs"><path fill-rule="evenodd" clip-rule="evenodd" d="m18.24 15.963-4.113-5.105 3.962-4.72h-2.791l-3.773 4.672V6.137H9.4v9.826h2.125V10.91l3.698 5.052h3.017ZM33.31 9.98c.616 0 3.24.391 3.24 2.964 0 2.723-2.648 3.016-2.648 3.016H27.71V14.37l4.981.003c1.445 0 1.43-1.36 1.43-1.36 0-1.489-1.706-1.43-1.706-1.43h-1.908c-.876 0-3.132-.311-3.132-2.612.001-2.765 2.8-2.833 2.8-2.833h5.667v1.57l-4.653.005c-1.504 0-1.48 1.151-1.48 1.151s.013 1.123 1.316 1.123l2.285-.007v.002Zm-6.033 3.239c0 1.661-1.361 2.743-2.858 2.743-1.265 0-5.992-.005-5.992-.005v-9.82h5.476s2.822.039 2.975 2.506c.107 1.703-1.023 2.086-1.023 2.086s1.422.591 1.422 2.49Zm-2.858 2.743h.001-.001Zm-1.24-8.23h-2.74v2.295h2.99c.303-.02 1.24-.09 1.24-1.14 0-1.221-1.49-1.155-1.49-1.155Zm-2.742 6.631h2.497c.973 0 2.142-.09 2.142-1.397s-1.557-1.365-1.557-1.365h-3.082v2.762Z" fill="#1D1160"></path><path fill-rule="evenodd" clip-rule="evenodd" d="m18.24 15.963-4.113-5.105 3.962-4.72h-2.791l-3.773 4.672V6.137H9.4v9.826h2.125V10.91l3.698 5.052h3.017ZM33.31 9.98c.616 0 3.24.391 3.24 2.964 0 2.723-2.648 3.016-2.648 3.016H27.71V14.37l4.981.003c1.445 0 1.43-1.36 1.43-1.36 0-1.489-1.706-1.43-1.706-1.43h-1.908c-.876 0-3.132-.311-3.132-2.612.001-2.765 2.8-2.833 2.8-2.833h5.667v1.57l-4.653.005c-1.504 0-1.48 1.151-1.48 1.151s.013 1.123 1.316 1.123l2.285-.007v.002Zm-6.033 3.239c0 1.661-1.361 2.743-2.858 2.743-1.265 0-5.992-.005-5.992-.005v-9.82h5.476s2.822.039 2.975 2.506c.107 1.703-1.023 2.086-1.023 2.086s1.422.591 1.422 2.49Zm-2.858 2.743h.001-.001Zm-1.24-8.23h-2.74v2.295h2.99c.303-.02 1.24-.09 1.24-1.14 0-1.221-1.49-1.155-1.49-1.155Zm-2.742 6.631h2.497c.973 0 2.142-.09 2.142-1.397s-1.557-1.365-1.557-1.365h-3.082v2.762Z" fill="currentColor"></path></svg><span class="blind">KBS</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/b/mbc"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand mbc"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.309 6.2H9.233C7.659 6.2 6.7 6.92 6.7 8.41v7.073h2.688v-6.72h1.541v6.72h2.682v-6.72h1.543v6.72h2.688V8.41c0-1.49-.96-2.21-2.533-2.21Zm17.678 6.767V8.746h6.333V6.2h-6.63c-1.625 0-2.482.853-2.482 2.192v4.935c0 1.216.715 2.155 2.528 2.155h6.62v-2.516h-6.37.001Zm-6.993-2.439v2.424h-3.982V8.756h3.982v1.764c1.388 0 2.9-.556 2.9-2.093s-1.172-2.2-3.043-2.227h-6.57v9.283h6.625c1.876 0 3.55-.678 3.55-2.472 0-1.795-1.477-2.483-3.463-2.483h.001Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.309 6.2H9.233C7.659 6.2 6.7 6.92 6.7 8.41v7.073h2.688v-6.72h1.541v6.72h2.682v-6.72h1.543v6.72h2.688V8.41c0-1.49-.96-2.21-2.533-2.21Zm17.678 6.767V8.746h6.333V6.2h-6.63c-1.625 0-2.482.853-2.482 2.192v4.935c0 1.216.715 2.155 2.528 2.155h6.62v-2.516h-6.37.001Zm-6.993-2.439v2.424h-3.982V8.756h3.982v1.764c1.388 0 2.9-.556 2.9-2.093s-1.172-2.2-3.043-2.227h-6.57v9.283h6.625c1.876 0 3.55-.678 3.55-2.472 0-1.795-1.477-2.483-3.463-2.483h.001Z" fill="#fff" fill-opacity="0.1"></path></svg><span class="blind">MBC</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/b/sbs"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand sbs"><path fill-rule="evenodd" clip-rule="evenodd" d="m16.465 10.75-2.6-2.34a.834.834 0 0 1-.295-.631c0-.488.426-.884.953-.884h2.878v-1.22H13c-1.365 0-2.5.901-2.5 2.312 0 .603.25 1.151.659 1.562l3.064 2.832s.517.366.337.97c-.178.602-.962.602-1.255.602H10.5v2.471h4.256c1.721 0 3.117-1.289 3.117-2.88v-.024c.047-1.188-.605-2.041-1.408-2.77Zm17.182 0-2.6-2.34a.832.832 0 0 1-.295-.631c0-.488.427-.884.953-.884h2.878v-1.22h-4.4c-1.366 0-2.5.901-2.5 2.312 0 .603.248 1.151.657 1.562l3.064 2.832s.517.366.337.97c-.18.602-.962.602-1.255.602h-2.803v2.471h4.256c1.72 0 3.116-1.289 3.116-2.88v-.024c.048-1.188-.605-2.041-1.409-2.77Zm-8.767-.475c1.473.493 2.21 1.738 2.21 3.028 0 .961-.447 1.815-1.108 2.386-.746.596-1.666.713-2.102.733h-5.168L18.71 5.687h4.858v.003s1.237-.043 2.064.514c.575.414.941 1.048.941 1.805 0 1.129-.578 1.932-1.693 2.266Zm-2.376-3.36h-1.166V9.43h1.221c.934 0 1.514-.52 1.441-1.353-.1-1.162-1.32-1.162-1.496-1.162Zm-1.166 7.039h1.4c.935 0 1.655-.592 1.583-1.538-.102-1.32-1.462-1.322-1.638-1.322h-1.345v2.86Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="m16.465 10.75-2.6-2.34a.834.834 0 0 1-.295-.631c0-.488.426-.884.953-.884h2.878v-1.22H13c-1.365 0-2.5.901-2.5 2.312 0 .603.25 1.151.659 1.562l3.064 2.832s.517.366.337.97c-.178.602-.962.602-1.255.602H10.5v2.471h4.256c1.721 0 3.117-1.289 3.117-2.88v-.024c.047-1.188-.605-2.041-1.408-2.77Zm17.182 0-2.6-2.34a.832.832 0 0 1-.295-.631c0-.488.427-.884.953-.884h2.878v-1.22h-4.4c-1.366 0-2.5.901-2.5 2.312 0 .603.248 1.151.657 1.562l3.064 2.832s.517.366.337.97c-.18.602-.962.602-1.255.602h-2.803v2.471h4.256c1.72 0 3.116-1.289 3.116-2.88v-.024c.048-1.188-.605-2.041-1.409-2.77Zm-8.767-.475c1.473.493 2.21 1.738 2.21 3.028 0 .961-.447 1.815-1.108 2.386-.746.596-1.666.713-2.102.733h-5.168L18.71 5.687h4.858v.003s1.237-.043 2.064.514c.575.414.941 1.048.941 1.805 0 1.129-.578 1.932-1.693 2.266Zm-2.376-3.36h-1.166V9.43h1.221c.934 0 1.514-.52 1.441-1.353-.1-1.162-1.32-1.162-1.496-1.162Zm-1.166 7.039h1.4c.935 0 1.655-.592 1.583-1.538-.102-1.32-1.462-1.322-1.638-1.322h-1.345v2.86Z" fill="#fff" fill-opacity="0.1"></path></svg><span class="blind">SBS</span></a></li></ul></nav><div class="Header_mode_wrap__CnQLB"><button class="Header_button_mode__K7u1M"><span class="Header_icon_applied__dY7x7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22"><g clip-path="url(#icon_light_mode_svg__a)" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="4.25"></circle><path d="M11 1.5V4M11 18v2.5M4.937 4.92l.707.708M16 16.5l.707.707M17 5.707 17.707 5M4.942 17.08l.707-.708M18 11h2.5M1.5 11H4" stroke-linecap="round"></path></g><defs><clipPath id="icon_light_mode_svg__a"><path fill="#fff" d="M0 0h22v22H0z"></path></clipPath></defs></svg></span><span class="Header_icon_next__L5wXj"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22"><path d="M18.61 12.475a7.75 7.75 0 1 1-9.124-9.078C8.676 4.806 8.317 6.2 8.344 7.5c.035 1.72.748 3.224 1.893 4.297 2.012 1.886 5.253 2.377 8.373.678Z" stroke="currentColor" stroke-width="1.5"></path></svg></span><span class="blind">다크 모드로 변경</span></button><span class="Header_tooltip_hover__rNAYS"><span class="Header_icon_triangle__DSsEC"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none" class="Header_icon_light__EoVJq"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 1L10.4471 8.3382C9.68468 9.19202 8.4187 9.22387 7.61948 8.40935C7.59676 8.3862 7.57455 8.36248 7.55288 8.3382L1 1H17Z" fill="#F8F8F8"></path><path d="M17 1L10.4471 8.3382C9.68468 9.19202 8.4187 9.22387 7.61948 8.40935C7.59676 8.3862 7.57455 8.36248 7.55288 8.3382L1 1" stroke="#E7E7E7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none" class="Header_icon_dark__KyHWb"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 1L10.4471 8.3382C9.68468 9.19202 8.4187 9.22387 7.61948 8.40935C7.59676 8.3862 7.57455 8.36248 7.55288 8.3382L1 1H17Z" fill="#343436"></path><path d="M17 1L10.4471 8.3382C9.68468 9.19202 8.4187 9.22387 7.61948 8.40935C7.59676 8.3862 7.57455 8.36248 7.55288 8.3382L1 1" stroke="#343436"></path></svg></span><span class="Header_tooltip_text__pbCxh">다크<span class="Header_only_wide__t0IuF"> 모드</span></span></span></div><a href="https://creator.tv.naver.com" class="Header_link_studio_menu__KefUn"><svg viewBox="0 0 90 17" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="90" height="17"><path d="M.513 8.545c-.018-1.278.446-2.372 1.39-3.28C2.85 4.346 3.97 3.9 5.265 3.928c.846 0 1.611.198 2.295.594a4.217 4.217 0 0 1 1.634 1.62l-1.378.972c-.638-.999-1.489-1.498-2.551-1.498-.828 0-1.516.279-2.065.837-.54.558-.81 1.26-.81 2.106 0 .846.27 1.543.81 2.092.548.549 1.237.824 2.065.824 1.062 0 1.913-.5 2.551-1.499l1.378.972a4.217 4.217 0 0 1-1.62 1.633c-.694.388-1.468.581-2.322.581-1.305.027-2.43-.414-3.375-1.323C.94 10.921.486 9.823.512 8.545Zm13.912-2.228v1.607h-.486c-.558 0-1 .148-1.323.446-.315.296-.473.729-.473 1.296V13h-1.822V6.317h1.674v.797c.468-.585 1.08-.877 1.836-.877.225 0 .423.026.594.08Zm6.84 3.956h-4.684c.108.423.324.752.648.986.333.224.742.337 1.228.337.657 0 1.278-.225 1.863-.675l.756 1.242c-.8.666-1.692.999-2.673.999-1.026.018-1.899-.315-2.619-.999-.71-.693-1.057-1.526-1.04-2.498-.017-.962.32-1.79 1.013-2.483.693-.694 1.521-1.031 2.484-1.013.918 0 1.67.297 2.255.891.594.594.89 1.332.89 2.214 0 .324-.04.657-.12.999Zm-4.684-1.282h3.037c-.009-.405-.153-.73-.432-.973-.27-.252-.607-.378-1.012-.378-.387 0-.725.122-1.013.365-.288.243-.481.571-.58.986Zm11.53.04V13h-1.674v-.648c-.522.54-1.201.81-2.038.81-.702 0-1.265-.185-1.688-.554-.414-.369-.62-.85-.62-1.444 0-.603.224-1.075.674-1.418.46-.35 1.076-.526 1.85-.526h1.674v-.297c0-.378-.108-.666-.324-.864-.207-.207-.513-.31-.918-.31-.333 0-.635.072-.905.216-.27.143-.558.377-.864.701l-.945-1.12c.774-.918 1.746-1.377 2.916-1.377.882 0 1.58.252 2.093.756.513.495.77 1.197.77 2.106Zm-1.822 1.471v-.08h-1.431c-.621 0-.932.224-.932.675 0 .225.086.405.257.54.18.125.414.188.702.188.405 0 .738-.121.999-.364.27-.252.405-.572.405-.959Zm7.57.973V13a5.17 5.17 0 0 1-1.256.162c-.855 0-1.517-.212-1.985-.635-.459-.422-.688-1.048-.688-1.876V7.856h-1.053V6.318h1.053V4.63h1.822v1.688h1.89v1.538h-1.89v2.633c0 .378.095.648.284.81.198.153.517.23.958.23.153 0 .441-.018.864-.054Zm.513-1.823c-.018-.954.328-1.777 1.04-2.47.71-.694 1.556-1.031 2.537-1.013.981-.018 1.827.32 2.538 1.013.72.692 1.071 1.516 1.053 2.47.018.954-.333 1.782-1.053 2.484-.72.693-1.57 1.03-2.551 1.013-.981.018-1.827-.32-2.538-1.013-.702-.702-1.044-1.53-1.026-2.484Zm4.806 1.31c.333-.342.5-.774.5-1.296 0-.523-.167-.959-.5-1.31a1.6 1.6 0 0 0-1.229-.526c-.504 0-.918.175-1.242.526-.324.342-.486.778-.486 1.31 0 .521.162.954.486 1.295.324.342.738.514 1.242.514.495 0 .905-.171 1.229-.514Zm7.59-4.644v1.606h-.487c-.558 0-.999.148-1.323.446-.315.296-.472.729-.472 1.296V13h-1.823V6.317h1.674v.797c.468-.585 1.08-.877 1.836-.877.225 0 .423.026.594.08Zm3.813 4.873 1.256-.945c.63.864 1.359 1.296 2.187 1.296.396 0 .706-.085.931-.256a.885.885 0 0 0 .338-.73c0-.251-.077-.445-.23-.58-.153-.144-.454-.32-.904-.527l-.959-.431c-1.44-.64-2.16-1.495-2.16-2.566 0-.755.28-1.363.837-1.822.558-.468 1.265-.702 2.12-.702.666 0 1.25.153 1.755.459.504.297.9.707 1.188 1.229l-1.242.958c-.46-.684-1.026-1.026-1.701-1.026-.324 0-.59.077-.797.23a.745.745 0 0 0-.31.634c0 .225.072.41.216.553.153.136.427.293.823.473l1.013.446c.765.341 1.323.715 1.674 1.12.35.396.526.891.526 1.485 0 .801-.292 1.449-.877 1.944-.585.486-1.332.729-2.241.729a3.95 3.95 0 0 1-2.025-.527 3.9 3.9 0 0 1-1.418-1.444Zm11.968.284V13a5.17 5.17 0 0 1-1.256.162c-.855 0-1.516-.212-1.984-.635-.46-.422-.689-1.048-.689-1.876V7.856h-1.053V6.318h1.053V4.63h1.823v1.688h1.89v1.538h-1.89v2.633c0 .378.094.648.283.81.198.153.518.23.959.23.153 0 .44-.018.864-.054Zm.956-1.418v-3.74h1.822v3.889c0 .386.117.697.351.931.243.234.549.351.918.351.36 0 .657-.117.891-.351.234-.243.351-.553.351-.931V6.318h1.823v3.739c0 .918-.293 1.665-.878 2.241-.576.576-1.305.864-2.187.864-.9 0-1.642-.284-2.228-.85-.575-.576-.863-1.328-.863-2.255Zm12.458-7.182h1.823V13h-1.674v-.823c-.46.657-1.175.985-2.147.985-.936 0-1.71-.329-2.322-.986-.612-.665-.918-1.502-.918-2.51 0-1.008.306-1.841.918-2.498.612-.666 1.386-.999 2.322-.999.846 0 1.512.266 1.998.796v-4.09Zm-.459 8.14c.324-.324.486-.774.486-1.35 0-.575-.162-1.025-.486-1.35a1.61 1.61 0 0 0-1.202-.499c-.495 0-.909.171-1.242.513-.323.342-.486.783-.486 1.323 0 .549.163.995.487 1.337.323.341.737.512 1.241.512.486 0 .887-.162 1.202-.486ZM79.294 13V6.317h1.822V13h-1.823Zm-.257-9.113c0-.324.112-.594.337-.81.225-.216.5-.324.824-.324.324 0 .598.108.823.325.234.216.351.486.351.81 0 .314-.117.58-.35.796-.226.216-.5.324-.824.324-.324 0-.599-.108-.824-.324a1.06 1.06 0 0 1-.337-.796Zm3.204 5.765c-.018-.954.328-1.777 1.04-2.47.71-.694 1.556-1.031 2.537-1.013.981-.018 1.827.32 2.538 1.013.72.692 1.071 1.516 1.053 2.47.018.954-.333 1.782-1.053 2.484-.72.693-1.57 1.03-2.551 1.013-.981.018-1.827-.32-2.538-1.013-.702-.702-1.044-1.53-1.026-2.484Zm4.806 1.31c.333-.342.5-.774.5-1.296 0-.523-.167-.959-.5-1.31a1.6 1.6 0 0 0-1.229-.526c-.504 0-.918.175-1.242.526-.324.342-.486.778-.486 1.31 0 .521.162.954.486 1.295.324.342.738.514 1.242.514.495 0 .905-.171 1.229-.514Z" fill="currentColor"></path></svg><span class="blind">Creator Studio</span></a></div></div><div class="Header_layer_dimmed__x0zGg" aria-hidden="true"></div></div><div class="_search_area Search_search_wrap__lqZZ8  "><div class="_search_dimmed Search_layer_dimmed__nYVAD" aria-hidden="true"></div><div class="Search_layer_search__srb8X"><div class="Search_input_section__m3aHz"><label class="Search_label_search__38jIt" for="__gnb__searchInput"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="20" height="20"><path d="m14.5 13.6 3 3" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"></path><circle cx="9.6" cy="9.2" r="6.4" stroke="currentColor" stroke-width="1.6"></circle></svg><span class="blind">검색창</span></label><input type="text" id="__gnb__searchInput" class="Search_input_search__Ekfhu" value="" placeholder="동영상, 채널, 라이브를 검색할 수 있어요." autoComplete="off"/><span class="Search_search_control__IFJCN"><button type="button" class="Search_button_erase__MLPAp"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="20" height="20"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.158-11.159a.8.8 0 0 1 0 1.132L11.131 10l2.027 2.027a.8.8 0 0 1-1.131 1.131L10 11.131l-2.027 2.027a.8.8 0 0 1-1.132-1.131L8.868 10 6.841 7.973A.8.8 0 1 1 7.973 6.84L10 8.868l2.027-2.027a.8.8 0 0 1 1.131 0Z" fill="currentColor"></path></svg><span class="blind">검색어 지우기</span></button><button class="Search_button_submit__vb8zX Search_disabled__0Ncc8" aria-disabled="false"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="20" height="20"><path d="m14.5 13.6 3 3" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"></path><circle cx="9.6" cy="9.2" r="6.4" stroke="currentColor" stroke-width="1.6"></circle></svg><span class="blind">검색</span></button><button type="button" class="Search_button_cancel__FK8Og">취소</button></span></div><div class="Search_keyword_section__01fmY"><div class="Search_scroll_wrap__zF_se" style="display:none"></div></div></div></div><div class="Header_right_wrap__HlL0A"><a href="https://creator.tv.naver.com" class="Header_link_studio__Z1DYf"><svg viewBox="0 0 72 14" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="72" height="14"><path d="M.415 6.398C.4 5.364.775 4.48 1.539 3.745c.764-.742 1.67-1.102 2.718-1.08.684 0 1.303.16 1.856.48.56.313 1 .75 1.32 1.31L6.32 5.24c-.516-.808-1.204-1.212-2.063-1.212-.67 0-1.226.226-1.67.677-.437.451-.655 1.019-.655 1.703 0 .684.218 1.248.655 1.692.444.444 1 .666 1.67.666.859 0 1.547-.404 2.063-1.212l1.114.786c-.313.56-.75 1-1.31 1.32-.56.314-1.186.47-1.878.47-1.055.022-1.965-.335-2.729-1.07C.76 8.32.393 7.431.415 6.398Zm11.24-1.801v1.299h-.394c-.451 0-.808.12-1.07.36-.254.24-.382.59-.382 1.048V10H8.336V4.597h1.353v.644a1.81 1.81 0 0 1 1.485-.71c.182 0 .342.022.48.066Zm5.52 3.198h-3.787c.088.342.262.608.524.797.27.182.6.273.993.273.532 0 1.034-.182 1.507-.546l.611 1.004c-.648.539-1.368.808-2.161.808-.83.014-1.536-.255-2.118-.808-.575-.56-.855-1.233-.84-2.02-.015-.778.258-1.447.818-2.008.56-.56 1.23-.833 2.009-.818.742 0 1.35.24 1.823.72.48.48.72 1.077.72 1.79 0 .262-.033.532-.098.808Zm-3.787-1.037h2.456c-.007-.327-.123-.59-.35-.786a1.153 1.153 0 0 0-.818-.306 1.23 1.23 0 0 0-.819.295c-.232.197-.389.462-.469.797Zm9.314.033V10h-1.354v-.524c-.422.437-.971.655-1.648.655-.567 0-1.022-.15-1.364-.448-.335-.298-.502-.687-.502-1.168 0-.487.182-.87.545-1.146.372-.283.87-.425 1.496-.425h1.353v-.24c0-.306-.087-.539-.262-.7-.167-.167-.414-.25-.742-.25-.27 0-.513.058-.731.174-.218.117-.451.306-.699.568l-.764-.906c.626-.742 1.412-1.113 2.358-1.113.713 0 1.277.203 1.692.61.415.401.622.969.622 1.704Zm-1.474 1.19v-.066h-1.157c-.502 0-.753.182-.753.546 0 .182.07.327.208.437.145.101.334.152.567.152.328 0 .597-.098.808-.294.218-.204.327-.462.327-.775Zm6.111.786V10c-.349.087-.687.131-1.015.131-.69 0-1.226-.171-1.604-.513-.371-.342-.557-.848-.557-1.517V5.84h-.851V4.597h.851V3.232h1.474v1.365h1.528V5.84h-1.528V7.97c0 .305.076.524.229.655.16.123.418.185.775.185.124 0 .357-.014.699-.043Zm.406-1.474c-.014-.771.266-1.437.84-1.998a2.762 2.762 0 0 1 2.053-.818 2.762 2.762 0 0 1 2.052.818c.582.56.866 1.227.852 1.998.014.771-.27 1.44-.852 2.008-.582.56-1.27.834-2.063.82a2.762 2.762 0 0 1-2.052-.82c-.568-.567-.844-1.237-.83-2.008Zm3.886 1.059c.27-.277.404-.626.404-1.048 0-.422-.134-.775-.404-1.059a1.294 1.294 0 0 0-.993-.426c-.408 0-.742.142-1.004.426-.262.277-.393.63-.393 1.059 0 .422.13.771.393 1.048.262.276.596.415 1.004.415.4 0 .731-.139.993-.415Zm6.127-3.755v1.299h-.392c-.452 0-.808.12-1.07.36-.255.24-.382.59-.382 1.048V10H34.44V4.597h1.354v.644a1.81 1.81 0 0 1 1.484-.71c.182 0 .342.022.48.066Zm1.818 3.94 1.015-.764c.51.699 1.099 1.048 1.768 1.048.32 0 .572-.069.753-.207a.715.715 0 0 0 .273-.59c0-.203-.062-.36-.185-.47-.124-.116-.368-.257-.732-.425l-.775-.35c-1.164-.516-1.746-1.207-1.746-2.073 0-.611.225-1.103.677-1.474.45-.378 1.022-.567 1.713-.567.539 0 1.012.123 1.42.37.407.24.727.572.96.994l-1.004.775c-.371-.553-.83-.83-1.376-.83-.262 0-.476.062-.644.186a.602.602 0 0 0-.25.513c0 .182.058.331.174.448.124.109.346.236.666.382l.819.36c.618.276 1.07.578 1.353.906.284.32.426.72.426 1.2 0 .648-.237 1.172-.71 1.573-.473.393-1.077.589-1.812.589-.604 0-1.15-.142-1.637-.426a3.153 3.153 0 0 1-1.146-1.168Zm9.667.23V10c-.35.087-.688.131-1.015.131-.692 0-1.226-.171-1.605-.513-.37-.342-.556-.848-.556-1.517V5.84h-.852V4.597h.852V3.232h1.473v1.365h1.528V5.84H47.54V7.97c0 .305.077.524.23.655.16.123.418.185.774.185.124 0 .357-.014.699-.043Zm.764-1.147V4.597h1.473V7.74c0 .313.095.564.284.754.196.189.444.283.742.283a.976.976 0 0 0 .72-.283c.19-.197.284-.448.284-.754V4.597h1.474V7.62c0 .743-.236 1.347-.71 1.812-.465.466-1.055.699-1.768.699-.728 0-1.328-.23-1.8-.688-.467-.465-.7-1.073-.7-1.823ZM60.07 1.813h1.473V10h-1.353v-.666c-.371.531-.95.797-1.736.797-.757 0-1.382-.266-1.877-.797-.495-.538-.742-1.215-.742-2.03 0-.815.247-1.488.742-2.02.495-.538 1.12-.807 1.877-.807.684 0 1.223.214 1.616.644V1.813ZM59.7 8.395c.262-.262.393-.625.393-1.091 0-.466-.131-.83-.393-1.092a1.302 1.302 0 0 0-.972-.404c-.4 0-.735.139-1.004.415-.262.277-.393.633-.393 1.07 0 .444.13.804.393 1.08.262.277.597.415 1.004.415.393 0 .717-.13.972-.393ZM62.754 10V4.597h1.474V10h-1.474Zm-.207-7.368c0-.262.09-.48.273-.655a.926.926 0 0 1 .666-.262c.262 0 .483.087.665.262.19.175.284.393.284.655 0 .255-.094.47-.284.644a.926.926 0 0 1-.665.262.926.926 0 0 1-.666-.262.858.858 0 0 1-.273-.644Zm2.581 4.66c-.014-.77.266-1.436.84-1.997a2.762 2.762 0 0 1 2.053-.818 2.762 2.762 0 0 1 2.052.818c.582.56.866 1.227.851 1.998.015.771-.269 1.44-.851 2.008-.582.56-1.27.834-2.063.82a2.762 2.762 0 0 1-2.052-.82c-.568-.567-.844-1.237-.83-2.008Zm3.886 1.06c.27-.277.404-.626.404-1.048 0-.422-.135-.775-.404-1.059a1.294 1.294 0 0 0-.993-.426c-.408 0-.743.142-1.005.426-.262.277-.392.63-.392 1.059 0 .422.13.771.392 1.048.262.276.597.415 1.005.415.4 0 .731-.139.993-.415Z" fill="currentColor"></path></svg><span class="blind">Creator Studio</span></a><span class="Header_search_area__18ZCR"><button type="button" class="Header_button_search__Cu5Vz"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="30" height="30"><path d="m20.5 20.5 4 4" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"></path><circle cx="14.5" cy="14.5" r="8.175" stroke="currentColor" stroke-width="1.65"></circle></svg><span class="blind">검색</span></button></span><div class="Header_upload_area__RYOr9"><button type="button" class="Header_link_upload__ZGZHe"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="30" height="30"><path d="M14.5 10v9M19 14.5h-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M3.8 11A7.2 7.2 0 0 1 11 3.8h7a7.2 7.2 0 0 1 7.2 7.2v7a7.2 7.2 0 0 1-7.2 7.2h-7A7.2 7.2 0 0 1 3.8 18v-7Z" stroke="currentColor" stroke-width="1.6"></path></svg><span class="blind">영상 업로드</span></button><div class="Header_upload_tooltip__IWs2i"><span class="Header_tooltip_text__pbCxh">이제 누구나 네이버TV에 영상을 <br class="Header_break_sub__tf6MV"/>올릴 수 있어요!<br class="Header_break_main__WQENw"/>내 채널을 만들고, <br class="Header_break_sub__tf6MV"/>네이버TV 크리에이터에 도전하세요!</span><footer class="Footer_footer__5bZGY"><div class="Footer_footer_inner__1YE9q"><div class="Footer_corporation_wrap__CHrP5"><div><span class="Footer_terms_item__NJ1eG"><a href="https://policy.naver.com/rules/privacy.html" target="_blank" rel="noreferrer" class="Footer_link_terms__gWa0s" data-nlog-area="footer.privacy"><strong>개인정보처리방침</strong></a></span><span class="Footer_terms_item__NJ1eG"><a href="https://policy.naver.com/rules/service.html" target="_blank" rel="noreferrer" class="Footer_link_terms__gWa0s" data-nlog-area="footer.usage">이용약관</a></span><span class="Footer_terms_item__NJ1eG"><a href="https://policy.naver.com/rules/disclaimer.html" target="_blank" rel="noreferrer" class="Footer_link_terms__gWa0s" data-nlog-area="footer.disclaimer">책임의 한계와 법적고지</a></span><span class="Footer_terms_item__NJ1eG"><a href="https://help.naver.com/service/17223/category/bookmark?lang=ko" target="_blank" rel="noreferrer" class="Footer_link_terms__gWa0s" data-nlog-area="footer.help">고객센터</a></span><span class="Footer_terms_item__NJ1eG"><a href="https://creator.tv.naver.com/join" target="_blank" rel="noreferrer" class="Footer_link_terms__gWa0s" data-nlog-area="footer.creatorstudio">채널 만들기</a></span><span class="Footer_terms_item__NJ1eG"><a href="/n/policy" target="_blank" rel="noreferrer" class="Footer_link_terms__gWa0s" data-nlog-area="footer.operation">운영정책</a></span></div><p class="Footer_copyright_notice__ECsKu">본 콘텐츠의 저작권은 저작권자에 있으며, 이를 무단으로 이용하는 경우 저작권법 등에 따라 법적 책임을 질 수 있습니다.</p><span class="Footer_copyright__u_mR_"><span class="Footer_icon_naver__bC2Z8" data-nlog-area="footer.naver"><svg viewBox="0 0 53 10" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="53" height="10"><path fill-rule="evenodd" clip-rule="evenodd" d="M15 0 11.08 10h3.316l.476-1.333h3.787L19.136 10h3.315L18.53 0H15Zm1.765 3.21 1.118 3.124h-2.236l1.118-3.124ZM33.167 0v10h7.832V7.5h-4.665V6.166h4.5V3.834h-4.5V2.5h4.665V0h-7.832ZM28.774 0l-2.352 6.575L24.068 0h-3.334l3.922 10h3.53l3.922-10h-3.334ZM6.833 0v5.353L3.187 0H0v10h3.167V4.647L6.813 10H10V0H6.833ZM47.43 4.667h-1.764V2.503h1.755a1.082 1.082 0 0 1 .01 2.164Zm2.218 1.903.303-.126c1.162-.487 1.753-1.54 1.753-2.875 0-1.262-.46-2.198-1.369-2.78C49.49.25 48.395 0 46.887 0h-4.22v10h3.165V7.167h1.14L48.9 10h3.277l-2.529-3.43Z" fill="currentColor"></path></svg><span class="blind">NAVER</span></span><span class="Footer_text__IMN95">Copyright</span><span class="Footer_text__IMN95">© NAVER Corp. All Rights Reserved.</span></span></div></div></footer></div></div>
+}setInitialColorMode();})()</script><div id="__next" data-reactroot=""><div role="dialog" aria-modal="true"></div><div role="dialog" aria-live="polite"></div><div id="root" class="wrap"><div id="u_skip"><a href="#content"><span>본문으로 바로가기</span></a></div><header class="Header_header__JAW_Z Header_channel_header__4mguP Header_without_background__UAAeK"><div class="Header_left_wrap__aVIXl"><h1 class="Header_logo_area__dpgTc"><a class="Header_link_navertv__TqTR3" href="/#"><svg viewBox="0 0 117 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="117" height="16"><path fill-rule="evenodd" clip-rule="evenodd" d="m22.425.5-5.864 14.95h4.958l.712-1.993h5.661l.715 1.992h4.955L27.702.5h-5.277Zm2.637 4.799 1.671 4.67H23.39l1.672-4.67ZM49.58.5v14.95h11.709v-3.737h-6.975V9.718h6.727V6.232h-6.727V4.237h6.975V.5H49.58ZM43.013.5l-3.516 9.83L35.98.5h-4.985l5.864 14.95h5.276L47.998.5h-4.985ZM10.215.5v8.002L4.764.5H0v14.95h4.734V7.447l5.451 8.001h4.764V.5h-4.734ZM70.904 7.477h-2.637V4.242h2.624a1.618 1.618 0 0 1 .013 3.235Zm3.316 2.844.453-.188c1.736-.728 2.62-2.303 2.62-4.298 0-1.887-.687-3.286-2.046-4.154C73.983.872 72.347.5 70.093.5h-6.309v14.95h4.731v-4.236h1.704l2.882 4.235H78l-3.78-5.128ZM111.367.5l-3.514 9.824L104.337.5h-4.982l5.86 14.94h5.273L116.349.5h-4.982ZM88.58.5H84v4.311h4.58V15.5h4.85V4.811h4.581V.5h-9.43Z" fill="currentColor"></path></svg><span class="blind">NAVER TV</span></a></h1><button type="button" aria-expanded="false" aria-haspopup="menu" aria-controls="wa_header_menu" class="Header_button_menu__8f3_9"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="24" height="24"><path fill-rule="evenodd" clip-rule="evenodd" d="M3 5a1 1 0 0 0 0 2h18a1 1 0 1 0 0-2H3Zm-1 7a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Zm0 6a1 1 0 0 1 1-1h18a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1Z" fill="currentColor"></path></svg><span class="blind">메뉴</span></button></div><div aria-labelledby="wa_header_menu" class="Header_layer_menu__8wMgP "><div class="Header_layer_content__u6ydj"><div id="headerScrollWrap" class="Header_scroll_wrap__tOk4E"><nav class="Header_menu_wrap__J2HC0"><ul role="menu" class="Header_main_menu_list__hat5m"><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path clip-rule="evenodd" d="M2 8.725a3 3 0 0 1 1.354-2.508L9.903 1.92a2 2 0 0 1 2.194 0l6.549 4.297A3 3 0 0 1 20 8.725V17.2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V8.725Z" stroke="currentColor" stroke-width="1.5"></path><path d="M11 15.2v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></span><span class="Header_text__LA4HP">
+홈</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#l"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M6.827 5.771c-1.043.951-1.687 2.253-1.687 3.69 0 1.436.644 2.738 1.687 3.688m8.43-7.378c1.044.951 1.688 2.253 1.688 3.69 0 1.436-.644 2.738-1.688 3.688M4.073 3C2.358 4.607 1.3 6.808 1.3 9.236s1.058 4.629 2.773 6.235M17.927 3C19.642 4.607 20.7 6.808 20.7 9.236s-1.058 4.629-2.773 6.235" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path><circle cx="10.999" cy="9.236" r="2.021" stroke="currentColor" stroke-width="1.5"></circle><path d="M11.042 11.585v8.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></span><span class="Header_text__LA4HP">
+생중계</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#h"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M15.6 10.5L10.2225 6.93922C9.42479 6.41101 8.35999 6.98302 8.35999 7.93976V11" stroke="url(#0000000)" stroke-width="1.5" stroke-linejoin="round"></path><path d="M11.2 19.9999C14.711 19.9999 17.7536 17.6591 19.3177 14.7352C19.7523 13.9227 19.4049 12.9474 18.6316 12.4463L16.4 11" stroke="url(#0000000)" stroke-width="1.5" stroke-linejoin="round"></path><path d="M11.2512 20C10.9414 20 10.635 19.9852 10.333 19.9562C5.65473 19.5078 2 15.6691 2 11C2 6.02944 6.14192 2 11.2512 2C14.7643 2 17.8084 4.32867 19.3717 7.25078C19.8048 8.06052 19.4606 9.03272 18.6921 9.53538L10.2153 15.0796C9.41717 15.6017 8.35844 15.029 8.35844 14.0754V11.5V11" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path><defs><linearGradient id="0000000" x1="13.5" y1="8.5" x2="15.5" y2="10.5" gradientUnits="userSpaceOnUse"><stop stop-color="currentColor"></stop><stop offset="1" stop-color="currentColor" stop-opacity="0"></stop></linearGradient><linearGradient id="0000000" x1="18.5" y1="14" x2="16.5" y2="11" gradientUnits="userSpaceOnUse"><stop stop-color="currentColor"></stop><stop offset="1" stop-color="currentColor" stop-opacity="0"></stop></linearGradient></defs></svg></span><span class="Header_text__LA4HP">
+클립</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#f"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><rect x="2" y="5.5" width="18" height="14" rx="4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></rect><path d="M13.326 11.75 10.29 9.727a.7.7 0 0 0-1.089.582v4.05a.7.7 0 0 0 1.089.583l3.037-2.025a.7.7 0 0 0 0-1.165ZM4.5 2.35a.75.75 0 0 1 .75-.75h11.5a.75.75 0 0 1 0 1.5H5.25a.75.75 0 0 1-.75-.75Z" fill="currentColor"></path></svg></span><span class="Header_text__LA4HP">
+구독</span></a></li></ul><span class="Header_menu_title__pFzEd">My</span><ul role="menu" class="Header_library_menu_list__cAA3v"><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#my?tab=recent"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M11 2a9 9 0 1 0 8.37 12.316" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M11 2a9 9 0 0 1 9 9c0 .667-.3 2.3-.7 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 3"></path><path d="M10.5 6.5v5h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">
+최근<span class="Header_hidden_reduced__y3kxs"> 본 영상</span></span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#my?tab=liked"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M9.52 4.357A4.626 4.626 0 0 0 6.86 3.5a4.81 4.81 0 0 0-3.45 1.46C2.537 5.854 1.984 6.863 2 8.648c.016 1.745.843 3.002 2.559 4.718a109.862 109.862 0 0 0 5.81 5.074.99.99 0 0 0 1.247 0c2.004-1.618 4.258-3.522 5.81-5.074C19.143 11.65 20 10.467 20 8.647c0-1.386-.555-2.812-1.477-3.713-.903-.884-2.16-1.432-3.614-1.429a4.661 4.661 0 0 0-2.536.918 5.946 5.946 0 0 0-1.397 1.487A5.253 5.253 0 0 0 9.52 4.357Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">좋아요<span class="Header_hidden_reduced__y3kxs"> 한 영상</span></span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#my?tab=saved"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M5.262 18.552 11 13.512l5.72 5.005c.088.072.2.113.316.114a.44.44 0 0 0 .185 0 .448.448 0 0 0 .279-.404V7.773M5.262 18.553a.496.496 0 0 1-.502.078.446.446 0 0 1-.26-.404V3.94c0-.242.208-.439.464-.439h12.072c.123 0 .24.046.328.129a.428.428 0 0 1 .136.31v3.834M5.262 18.553 17.5 7.772" stroke="currentColor" stroke-width="1.4"></path></svg></span><span class="Header_text__LA4HP">
+나중에<span class="Header_hidden_reduced__y3kxs"> 볼 영상</span></span></a></li></ul><span class="Header_menu_title__pFzEd">탐색</span><ul role="menu" class="Header_genre_menu_list__NbKFm"><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#r"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M11.133 14.938v1.837" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M8 20.068h6.318a.5.5 0 0 0 .5-.5v-.454c0-1.05-.688-1.91-1.527-1.91H8.709c-.84 0-1.528.86-1.528 1.91v.454a.5.5 0 0 0 .5.5H8Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></path><path d="M11.001 14.5a6.12 6.12 0 0 1-6.125-6.126V5.75c0-1.933 1.566-3.5 3.5-3.5h5.25a3.5 3.5 0 0 1 3.5 3.5v2.625a6.12 6.12 0 0 1-6.125 6.125Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.318 11A5.687 5.687 0 0 1 3.17 9.902C2.168 8.986 1.5 7.888 1.5 6.607c0-1.282 1.224-2.289 2.783-2.289h.723a2.919 2.919 0 0 0-.333 1.373v2.746c0 .916.233 1.776.645 2.563ZM16.727 11a5.688 5.688 0 0 0 2.149-1.098c1.002-.915 1.67-2.014 1.67-3.295 0-1.282-1.225-2.288-2.783-2.288h-.724c.223.42.334.887.334 1.373v2.746c0 .915-.234 1.775-.646 2.562Z" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">TOP100</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#i"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M14.708 5.652h3.444m0 0v3.444m0-3.444-6.59 6.59-3.153-3.151L3 14.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M2.667 3.667v13.166c0 1.384 1.117 2.5 2.5 2.5h13.167" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">급상승</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#ct/news"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M16.83 13.875V5.781m0 0V5.5a3 3 0 0 0-3-3H5.5a3 3 0 0 0-3 3v11a3 3 0 0 0 3 3h11.4a3 3 0 0 0 3-3V7.781a2 2 0 0 0-2-2h-1.07Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path><path d="M6 6.8h7M6 10h7M6 13.2h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">뉴스</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#ct/sport"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><circle cx="11" cy="11" r="9.25" stroke="currentColor" stroke-width="1.5"></circle><path d="M9.54 2c.5 3.5-2.5 9-7.5 9.5M12.094 20.498c-.4-3.513 2.756-8.925 7.768-9.282" stroke="currentColor" stroke-width="1.3"></path></svg></span><span class="Header_text__LA4HP">스포츠</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#ct/drama"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M5.8 20.5h8M16.8 6v6h1a3 3 0 1 0 0-6h-1ZM16.8 6h-13a1 1 0 0 0-1 1v4a7 7 0 1 0 14 0V6ZM14 1l-1 1.8M10.3 1l-1 1.8M6.5 1l-1 1.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg></span><span class="Header_text__LA4HP">드라마</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#ct/enter"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><circle cx="11" cy="11" r="9.25" stroke="currentColor" stroke-width="1.5"></circle><path d="M15.5 11.5a4.5 4.5 0 1 1-9 0" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg></span><span class="Header_text__LA4HP">예능</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_menu__A9JZs" href="/#ct/other"><span class="Header_icon__ZUiy7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22" class="Header_icon_menu__4Y1zQ"><path d="M14.246 6.672 9.424 8.787c-.223.102-.49.368-.591.591L6.668 14.25c-.462 1.01.072 1.544 1.082 1.082l4.872-2.165c.222-.101.488-.368.59-.59l2.116-4.822c.462-1.043-.074-1.544-1.082-1.083Zm-2.4 5.18a1.2 1.2 0 1 1-1.697-1.696 1.2 1.2 0 0 1 1.697 1.696Z" fill="currentColor"></path><circle cx="11" cy="11" r="9.25" stroke="currentColor" stroke-width="1.5"></circle></svg></span><span class="Header_text__LA4HP">더 많은 영상</span></a></li></ul><span class="Header_menu_title__pFzEd">방송관</span><ul role="menu" class="Header_brand_menu_list__gdj5a"><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/#b/tvchosun"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand tvchosun"><path d="M11.669 5.9H3.346C2.603 5.9 2 6.472 2 7.177v7.893c0 .705.603 1.277 1.346 1.277h8.323c.744 0 1.346-.572 1.346-1.277V7.177c0-.705-.602-1.277-1.346-1.277Z" fill="url(#icon_tvlogo_tvchosun_h22_svg__a)"></path><path d="M3.34 11.593c-.57 1.968.98 3.593 3.451 3.593 2.473 0 4.994-1.579 5.612-3.546h-2.215l-.257.336c-.14.198-.318.378-.514.528a5.036 5.036 0 0 1-3.14 1.248c-1.854.047-3.035-1.102-2.625-2.588.129-.453.373-.865.722-1.196A4.589 4.589 0 0 0 3.346 11.6" fill="#fff"></path><path d="m4.943 9.3-.269.291a2.69 2.69 0 0 0-.753 1.219c-.428 1.509.808 2.681 2.748 2.635 1.23-.047 2.399-.5 3.286-1.265a3.695 3.695 0 0 1-2.423.928c-1.456 0-2.264-.928-1.885-2.095.453-1.074 1.5-1.851 2.748-2.049l.428-1.317a7.204 7.204 0 0 0-3.88 1.66" fill="url(#icon_tvlogo_tvchosun_h22_svg__b)"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M22.599 6.48 21.16 9.54 19.93 6.48h-5.079v.5h1.591v3.563h1.028V6.98h1.64l1.488 3.563h.77l2.05-4.063h-.82Zm-3.562 4.84h.098l-.294.79h-.098a2.39 2.39 0 0 0-1.169-.342c-.973 0-1.511.737-1.511 1.92 0 1.185.538 1.875 1.511 1.875.423-.035.839-.15 1.218-.342h.147v.836c0 .011 0 .023-.012.034-.012.012-.025.012-.037.012-.428.14-.869.226-1.316.244-1.7 0-2.723-1.33-2.723-2.612 0-1.283.973-2.612 2.821-2.612.465.006.924.093 1.365.244v-.046Zm3.874 1.904v-2.1h1.12v5.223h-1.12V13.99h-2.044v2.357h-1.12v-5.224h1.12v2.101h2.044Zm4.51-2.1a2.834 2.834 0 0 0-1.983.748 2.464 2.464 0 0 0-.795 1.863c-.012.696.275 1.37.795 1.863a2.81 2.81 0 0 0 1.983.748c1.512-.029 2.73-1.19 2.73-2.611a2.41 2.41 0 0 0-.765-1.857 2.775 2.775 0 0 0-1.965-.755Zm.055 4.532c-1.205 0-1.517-1.381-1.517-2.17 0-.79.367-1.678 1.364-1.678.998 0 1.518 1.33 1.518 2.118 0 .79-.367 1.724-1.365 1.724v.006Zm5.226-4.486h.055v-.052c.46-.006.918.046 1.365.145l-.312.876a2.668 2.668 0 0 0-1.102-.29c-.477 0-.79.197-.79.54 0 .342.264.487.943.73l.05.019c.673.24 1.523.544 1.523 1.688 0 1.172-1.206 1.515-1.94 1.515a7.705 7.705 0 0 1-1.628-.244c0-.023-.055-.046-.055-.046v-.877h.104c.478.227.992.36 1.524.39.477 0 .79-.053.79-.54 0-.488-.319-.633-.998-.877-.68-.244-1.469-.685-1.469-1.561 0-.876.735-1.416 1.94-1.416Zm5.74 2.867c.043.394-.06.79-.293 1.103-.245.22-.563.33-.888.301-.985 0-1.034-.551-1.034-1.456v-2.862h-1.181v2.966c0 .952 0 2.258 2.117 2.258 2.118 0 2.167-.755 2.167-2.258v-2.966h-.888v2.914Zm5.006.418v-3.332h.777v5.224H43.4l-2.631-3.587v3.587h-.826v-5.224h1.022l2.484 3.332Z" fill="#575756"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M22.599 6.48 21.16 9.54 19.93 6.48h-5.079v.5h1.591v3.563h1.028V6.98h1.64l1.488 3.563h.77l2.05-4.063h-.82Zm-3.562 4.84h.098l-.294.79h-.098a2.39 2.39 0 0 0-1.169-.342c-.973 0-1.511.737-1.511 1.92 0 1.185.538 1.875 1.511 1.875.423-.035.839-.15 1.218-.342h.147v.836c0 .011 0 .023-.012.034-.012.012-.025.012-.037.012-.428.14-.869.226-1.316.244-1.7 0-2.723-1.33-2.723-2.612 0-1.283.973-2.612 2.821-2.612.465.006.924.093 1.365.244v-.046Zm3.874 1.904v-2.1h1.12v5.223h-1.12V13.99h-2.044v2.357h-1.12v-5.224h1.12v2.101h2.044Zm4.51-2.1a2.834 2.834 0 0 0-1.983.748 2.464 2.464 0 0 0-.795 1.863c-.012.696.275 1.37.795 1.863a2.81 2.81 0 0 0 1.983.748c1.512-.029 2.73-1.19 2.73-2.611a2.41 2.41 0 0 0-.765-1.857 2.775 2.775 0 0 0-1.965-.755Zm.055 4.532c-1.205 0-1.517-1.381-1.517-2.17 0-.79.367-1.678 1.364-1.678.998 0 1.518 1.33 1.518 2.118 0 .79-.367 1.724-1.365 1.724v.006Zm5.226-4.486h.055v-.052c.46-.006.918.046 1.365.145l-.312.876a2.668 2.668 0 0 0-1.102-.29c-.477 0-.79.197-.79.54 0 .342.264.487.943.73l.05.019c.673.24 1.523.544 1.523 1.688 0 1.172-1.206 1.515-1.94 1.515a7.705 7.705 0 0 1-1.628-.244c0-.023-.055-.046-.055-.046v-.877h.104c.478.227.992.36 1.524.39.477 0 .79-.053.79-.54 0-.488-.319-.633-.998-.877-.68-.244-1.469-.685-1.469-1.561 0-.876.735-1.416 1.94-1.416Zm5.74 2.867c.043.394-.06.79-.293 1.103-.245.22-.563.33-.888.301-.985 0-1.034-.551-1.034-1.456v-2.862h-1.181v2.966c0 .952 0 2.258 2.117 2.258 2.118 0 2.167-.755 2.167-2.258v-2.966h-.888v2.914Zm5.006.418v-3.332h.777v5.224H43.4l-2.631-3.587v3.587h-.826v-5.224h1.022l2.484 3.332Z" fill="currentColor"></path><defs><linearGradient id="icon_tvlogo_tvchosun_h22_svg__a" x1="7.471" y1="5.993" x2="7.471" y2="16.335" gradientUnits="userSpaceOnUse"><stop offset="0.25" stop-color="#EC1C24"></stop><stop offset="0.75" stop-color="#AE1E23"></stop></linearGradient><linearGradient id="icon_tvlogo_tvchosun_h22_svg__b" x1="6.896" y1="7.699" x2="6.896" y2="13.445" gradientUnits="userSpaceOnUse"><stop offset="0.5" stop-color="#fff"></stop><stop offset="1" stop-color="#A36E5D"></stop></linearGradient></defs></svg><span class="blind">TV 조선</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/#b/mbn"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand mbn"><path fill-rule="evenodd" clip-rule="evenodd" d="m14.172 7.38-2.099 2.256L9.937 7.38A1.202 1.202 0 0 0 9.061 7H7v8.15h2.328V9.91l2.558 2.716c.043.049.107.08.171.08a.217.217 0 0 0 .17-.08l2.596-2.716v5.24h2.328V7h-2.098a1.254 1.254 0 0 0-.876.38h-.005Zm13.771 1.844a2.079 2.079 0 0 1-.948 1.715 2.262 2.262 0 0 1 1.37 2.03c0 1.185-1.068 2.144-2.44 2.181h-7.401V7.043h6.942c1.297.075 2.477 1.034 2.477 2.18Zm-7.096-.311h4.042a.73.73 0 0 1 .726.648.682.682 0 0 1-.726.611h-4.042V8.913Zm4.464 4.324h-4.464v-1.264h4.464a.677.677 0 0 1 .496.177.711.711 0 0 1 .23.476.655.655 0 0 1-.726.617v-.006ZM36.6 7h2.365v8.15h-1.831a1.232 1.232 0 0 1-.876-.38l-4.694-4.978v5.358h-2.328V7h2.173c.331.005.646.145.881.38l4.31 4.598V7Z" fill="#EB6608"></path></svg><span class="blind">MBN</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/#b/channela"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand channela"><g clip-path="url(#icon_tvlogo_channelA_h22_svg__a)"><path d="M35.155 14.29c.548 0 1.15-.32 1.431-.641l-.709-1.03c-.107.12-.307.267-.414.24-.107-.026-.12-.12-.12-.28V7.403h-1.391v5.47c0 .989.535 1.417 1.203 1.417ZM32.788 12.097s-.588.87-1.711.87c-.481 0-.963-.389-1.057-.71l3.437-1.002c0-1.137-.789-2.26-2.394-2.26a2.57 2.57 0 0 0-2.567 2.62c0 1.592 1.243 2.675 2.58 2.675 1.07 0 2.02-.615 2.394-1.177l-.682-1.016Zm-1.724-1.872c.387-.04.815.067.869.348.067.36-1.31.896-1.819 1.11l-.24.094c-.16-1.03.615-1.485 1.19-1.551ZM23.227 14.09h1.418v-2.233c0-.856.267-1.78 1.03-1.78.762 0 1.002.603 1.002 1.512v2.5h1.404v-2.955c0-1.296-.642-2.14-1.792-2.14-.976 0-1.39.683-1.551 1.11-.013.028-.027.054-.053.054-.027 0-.04-.013-.04-.04v-.923h-1.418v4.895ZM17.705 14.09h1.417v-2.233c0-.856.268-1.78 1.017-1.78.749 0 1.016.603 1.016 1.512v2.5h1.404v-2.955c0-1.296-.655-2.14-1.792-2.14-.976 0-1.39.683-1.551 1.11-.013.028-.027.054-.054.054-.026 0-.04-.013-.04-.04v-.923h-1.417v4.895ZM15.659 9.195v.923c0 .027-.027.04-.054.04-.013 0-.04 0-.053-.04-.16-.428-.602-1.123-1.511-1.123-1.404 0-2.02 1.43-2.02 2.62 0 1.19.616 2.675 2.02 2.675.91 0 1.35-.682 1.51-1.123.014-.04.028-.054.054-.054.04 0 .054.027.054.054v.923h1.377V9.195h-1.377Zm-1.11 3.999c-.696 0-1.137-.549-1.137-1.578 0-.976.442-1.538 1.137-1.538.588 0 1.03.562 1.03 1.538 0 1.03-.442 1.578-1.03 1.578ZM6.713 14.09H8.09v-2.233c0-.856.308-1.78 1.043-1.78.735 0 1.016.603 1.016 1.512v2.5h1.418v-2.955c0-1.296-.655-2.14-1.805-2.14-.976 0-1.39.67-1.538 1.097-.013.04-.027.067-.067.067-.053 0-.067-.04-.067-.08V7.404H6.713v6.686ZM3.236 14.29c1.993 0 3.009-1.685 3.009-2.862H4.814c0 .75-.696 1.551-1.578 1.551-.936 0-1.792-.882-1.792-2.246 0-1.364.882-2.3 1.792-2.3s1.404.655 1.55 1.805l1.391-.816c-.227-.829-.949-2.22-2.941-2.22C1.243 7.202 0 8.834 0 10.733c0 1.9 1.23 3.557 3.236 3.557Z" fill="currentColor"></path><path d="M42.002 6.001c-.535 0-.856.428-1.017.776l-2.717 5.669c-.388.802.121 1.845 1.044 1.845.549 0 .937-.307 1.299-.628l.365-.316v-1.614l-.5.298c-.106.067-.227.147-.294.094-.067-.04-.04-.134.014-.294l1.579-4.333c.067-.187.134-.294.227-.294.023 0 .046.003.066.013V6.004A1.072 1.072 0 0 0 42.002 6Z" fill="url(#icon_tvlogo_channelA_h22_svg__b)"></path><path d="m45.897 12.78-2.864-6.004c-.174-.348-.509-.776-1.03-.776a.949.949 0 0 0-.153.012v1.313c.045-.079.093-.122.152-.122.08 0 .148.04.201.241l1.7 6.004c.227.816.964.976 1.485.748.563-.254.75-.909.509-1.417Z" fill="url(#icon_tvlogo_channelA_h22_svg__c)"></path><path d="M45.723 9.062c-.053-.067-.174-.067-.32.027l-4.645 2.774v1.672l4.885-4.218c.107-.094.134-.188.08-.255Z" fill="url(#icon_tvlogo_channelA_h22_svg__d)"></path></g><defs><linearGradient id="icon_tvlogo_channelA_h22_svg__b" x1="38.898" y1="14.687" x2="42.901" y2="4.777" gradientUnits="userSpaceOnUse"><stop offset="0.3" stop-color="#7DD7FF"></stop><stop offset="0.7" stop-color="#196EFF"></stop></linearGradient><linearGradient id="icon_tvlogo_channelA_h22_svg__c" x1="42.205" y1="6.454" x2="45.44" y2="14.46" gradientUnits="userSpaceOnUse"><stop offset="0.1" stop-color="#196EFF"></stop><stop offset="0.23" stop-color="#186AF9"></stop><stop offset="0.41" stop-color="#1661E8"></stop><stop offset="0.6" stop-color="#1352CD"></stop><stop offset="0.82" stop-color="#0E3DA8"></stop><stop offset="1" stop-color="#0A2882"></stop></linearGradient><linearGradient id="icon_tvlogo_channelA_h22_svg__d" x1="41.342" y1="13.831" x2="44.951" y2="7.581" gradientUnits="userSpaceOnUse"><stop offset="0.3" stop-color="#7DD7FF"></stop><stop offset="0.39" stop-color="#6BC4FF"></stop><stop offset="0.57" stop-color="#3E94FF"></stop><stop offset="0.7" stop-color="#196EFF"></stop></linearGradient><clipPath id="icon_tvlogo_channelA_h22_svg__a"><path fill="#fff" transform="translate(0 6)" d="M0 0h46v8.291H0z"></path></clipPath></defs></svg><span class="blind">CHANNEL A</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/#b/jtbc"><span class="icon_jtbc_w46h22"></span><span class="blind">JTBC</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/#b/cjenm"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand cjenm"><path fill-rule="evenodd" clip-rule="evenodd" d="M22.881 8.167c-2.294-.863-4.614-.774-5.202.239-.594 1.02.272 3.437 1.904 5.44 1.632 2.004 3.94 1.939 5.212-.25 1.253-2.183.378-4.57-1.91-5.432" fill="#FF9700"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M11.207 8.865c2.038 1.33 4.318 1.732 5.127.87.817-.87.535-3.408-.59-5.707-1.126-2.3-3.39-2.724-5.14-.86-1.73 1.863-1.43 4.374.6 5.697" fill="#006ECD"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M18.507 15.862c-.325-2.335-1.538-4.225-2.75-4.225-1.223 0-3.012 1.896-4.053 4.234-1.038 2.338.144 4.229 2.764 4.229 2.608-.018 4.365-1.908 4.04-4.238Z" fill="#EF151E"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M5.783 15.065c1.538 0 2.329-1.084 2.329-1.084s-.341-.41-.797-.41c-.216 0-.366.087-.523.18-.222.128-.475.275-1.01.275a1.64 1.64 0 0 1-1.635-1.66c0-.932.735-1.694 1.636-1.694.47 0 .73.153.957.286l.006.004c.168.101.318.188.515.188.407 0 .829-.433.829-.433s-.72-1.084-2.307-1.084C4.194 9.633 3 10.83 3 12.368c0 1.538 1.244 2.697 2.783 2.697Zm2.732-4.668c0-.364.278-.609.694-.609h2.273v.367c0 .35-.3.607-.719.61v2.765c0 .663-.094 1.096-.322 1.5-.422.74-1.257 1.041-2.042 1.223-.2.048-.25.015-.206-.247l.005-.03c.032-.195.067-.412.567-.64.61-.277.697-.809.735-1.134.038-.329.003-3.437.003-3.437h-.988v-.368ZM30.448 10.747c.281 0 .519-.227.519-.496v-.463h-3.661c-.282 0-.52.236-.52.496v4.623h3.662c.281 0 .519-.293.519-.561v-.404H28.43c-.419 0-.49.197-.49.197v-1.337h2.385c.281 0 .519-.227.519-.496v-.469h-2.417c-.419 0-.49.197-.49.197v-1.287H30.447Zm12.059-.959v4.602c0 .335-.266.514-.635.514h-.488v-3.118l-.894 2.793c-.078.223-.366.325-.657.328h-.225l-1.103-3.12v2.597c0 .34-.26.52-.635.52h-.49v-4.596c0-.34.259-.52.634-.52h.803l1.16 3.393 1.048-3.07c.08-.212.3-.323.597-.323h.885Zm-7.198.496c0-.245.154-.496.413-.496h.713v4.623c0 .26-.222.496-.482.496h-.337l-2.67-3.428v2.932c0 .254-.222.496-.482.496h-.644v-4.623c0-.26.222-.496.482-.496h.494l2.513 3.166v-2.67Z" fill="currentColor"></path></svg><span class="blind">CJ ENM</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/#b/kbs"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand kbs"><path fill-rule="evenodd" clip-rule="evenodd" d="m18.24 15.963-4.113-5.105 3.962-4.72h-2.791l-3.773 4.672V6.137H9.4v9.826h2.125V10.91l3.698 5.052h3.017ZM33.31 9.98c.616 0 3.24.391 3.24 2.964 0 2.723-2.648 3.016-2.648 3.016H27.71V14.37l4.981.003c1.445 0 1.43-1.36 1.43-1.36 0-1.489-1.706-1.43-1.706-1.43h-1.908c-.876 0-3.132-.311-3.132-2.612.001-2.765 2.8-2.833 2.8-2.833h5.667v1.57l-4.653.005c-1.504 0-1.48 1.151-1.48 1.151s.013 1.123 1.316 1.123l2.285-.007v.002Zm-6.033 3.239c0 1.661-1.361 2.743-2.858 2.743-1.265 0-5.992-.005-5.992-.005v-9.82h5.476s2.822.039 2.975 2.506c.107 1.703-1.023 2.086-1.023 2.086s1.422.591 1.422 2.49Zm-2.858 2.743h.001-.001Zm-1.24-8.23h-2.74v2.295h2.99c.303-.02 1.24-.09 1.24-1.14 0-1.221-1.49-1.155-1.49-1.155Zm-2.742 6.631h2.497c.973 0 2.142-.09 2.142-1.397s-1.557-1.365-1.557-1.365h-3.082v2.762Z" fill="#1D1160"></path><path fill-rule="evenodd" clip-rule="evenodd" d="m18.24 15.963-4.113-5.105 3.962-4.72h-2.791l-3.773 4.672V6.137H9.4v9.826h2.125V10.91l3.698 5.052h3.017ZM33.31 9.98c.616 0 3.24.391 3.24 2.964 0 2.723-2.648 3.016-2.648 3.016H27.71V14.37l4.981.003c1.445 0 1.43-1.36 1.43-1.36 0-1.489-1.706-1.43-1.706-1.43h-1.908c-.876 0-3.132-.311-3.132-2.612.001-2.765 2.8-2.833 2.8-2.833h5.667v1.57l-4.653.005c-1.504 0-1.48 1.151-1.48 1.151s.013 1.123 1.316 1.123l2.285-.007v.002Zm-6.033 3.239c0 1.661-1.361 2.743-2.858 2.743-1.265 0-5.992-.005-5.992-.005v-9.82h5.476s2.822.039 2.975 2.506c.107 1.703-1.023 2.086-1.023 2.086s1.422.591 1.422 2.49Zm-2.858 2.743h.001-.001Zm-1.24-8.23h-2.74v2.295h2.99c.303-.02 1.24-.09 1.24-1.14 0-1.221-1.49-1.155-1.49-1.155Zm-2.742 6.631h2.497c.973 0 2.142-.09 2.142-1.397s-1.557-1.365-1.557-1.365h-3.082v2.762Z" fill="currentColor"></path></svg><span class="blind">KBS</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/#b/mbc"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand mbc"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.309 6.2H9.233C7.659 6.2 6.7 6.92 6.7 8.41v7.073h2.688v-6.72h1.541v6.72h2.682v-6.72h1.543v6.72h2.688V8.41c0-1.49-.96-2.21-2.533-2.21Zm17.678 6.767V8.746h6.333V6.2h-6.63c-1.625 0-2.482.853-2.482 2.192v4.935c0 1.216.715 2.155 2.528 2.155h6.62v-2.516h-6.37.001Zm-6.993-2.439v2.424h-3.982V8.756h3.982v1.764c1.388 0 2.9-.556 2.9-2.093s-1.172-2.2-3.043-2.227h-6.57v9.283h6.625c1.876 0 3.55-.678 3.55-2.472 0-1.795-1.477-2.483-3.463-2.483h.001Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M15.309 6.2H9.233C7.659 6.2 6.7 6.92 6.7 8.41v7.073h2.688v-6.72h1.541v6.72h2.682v-6.72h1.543v6.72h2.688V8.41c0-1.49-.96-2.21-2.533-2.21Zm17.678 6.767V8.746h6.333V6.2h-6.63c-1.625 0-2.482.853-2.482 2.192v4.935c0 1.216.715 2.155 2.528 2.155h6.62v-2.516h-6.37.001Zm-6.993-2.439v2.424h-3.982V8.756h3.982v1.764c1.388 0 2.9-.556 2.9-2.093s-1.172-2.2-3.043-2.227h-6.57v9.283h6.625c1.876 0 3.55-.678 3.55-2.472 0-1.795-1.477-2.483-3.463-2.483h.001Z" fill="#fff" fill-opacity="0.1"></path></svg><span class="blind">MBC</span></a></li><li role="presentation" class="Header_list_item__5svjK"><a role="menuitem" aria-current="false" class="Header_link_brand__ShZKj" href="/#b/sbs"><svg viewBox="0 0 46 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="46" height="22" class="icon_brand sbs"><path fill-rule="evenodd" clip-rule="evenodd" d="m16.465 10.75-2.6-2.34a.834.834 0 0 1-.295-.631c0-.488.426-.884.953-.884h2.878v-1.22H13c-1.365 0-2.5.901-2.5 2.312 0 .603.25 1.151.659 1.562l3.064 2.832s.517.366.337.97c-.178.602-.962.602-1.255.602H10.5v2.471h4.256c1.721 0 3.117-1.289 3.117-2.88v-.024c.047-1.188-.605-2.041-1.408-2.77Zm17.182 0-2.6-2.34a.832.832 0 0 1-.295-.631c0-.488.427-.884.953-.884h2.878v-1.22h-4.4c-1.366 0-2.5.901-2.5 2.312 0 .603.248 1.151.657 1.562l3.064 2.832s.517.366.337.97c-.18.602-.962.602-1.255.602h-2.803v2.471h4.256c1.72 0 3.116-1.289 3.116-2.88v-.024c.048-1.188-.605-2.041-1.409-2.77Zm-8.767-.475c1.473.493 2.21 1.738 2.21 3.028 0 .961-.447 1.815-1.108 2.386-.746.596-1.666.713-2.102.733h-5.168L18.71 5.687h4.858v.003s1.237-.043 2.064.514c.575.414.941 1.048.941 1.805 0 1.129-.578 1.932-1.693 2.266Zm-2.376-3.36h-1.166V9.43h1.221c.934 0 1.514-.52 1.441-1.353-.1-1.162-1.32-1.162-1.496-1.162Zm-1.166 7.039h1.4c.935 0 1.655-.592 1.583-1.538-.102-1.32-1.462-1.322-1.638-1.322h-1.345v2.86Z" fill="currentColor"></path><path fill-rule="evenodd" clip-rule="evenodd" d="m16.465 10.75-2.6-2.34a.834.834 0 0 1-.295-.631c0-.488.426-.884.953-.884h2.878v-1.22H13c-1.365 0-2.5.901-2.5 2.312 0 .603.25 1.151.659 1.562l3.064 2.832s.517.366.337.97c-.178.602-.962.602-1.255.602H10.5v2.471h4.256c1.721 0 3.117-1.289 3.117-2.88v-.024c.047-1.188-.605-2.041-1.408-2.77Zm17.182 0-2.6-2.34a.832.832 0 0 1-.295-.631c0-.488.427-.884.953-.884h2.878v-1.22h-4.4c-1.366 0-2.5.901-2.5 2.312 0 .603.248 1.151.657 1.562l3.064 2.832s.517.366.337.97c-.18.602-.962.602-1.255.602h-2.803v2.471h4.256c1.72 0 3.116-1.289 3.116-2.88v-.024c.048-1.188-.605-2.041-1.409-2.77Zm-8.767-.475c1.473.493 2.21 1.738 2.21 3.028 0 .961-.447 1.815-1.108 2.386-.746.596-1.666.713-2.102.733h-5.168L18.71 5.687h4.858v.003s1.237-.043 2.064.514c.575.414.941 1.048.941 1.805 0 1.129-.578 1.932-1.693 2.266Zm-2.376-3.36h-1.166V9.43h1.221c.934 0 1.514-.52 1.441-1.353-.1-1.162-1.32-1.162-1.496-1.162Zm-1.166 7.039h1.4c.935 0 1.655-.592 1.583-1.538-.102-1.32-1.462-1.322-1.638-1.322h-1.345v2.86Z" fill="#fff" fill-opacity="0.1"></path></svg><span class="blind">SBS</span></a></li></ul></nav><div class="Header_mode_wrap__CnQLB"><button class="Header_button_mode__K7u1M"><span class="Header_icon_applied__dY7x7"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22"><g clip-path="url(#icon_light_mode_svg__a)" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="4.25"></circle><path d="M11 1.5V4M11 18v2.5M4.937 4.92l.707.708M16 16.5l.707.707M17 5.707 17.707 5M4.942 17.08l.707-.708M18 11h2.5M1.5 11H4" stroke-linecap="round"></path></g><defs><clipPath id="icon_light_mode_svg__a"><path fill="#fff" d="M0 0h22v22H0z"></path></clipPath></defs></svg></span><span class="Header_icon_next__L5wXj"><svg viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="22" height="22"><path d="M18.61 12.475a7.75 7.75 0 1 1-9.124-9.078C8.676 4.806 8.317 6.2 8.344 7.5c.035 1.72.748 3.224 1.893 4.297 2.012 1.886 5.253 2.377 8.373.678Z" stroke="currentColor" stroke-width="1.5"></path></svg></span><span class="blind">다크 모드로 변경</span></button><span class="Header_tooltip_hover__rNAYS"><span class="Header_icon_triangle__DSsEC"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none" class="Header_icon_light__EoVJq"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 1L10.4471 8.3382C9.68468 9.19202 8.4187 9.22387 7.61948 8.40935C7.59676 8.3862 7.57455 8.36248 7.55288 8.3382L1 1H17Z" fill="#F8F8F8"></path><path d="M17 1L10.4471 8.3382C9.68468 9.19202 8.4187 9.22387 7.61948 8.40935C7.59676 8.3862 7.57455 8.36248 7.55288 8.3382L1 1" stroke="#E7E7E7"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="18" height="10" viewBox="0 0 18 10" fill="none" class="Header_icon_dark__KyHWb"><path fill-rule="evenodd" clip-rule="evenodd" d="M17 1L10.4471 8.3382C9.68468 9.19202 8.4187 9.22387 7.61948 8.40935C7.59676 8.3862 7.57455 8.36248 7.55288 8.3382L1 1H17Z" fill="#343436"></path><path d="M17 1L10.4471 8.3382C9.68468 9.19202 8.4187 9.22387 7.61948 8.40935C7.59676 8.3862 7.57455 8.36248 7.55288 8.3382L1 1" stroke="#343436"></path></svg></span><span class="Header_tooltip_text__pbCxh">다크<span class="Header_only_wide__t0IuF"> 모드</span></span></span></div><a href="https://creator.tv.naver.com" class="Header_link_studio_menu__KefUn"><svg viewBox="0 0 90 17" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="90" height="17"><path d="M.513 8.545c-.018-1.278.446-2.372 1.39-3.28C2.85 4.346 3.97 3.9 5.265 3.928c.846 0 1.611.198 2.295.594a4.217 4.217 0 0 1 1.634 1.62l-1.378.972c-.638-.999-1.489-1.498-2.551-1.498-.828 0-1.516.279-2.065.837-.54.558-.81 1.26-.81 2.106 0 .846.27 1.543.81 2.092.548.549 1.237.824 2.065.824 1.062 0 1.913-.5 2.551-1.499l1.378.972a4.217 4.217 0 0 1-1.62 1.633c-.694.388-1.468.581-2.322.581-1.305.027-2.43-.414-3.375-1.323C.94 10.921.486 9.823.512 8.545Zm13.912-2.228v1.607h-.486c-.558 0-1 .148-1.323.446-.315.296-.473.729-.473 1.296V13h-1.822V6.317h1.674v.797c.468-.585 1.08-.877 1.836-.877.225 0 .423.026.594.08Zm6.84 3.956h-4.684c.108.423.324.752.648.986.333.224.742.337 1.228.337.657 0 1.278-.225 1.863-.675l.756 1.242c-.8.666-1.692.999-2.673.999-1.026.018-1.899-.315-2.619-.999-.71-.693-1.057-1.526-1.04-2.498-.017-.962.32-1.79 1.013-2.483.693-.694 1.521-1.031 2.484-1.013.918 0 1.67.297 2.255.891.594.594.89 1.332.89 2.214 0 .324-.04.657-.12.999Zm-4.684-1.282h3.037c-.009-.405-.153-.73-.432-.973-.27-.252-.607-.378-1.012-.378-.387 0-.725.122-1.013.365-.288.243-.481.571-.58.986Zm11.53.04V13h-1.674v-.648c-.522.54-1.201.81-2.038.81-.702 0-1.265-.185-1.688-.554-.414-.369-.62-.85-.62-1.444 0-.603.224-1.075.674-1.418.46-.35 1.076-.526 1.85-.526h1.674v-.297c0-.378-.108-.666-.324-.864-.207-.207-.513-.31-.918-.31-.333 0-.635.072-.905.216-.27.143-.558.377-.864.701l-.945-1.12c.774-.918 1.746-1.377 2.916-1.377.882 0 1.58.252 2.093.756.513.495.77 1.197.77 2.106Zm-1.822 1.471v-.08h-1.431c-.621 0-.932.224-.932.675 0 .225.086.405.257.54.18.125.414.188.702.188.405 0 .738-.121.999-.364.27-.252.405-.572.405-.959Zm7.57.973V13a5.17 5.17 0 0 1-1.256.162c-.855 0-1.517-.212-1.985-.635-.459-.422-.688-1.048-.688-1.876V7.856h-1.053V6.318h1.053V4.63h1.822v1.688h1.89v1.538h-1.89v2.633c0 .378.095.648.284.81.198.153.517.23.958.23.153 0 .441-.018.864-.054Zm.513-1.823c-.018-.954.328-1.777 1.04-2.47.71-.694 1.556-1.031 2.537-1.013.981-.018 1.827.32 2.538 1.013.72.692 1.071 1.516 1.053 2.47.018.954-.333 1.782-1.053 2.484-.72.693-1.57 1.03-2.551 1.013-.981.018-1.827-.32-2.538-1.013-.702-.702-1.044-1.53-1.026-2.484Zm4.806 1.31c.333-.342.5-.774.5-1.296 0-.523-.167-.959-.5-1.31a1.6 1.6 0 0 0-1.229-.526c-.504 0-.918.175-1.242.526-.324.342-.486.778-.486 1.31 0 .521.162.954.486 1.295.324.342.738.514 1.242.514.495 0 .905-.171 1.229-.514Zm7.59-4.644v1.606h-.487c-.558 0-.999.148-1.323.446-.315.296-.472.729-.472 1.296V13h-1.823V6.317h1.674v.797c.468-.585 1.08-.877 1.836-.877.225 0 .423.026.594.08Zm3.813 4.873 1.256-.945c.63.864 1.359 1.296 2.187 1.296.396 0 .706-.085.931-.256a.885.885 0 0 0 .338-.73c0-.251-.077-.445-.23-.58-.153-.144-.454-.32-.904-.527l-.959-.431c-1.44-.64-2.16-1.495-2.16-2.566 0-.755.28-1.363.837-1.822.558-.468 1.265-.702 2.12-.702.666 0 1.25.153 1.755.459.504.297.9.707 1.188 1.229l-1.242.958c-.46-.684-1.026-1.026-1.701-1.026-.324 0-.59.077-.797.23a.745.745 0 0 0-.31.634c0 .225.072.41.216.553.153.136.427.293.823.473l1.013.446c.765.341 1.323.715 1.674 1.12.35.396.526.891.526 1.485 0 .801-.292 1.449-.877 1.944-.585.486-1.332.729-2.241.729a3.95 3.95 0 0 1-2.025-.527 3.9 3.9 0 0 1-1.418-1.444Zm11.968.284V13a5.17 5.17 0 0 1-1.256.162c-.855 0-1.516-.212-1.984-.635-.46-.422-.689-1.048-.689-1.876V7.856h-1.053V6.318h1.053V4.63h1.823v1.688h1.89v1.538h-1.89v2.633c0 .378.094.648.283.81.198.153.518.23.959.23.153 0 .44-.018.864-.054Zm.956-1.418v-3.74h1.822v3.889c0 .386.117.697.351.931.243.234.549.351.918.351.36 0 .657-.117.891-.351.234-.243.351-.553.351-.931V6.318h1.823v3.739c0 .918-.293 1.665-.878 2.241-.576.576-1.305.864-2.187.864-.9 0-1.642-.284-2.228-.85-.575-.576-.863-1.328-.863-2.255Zm12.458-7.182h1.823V13h-1.674v-.823c-.46.657-1.175.985-2.147.985-.936 0-1.71-.329-2.322-.986-.612-.665-.918-1.502-.918-2.51 0-1.008.306-1.841.918-2.498.612-.666 1.386-.999 2.322-.999.846 0 1.512.266 1.998.796v-4.09Zm-.459 8.14c.324-.324.486-.774.486-1.35 0-.575-.162-1.025-.486-1.35a1.61 1.61 0 0 0-1.202-.499c-.495 0-.909.171-1.242.513-.323.342-.486.783-.486 1.323 0 .549.163.995.487 1.337.323.341.737.512 1.241.512.486 0 .887-.162 1.202-.486ZM79.294 13V6.317h1.822V13h-1.823Zm-.257-9.113c0-.324.112-.594.337-.81.225-.216.5-.324.824-.324.324 0 .598.108.823.325.234.216.351.486.351.81 0 .314-.117.58-.35.796-.226.216-.5.324-.824.324-.324 0-.599-.108-.824-.324a1.06 1.06 0 0 1-.337-.796Zm3.204 5.765c-.018-.954.328-1.777 1.04-2.47.71-.694 1.556-1.031 2.537-1.013.981-.018 1.827.32 2.538 1.013.72.692 1.071 1.516 1.053 2.47.018.954-.333 1.782-1.053 2.484-.72.693-1.57 1.03-2.551 1.013-.981.018-1.827-.32-2.538-1.013-.702-.702-1.044-1.53-1.026-2.484Zm4.806 1.31c.333-.342.5-.774.5-1.296 0-.523-.167-.959-.5-1.31a1.6 1.6 0 0 0-1.229-.526c-.504 0-.918.175-1.242.526-.324.342-.486.778-.486 1.31 0 .521.162.954.486 1.295.324.342.738.514 1.242.514.495 0 .905-.171 1.229-.514Z" fill="currentColor"></path></svg><span class="blind">Creator Studio</span></a></div></div><div class="Header_layer_dimmed__x0zGg" aria-hidden="true"></div></div><div class="_search_area Search_search_wrap__lqZZ8  "><div class="_search_dimmed Search_layer_dimmed__nYVAD" aria-hidden="true"></div><div class="Search_layer_search__srb8X"><div class="Search_input_section__m3aHz"><label class="Search_label_search__38jIt" for="__gnb__searchInput"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="20" height="20"><path d="m14.5 13.6 3 3" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"></path><circle cx="9.6" cy="9.2" r="6.4" stroke="currentColor" stroke-width="1.6"></circle></svg><span class="blind">검색창</span></label><input type="text" id="__gnb__searchInput" class="Search_input_search__Ekfhu" value="" placeholder="동영상, 채널, 라이브를 검색할 수 있어요." autoComplete="off"/><span class="Search_search_control__IFJCN"><button type="button" class="Search_button_erase__MLPAp"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="20" height="20"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm3.158-11.159a.8.8 0 0 1 0 1.132L11.131 10l2.027 2.027a.8.8 0 0 1-1.131 1.131L10 11.131l-2.027 2.027a.8.8 0 0 1-1.132-1.131L8.868 10 6.841 7.973A.8.8 0 1 1 7.973 6.84L10 8.868l2.027-2.027a.8.8 0 0 1 1.131 0Z" fill="currentColor"></path></svg><span class="blind">검색어 지우기</span></button><button class="Search_button_submit__vb8zX Search_disabled__0Ncc8" aria-disabled="false"><svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="20" height="20"><path d="m14.5 13.6 3 3" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"></path><circle cx="9.6" cy="9.2" r="6.4" stroke="currentColor" stroke-width="1.6"></circle></svg><span class="blind">검색</span></button><button type="button" class="Search_button_cancel__FK8Og">취소</button></span></div><div class="Search_keyword_section__01fmY"><div class="Search_scroll_wrap__zF_se" style="display:none"></div></div></div></div><div class="Header_right_wrap__HlL0A"><a href="https://creator.tv.naver.com" class="Header_link_studio__Z1DYf"><svg viewBox="0 0 72 14" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="72" height="14"><path d="M.415 6.398C.4 5.364.775 4.48 1.539 3.745c.764-.742 1.67-1.102 2.718-1.08.684 0 1.303.16 1.856.48.56.313 1 .75 1.32 1.31L6.32 5.24c-.516-.808-1.204-1.212-2.063-1.212-.67 0-1.226.226-1.67.677-.437.451-.655 1.019-.655 1.703 0 .684.218 1.248.655 1.692.444.444 1 .666 1.67.666.859 0 1.547-.404 2.063-1.212l1.114.786c-.313.56-.75 1-1.31 1.32-.56.314-1.186.47-1.878.47-1.055.022-1.965-.335-2.729-1.07C.76 8.32.393 7.431.415 6.398Zm11.24-1.801v1.299h-.394c-.451 0-.808.12-1.07.36-.254.24-.382.59-.382 1.048V10H8.336V4.597h1.353v.644a1.81 1.81 0 0 1 1.485-.71c.182 0 .342.022.48.066Zm5.52 3.198h-3.787c.088.342.262.608.524.797.27.182.6.273.993.273.532 0 1.034-.182 1.507-.546l.611 1.004c-.648.539-1.368.808-2.161.808-.83.014-1.536-.255-2.118-.808-.575-.56-.855-1.233-.84-2.02-.015-.778.258-1.447.818-2.008.56-.56 1.23-.833 2.009-.818.742 0 1.35.24 1.823.72.48.48.72 1.077.72 1.79 0 .262-.033.532-.098.808Zm-3.787-1.037h2.456c-.007-.327-.123-.59-.35-.786a1.153 1.153 0 0 0-.818-.306 1.23 1.23 0 0 0-.819.295c-.232.197-.389.462-.469.797Zm9.314.033V10h-1.354v-.524c-.422.437-.971.655-1.648.655-.567 0-1.022-.15-1.364-.448-.335-.298-.502-.687-.502-1.168 0-.487.182-.87.545-1.146.372-.283.87-.425 1.496-.425h1.353v-.24c0-.306-.087-.539-.262-.7-.167-.167-.414-.25-.742-.25-.27 0-.513.058-.731.174-.218.117-.451.306-.699.568l-.764-.906c.626-.742 1.412-1.113 2.358-1.113.713 0 1.277.203 1.692.61.415.401.622.969.622 1.704Zm-1.474 1.19v-.066h-1.157c-.502 0-.753.182-.753.546 0 .182.07.327.208.437.145.101.334.152.567.152.328 0 .597-.098.808-.294.218-.204.327-.462.327-.775Zm6.111.786V10c-.349.087-.687.131-1.015.131-.69 0-1.226-.171-1.604-.513-.371-.342-.557-.848-.557-1.517V5.84h-.851V4.597h.851V3.232h1.474v1.365h1.528V5.84h-1.528V7.97c0 .305.076.524.229.655.16.123.418.185.775.185.124 0 .357-.014.699-.043Zm.406-1.474c-.014-.771.266-1.437.84-1.998a2.762 2.762 0 0 1 2.053-.818 2.762 2.762 0 0 1 2.052.818c.582.56.866 1.227.852 1.998.014.771-.27 1.44-.852 2.008-.582.56-1.27.834-2.063.82a2.762 2.762 0 0 1-2.052-.82c-.568-.567-.844-1.237-.83-2.008Zm3.886 1.059c.27-.277.404-.626.404-1.048 0-.422-.134-.775-.404-1.059a1.294 1.294 0 0 0-.993-.426c-.408 0-.742.142-1.004.426-.262.277-.393.63-.393 1.059 0 .422.13.771.393 1.048.262.276.596.415 1.004.415.4 0 .731-.139.993-.415Zm6.127-3.755v1.299h-.392c-.452 0-.808.12-1.07.36-.255.24-.382.59-.382 1.048V10H34.44V4.597h1.354v.644a1.81 1.81 0 0 1 1.484-.71c.182 0 .342.022.48.066Zm1.818 3.94 1.015-.764c.51.699 1.099 1.048 1.768 1.048.32 0 .572-.069.753-.207a.715.715 0 0 0 .273-.59c0-.203-.062-.36-.185-.47-.124-.116-.368-.257-.732-.425l-.775-.35c-1.164-.516-1.746-1.207-1.746-2.073 0-.611.225-1.103.677-1.474.45-.378 1.022-.567 1.713-.567.539 0 1.012.123 1.42.37.407.24.727.572.96.994l-1.004.775c-.371-.553-.83-.83-1.376-.83-.262 0-.476.062-.644.186a.602.602 0 0 0-.25.513c0 .182.058.331.174.448.124.109.346.236.666.382l.819.36c.618.276 1.07.578 1.353.906.284.32.426.72.426 1.2 0 .648-.237 1.172-.71 1.573-.473.393-1.077.589-1.812.589-.604 0-1.15-.142-1.637-.426a3.153 3.153 0 0 1-1.146-1.168Zm9.667.23V10c-.35.087-.688.131-1.015.131-.692 0-1.226-.171-1.605-.513-.37-.342-.556-.848-.556-1.517V5.84h-.852V4.597h.852V3.232h1.473v1.365h1.528V5.84H47.54V7.97c0 .305.077.524.23.655.16.123.418.185.774.185.124 0 .357-.014.699-.043Zm.764-1.147V4.597h1.473V7.74c0 .313.095.564.284.754.196.189.444.283.742.283a.976.976 0 0 0 .72-.283c.19-.197.284-.448.284-.754V4.597h1.474V7.62c0 .743-.236 1.347-.71 1.812-.465.466-1.055.699-1.768.699-.728 0-1.328-.23-1.8-.688-.467-.465-.7-1.073-.7-1.823ZM60.07 1.813h1.473V10h-1.353v-.666c-.371.531-.95.797-1.736.797-.757 0-1.382-.266-1.877-.797-.495-.538-.742-1.215-.742-2.03 0-.815.247-1.488.742-2.02.495-.538 1.12-.807 1.877-.807.684 0 1.223.214 1.616.644V1.813ZM59.7 8.395c.262-.262.393-.625.393-1.091 0-.466-.131-.83-.393-1.092a1.302 1.302 0 0 0-.972-.404c-.4 0-.735.139-1.004.415-.262.277-.393.633-.393 1.07 0 .444.13.804.393 1.08.262.277.597.415 1.004.415.393 0 .717-.13.972-.393ZM62.754 10V4.597h1.474V10h-1.474Zm-.207-7.368c0-.262.09-.48.273-.655a.926.926 0 0 1 .666-.262c.262 0 .483.087.665.262.19.175.284.393.284.655 0 .255-.094.47-.284.644a.926.926 0 0 1-.665.262.926.926 0 0 1-.666-.262.858.858 0 0 1-.273-.644Zm2.581 4.66c-.014-.77.266-1.436.84-1.997a2.762 2.762 0 0 1 2.053-.818 2.762 2.762 0 0 1 2.052.818c.582.56.866 1.227.851 1.998.015.771-.269 1.44-.851 2.008-.582.56-1.27.834-2.063.82a2.762 2.762 0 0 1-2.052-.82c-.568-.567-.844-1.237-.83-2.008Zm3.886 1.06c.27-.277.404-.626.404-1.048 0-.422-.135-.775-.404-1.059a1.294 1.294 0 0 0-.993-.426c-.408 0-.743.142-1.005.426-.262.277-.392.63-.392 1.059 0 .422.13.771.392 1.048.262.276.597.415 1.005.415.4 0 .731-.139.993-.415Z" fill="currentColor"></path></svg><span class="blind">Creator Studio</span></a><span class="Header_search_area__18ZCR"><button type="button" class="Header_button_search__Cu5Vz"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="30" height="30"><path d="m20.5 20.5 4 4" stroke="currentColor" stroke-width="1.65" stroke-linecap="round"></path><circle cx="14.5" cy="14.5" r="8.175" stroke="currentColor" stroke-width="1.65"></circle></svg><span class="blind">검색</span></button></span><div class="Header_upload_area__RYOr9"><button type="button" class="Header_link_upload__ZGZHe"><svg viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" width="30" height="30"><path d="M14.5 10v9M19 14.5h-9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path><path d="M3.8 11A7.2 7.2 0 0 1 11 3.8h7a7.2 7.2 0 0 1 7.2 7.2v7a7.2 7.2 0 0 1-7.2 7.2h-7A7.2 7.2 0 0 1 3.8 18v-7Z" stroke="currentColor" stroke-width="1.6"></path></svg><span class="blind">영상 업로드</span></button><div class="Header_upload_tooltip__IWs2i"><span class="Header_tooltip_text__pbCxh">이제 누구나 네이버TV에 영상을 <br class="Header_break_sub__tf6MV"/>올릴 수 있어요!<br class="Header_break_main__WQENw"/>내 채널을 만들고, <br class="Header_break_sub__tf6MV"/>네이버TV 크리에이터에 도전하세요!</span>
+</div></div>
 
 <script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"channelInfo":{"currentLive":null,"currentLives":[],"representClip":{"clipNo":18845374,"title":"맞구독 좋아요^^ 자동차보험료 비교견적사이트","videoId":"234F54F1FE41FC82E1EF18D00D22679809A4","description":"맞구독좋아요^^ 100% 빠르게 친추합니다.\r\nhttp://www.4pcbs.com 자동차보험료 비교견적사이트 입니다.\r\n보험사별 나의 자동차보험료를 알아볼수 있으며,\r\n간편 가입 및 갱신이 가능합니다.","thumbnailImageUrl":"https://phinf.pstatic.net/tvcast/20210307_223/Fac8E_1615116170464QXGy3_JPEG/2fb80513-7f37-11eb-bba0-a0369ff94f34_03.jpg","firstExposureDatetime":"2021-03-07T20:22:50+0900","registerDateTime":"2021-03-07T20:22:50+0900","playCount":2199,"likeItCount":56,"commentCount":null,"optionFields":[{"title":"등록일","description":"2021.03.07"},{"title":"카테고리","description":"자동차"}],"playTime":45,"displayPlayTime":"0:45","orientation":"LANDSCAPE","channelType":null,"channelId":"cardamoa","channelName":"자동차보험료비교견적사이트","channelEmblemImageUrl":"https://phinf.pstatic.net/tvcast/20210218_220/n5xxM_1613641053741vwuIe_JPEG/1613641053706.jpg","channelLogo":null,"channelUrl":"https://tv.naver.com/cardamoa","channelRepresentImageUrl":"","channelCategoryName":null,"brandCode":null,"tags":["맞구독","좋아요","자동차보험료비교견적사이트","다이렉트자동차보험료비교견적","다이렉트자동차보험","자동차보험료계산기"],"authType":"NORMAL_VOD","clipTrailerUrl":null,"shareUrl":null,"recId":null,"airsSessionId":null,"airsBypass":null,"clipType":null,"episodeNo":null,"displayChannelId":"cardamoa","globalService":true,"hash":"YLjtG4ipiiOK","shorts":false,"trailerUrl":null,"smr":false,"multiTrack":false,"opened":true,"channelEmblem":"https://phinf.pstatic.net/tvcast/20210218_220/n5xxM_1613641053741vwuIe_JPEG/1613641053706.jpg","highlight":false,"adultVideo":false},"showMenu":null,"channelId":"cardamoa","displayChannelId":"cardamoa","channelName":"자동차보험료비교견적사이트","channelHomeUrl":"https://tv.naver.com/cardamoa","channelLogo":"","channelBackgroundImageUrl":"","channelLandscapeBackgroundImageUrl":null,"channelProfileImageUrl":"https://phinf.pstatic.net/tvcast/20210218_220/n5xxM_1613641053741vwuIe_JPEG/1613641053706.jpg","channelBannerImageUrlPc":"https://phinf.pstatic.net/tvcast/20210310_4/nhopp_1615331038871c22mW_JPEG/1615331038827.jpg","channelBannerImageUrlMobile":"https://phinf.pstatic.net/tvcast/20210218_167/FDcgG_1613641151945asN0x_JPEG/1613641151893.jpg","dominantColor":"#326760","description":"자동차보험료 비교견적사이트 \r\n내자동차보험 조회 및 무료견적을 받아보시는 경우\r\n\r\nhttp://www.4pcbs.com 통하여\r\n보험소식 및 다이렉트자동차보험을 보험사별 알아보시기 바랍니다.\r\n무료견적 및 다양한 소식들을 받아보세요.\r\n\r\n다이렉트자동차보험 특약할인등은 보험사별 차이가 있습니다.\r\n갱신전 한번 꼭!! 알아보셔서 \r\n경제적으로 저렴하게 가입해 보시길 바랍니다.","displayBroadcastingTime":"","subscriptionCount":106,"registerDateTime":"2021-02-18T18:29:59+0900","subscription":null,"schedules":[],"channelLinks":[{"url":"http://www.4pcbs.com","description":"자동차보험료비교견적사이트"},{"url":"http://cardamoa.direct-ins.net","description":"다이렉트자동차보험료비교견적"},{"url":"2014posttistory.com","description":"자동차보험료계산기"}],"homeBanners":[],"isOriginal":false,"isCommunityOpen":false,"timefeedInfo":null,"dssId":null,"openTalkCategoryId":null,"brandInfo":null,"talkId":null,"homeClipRecommendCode":"RECENT","categoryName":"자동차","showType":null,"showHostNames":null,"showOriginalTypeCode":null,"isEnd":null,"noticeMessage":null,"promotionBanner":{"pcImageUrl":"https://phinf.pstatic.net/tvcast/20210218_22/oX96k_1613641356623ohgdt_JPEG/1613641356559.jpg","pcLinkUrl":"http://www.4pcbs.com","mobileImageUrl":"https://phinf.pstatic.net/tvcast/20210218_298/FgWQf_1613641368944mFoPV_JPEG/1613641368925.jpg","mobileLinkUrl":"http://www.4pcbs.com","mobileBackgroundColor":"#1D1D1D"},"channelType":"CHANNEL_GENERAL","registerYmdt":1613640599000},"channelType":"CHANNEL_GENERAL","channelBanner":{"channelBannerImageUrlPc":"https://phinf.pstatic.net/tvcast/20210310_4/nhopp_1615331038871c22mW_JPEG/1615331038827.jpg","channelBannerImageUrlMobile":"https://phinf.pstatic.net/tvcast/20210218_167/FDcgG_1613641151945asN0x_JPEG/1613641151893.jpg"}},"userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36","requestPath":"/cardamoa","serverTime":1762999881568,"__N_SSP":true},"page":"/[showId]","query":{"showId":"cardamoa"},"buildId":"7e991e_b15","assetPrefix":"https://static-now.pstatic.net/now-web-resource/real/7e991e_b15","isFallback":false,"dynamicIds":[4480],"gssp":true,"appGip":true,"scriptLoader":[]}</script>
+
 
 
 
